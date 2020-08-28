@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang = "es">
 <head>
-	<title>The Alopecia College - Inicio de sesión</title>
+	<title>The Alopecia College - Registrarse</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="estilos_login.css">
+	<link rel="stylesheet" type="text/css" href="estilos_register.css">
 	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 
 </head>
@@ -18,12 +18,23 @@
 		</nav>
 	</header>	
 	<form action = "https://hjava.herokuapp.com/registro.jsp" method = "POST" accept-charset="ISO-8859-1">
-		<caption><center>Inicio de sesión</center></caption><br>
-		<input class="input" type="email" name="email_control" required autofocus placeholder ="Dirección de correo electrónico"><br>
+		<caption><center>Registrarse</center></caption><br>
+		<input class="input" type="text" name="dni_control" required autofocus placeholder ="DNI"><br>
+		<input class="input" type="text" name="name_control" required placeholder ="Nombre"><br>
+		<input class="input" type="text" name="surname_control" required placeholder ="Apellidos"><br>
+		<label for="date">Fecha Nacimiento</label>
+		<input class="input" type="date" name="birthdate_control" required placeholder ="Fecha Nacimiento"><br>
+		<input class="input" type="text" name="city_control" required placeholder ="Localidad"><br>
+		<input class="input" type="number" name="tlf_control" required placeholder ="Teléfono"><br>
+		<input class="input" type="email" name="email_control" required placeholder ="Dirección de correo electrónico"><br>
+		<label for="date">Sexo</label><br>
+		<select name="sexo_control">
+  			<option value="1">Otro</option> 
+   			<option value="2">Mujer</option> 
+   			<option value="3">Hombre</option>
+		</select><br>
 		<input class="input" type="password" name="pass_control" minlength="6" required placeholder ="Contraseña "><br>
-		<input type="checkbox" name="recuerdame" /> Recuérdame <br>
-		¿Aún no te has registrado? <a href="#"> Regístrate</a><br>
-		<input type ="submit" value="Entrar">			
+		<input type ="submit" value="Registrarse">			
 	</form>
 	<footer>
 		<div class= "container-all">
@@ -36,13 +47,13 @@
 				</div>
 
 				<div class="colum2">
-					<h2><center>Team Alopégicos</center></h2>
-					<a href="#"><img src ="img/insta.jpg" width="35"></a>
+					<h2><center>Team Alopéciques</center></h2>
+					<a href="#"><img src ="img/insta.png" width="35"></a>
 					<a href="#"><img src ="img/face.png" width="35"></a>
 					<a href="#"><img src ="img/twit.png" width="40"></a>
 				</div>	
 				<div class="colum3">
-					<a href="#"><img src ="img/whats.jpg" width="60"></a>
+					<a href="#"><img src ="img/whats.png" width="60"></a>
 				</div>	
 			</div>
 		</div>		
