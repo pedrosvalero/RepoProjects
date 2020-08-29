@@ -5,23 +5,72 @@
 	box-sizing: border-box;
 }
 
-h1{
-	margin-top: 24px;
-	font-size: 40px;
-}
+body {background: #FDFEFE;}
+h2{margin-left: 24px;}
+header img { border-radius: 15%; }
+header h4 { color: white; }
+nav { border-bottom: inset grey 2px; }
+#demo { text-align: center; border: inset lightgrey; margin-top: 70px; margin-left: 30%; margin-right: 30%; }
 
 form{
 	margin: auto;
-	margin-top: 105px;
+	margin-top: 5%;
+	margin-bottom: 5%;
 	width: 400px;
 	padding: 30px;
 	background-color: #f8b24f;
 	border-radius: 20px; 
 }
 
+.input{
+	display: inline-block;
+	width: 80%;
+	padding: 10px 8px;
+	border: 2px solid #f6f6f6;
+	margin: 10px 0;
+	background-color: #f6f6f6; 
+	border-radius: 5px;
+}
+
+form a{
+	text-decoration: none;
+	color:black;
+}
+
+form ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #303960;
+  width: 100%;
+}
+
+form li{
+  float: left;
+}
+
+form li a{
+  display: block;
+  color: white;
+  padding: 20px 14px;
+  text-decoration: none;
+}
+
+form input[type = "submit"]{
+	width: 100%;
+	padding: 8px 10px;
+	margin-top: 22px;
+	color: #fff;
+	background: #000;
+	transition:1s;
+}
+form input[type="submit"]:hover{
+	cursor: pointer;
+	background: #ccc;
+}
 
 footer{
-	margin-top: 105px;
 	width: 100%;
 	background: #e5e5e5;
 	padding-bottom: 15px;
@@ -44,6 +93,8 @@ footer{
 	max-width: 200px;
 	font-size: 10px;
 	margin-top: 20px;
+	text-decoration: none;
+	color:black;
 }
 
 .colum2{
@@ -65,16 +116,6 @@ footer{
 	font-size: 20px;
 }
 
-.input{
-	display: inline-block;
-	width: 240px;
-	padding: 10px 8px;
-	border: 2px solid #f6f6f6;
-	margin: 10px 0;
-	background-color: #f6f6f6; 
-	border-radius: 5px;
-}
-
 .container-footer{
 	text-align: center;
 	padding: 10px 8px;
@@ -90,36 +131,15 @@ footer{
 	color: white;
 }
 
-ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #303960;
-  width: 100%;
+.tooltip {
+    text-decoration:none;
+    position:relative;
 }
-
-li{
-  float: left;
+.tooltip span {
+    display:none;
 }
-
-li a{
-  display: block;
-  color: white;
-  padding: 20px 14px;
-  text-decoration: none;
-}
-
-form input[type="submit"] {
-	width: 100%;
-	padding: 8px 16px;
-	margin-top: 32px;
-	color: #fff;
-	background: #000;
-	transition: background 1s;
-}
-
-form input[type="submit"]:hover {
-	cursor: pointer;
-	background: #ccc;
+.tooltip:hover span {
+    display:block;
+    position:absolute;
+    overflow:hidden;
 }

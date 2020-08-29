@@ -3,38 +3,49 @@
 <head>
 	<title>The Alopecia College - Registrarse</title>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="estilos_register.css">
 	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-
 </head>
 <body>
 	<header>
-		<nav>
-			<ul>
-				<li><a><img src ="../img/pepe1.jpg" width="80"> </a></li>
-				<li><a><h1> The Alopecia College</h1></a></li>
-			</ul>	
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+			<img src ="../img/pepe1.jpg" width="50px">
+		  <a class="navbar-brand" href="#"><h2> The Alopecia College</h2></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item">
+		        <a class="nav-link" href="../Login/html_login.html">Iniciar Sesión</a>
+		      </li>
+		    </ul>
+		    <h4>Registro</h4>
+		  </div>
 		</nav>
-	</header>	
+	</header>
 	<form action = "https://hjava.herokuapp.com/registro.jsp" method = "POST" accept-charset="ISO-8859-1">
-		<caption><center>Registrarse</center></caption><br>
-		<input class="input" type="email" name="email_control" required autofocus placeholder ="Dirección de correo electrónico"><br>
-		<input class="input" type="text" name="name_control" required placeholder ="Nombre"><br>
-		<input class="input" type="text" name="surname_control" required placeholder ="Apellidos"><br>
-		<input class="input" type="text" name="dni_control" required placeholder ="DNI"><br>
-		<label for="date">Fecha Nacimiento</label>
+		<caption><center><h4>Registrarse</h4></caption><br>
+		<input class="input" type="email" name="email_control" required autofocus placeholder ="Dirección de correo electrónico *"><br>
+		<input class="input" type="text" name="name_control" required placeholder ="Nombre *"><br>
+		<input class="input" type="text" name="surname_control" required placeholder ="Apellidos *"><br>
+		<input class="input" type="text" name="dni_control" required placeholder ="DNI *"><br>
+		<label for="date">Fecha Nacimiento *</label>
 		<input class="input" type="date" name="birthdate_control" required placeholder ="Fecha Nacimiento"><br>
-		<input class="input" type="text" name="city_control" required placeholder ="Localidad"><br>
-		<input class="input" type="number" name="tlf_control" required placeholder ="Teléfono"><br>
-		<label for="date">Sexo</label><br>
-		<select name="sexo_control">
+		<input class="input" type="text" name="city_control" required placeholder ="Localidad *"><br>
+		<input class="input" type="number" name="tlf_control" placeholder ="Teléfono (Opcional)"><br>
+		<label for="idSex">Sexo</label><br>
+		<select id="idSex" name="sexo_control">
   			<option value="1">Otro</option> 
    			<option value="2">Mujer</option> 
    			<option value="3">Hombre</option>
 		</select><br>
-		<input class="input" type="text" name="nick_control" required placeholder ="Nickname "><br>
-		<input class="input" type="password" name="pass_control" minlength="6" required placeholder ="Contraseña "><br>
-		<input type ="submit" value="Registrarse">			
+		<input class="input" type="text" name="nick_control" required placeholder ="Nickname *"><br>
+		<input class="input" type="password" name="pass_control" minlength="6" required placeholder ="Contraseña *"><br>
+		<input type ="submit" value="Registrarse"></center>
 	</form>
 	<footer>
 		<div class= "container-all">
@@ -61,5 +72,9 @@
 	<div class = "container-footer">
 		©2020 The Alopecia College | En un lugar llamado mundo, 20 02004 NUESTRA CASA (SPAIN) | <a href="correo">alopecia.college@gmail.com</a>
 	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>	
 </html>	
