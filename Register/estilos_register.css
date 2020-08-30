@@ -1,9 +1,9 @@
-*{	
-	padding: 0;
-	margin: 0;
-			ont-family: 'Russo One', sans-serif;
+*{
+	margin:0px;
+	padding: 0px;
 	font-family: 'Alata', sans-serif;
-	box-sizing: border-box;
+	box-sizing: border-box;;
+	font-family: sans-serif;
 }
 
 body {background: #F4F6F7;}
