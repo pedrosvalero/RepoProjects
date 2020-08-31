@@ -91,111 +91,6 @@ form input[type="submit"]:hover, form input[type="reset"]:hover{
 	border-radius: 5px;
 }
 
-footer{
-	width: 100%;
-	background: #5D6D7E;
-	color:white;
-	bottom:0;
-}
-
-.container-all{
-	width: 100%;
-	max-width:1200px; 
-	margin: auto;
-	padding:18px;
-}
-
-.container-body{
-	display: flex;
-	justify-content: space-between;
-}
-
-.colum1{
-	width: 100%;
-	max-width: 200px;
-	line-height: 40px;
-
-}
-
-.colum1 h1{
-	font-size: 16px;
-}
-
-.colum1 a{
-	text-decoration: none;
-	font-size: 12px;
-	color: #C7C7C7;
-}
-
-.colum2{
-	max-width:400px;
-
-}
-
-.colum2 h1{
-	font-size: 16px;
-	text-align: center;
-}
-
-.row{
-	margin-top: 18px;
-}
-
-.row img{
-	width: 50px;
-	margin-left: 25px;
-}
-
-.colum3{
-	max-width: 400px;
-	padding-left: 50px;
-}
-
-.colum3 h1{
-	font-size: 16px;
-	padding-bottom: 5px;
-}
-
-.row2{
-	font-size:12px;
-	padding-right: 70px;
-	padding-bottom: 5px;
-	margin-top: 5px;
-	color: #C7C7C7;
-}
-
-.row2 a{
-	text-decoration: none;
-	color: #C7C7C7;
-	max-width: 150px;
-}
-
-.row2 label{
-	margin-left: 8px;
-}
-
-.container-footer{
-	width:100%;
-	background: black;
-}
-
-.footer{
-	max-width: 1200px;
-	margin:auto;
-	display: flex;
-	justify-content: space-between;
-	padding:5px;
-
-}
-.copyright{
-	color: #C7C7C7;
-	margin: auto;
-}
-
-.copyright a{
-	text-decoration: none;
-	color: #C7C7C7;
-}
 
 .appWhatsapp{
 	position:fixed;
@@ -210,15 +105,7 @@ footer{
 	height: auto;
 }
 
-@media screen and(max-width: 1100px){
-	.container-body{
-		flex-wrap: wrap;
-	}
-}
+#redes img{
+	margin-left: 5px; 
 
-@media screen and(max-width: 715px){	
-	.colum2,
-	.colum3{
-		margin-top: 40px;
-	}
 }
