@@ -30,25 +30,120 @@
 
 	<div class="containerbody">
 		<form action = "https://hjava.herokuapp.com/registro.jsp" method = "POST" accept-charset="ISO-8859-1">
-			<caption><center><h4>Registrarse</h4></caption><br>
-			<input class="input" type="email" name="email_control" required autofocus placeholder ="Dirección de correo electrónico"><br>
-			<input class="input" type="text" name="name_control" required placeholder ="Nombre"><br>
-			<input class="input" type="text" name="surname_control" required placeholder ="Apellidos"><br>
-			<input class="input" type="text" name="dni_control" required placeholder ="DNI"><br>
-			<input class="input" type="date" name="birthdate_control" required placeholder ="Fecha Nacimiento"><br>
-			<input class="input" type="text" name="city_control" required placeholder ="Localidad"><br>
-			<input class="input" type="tel" name="tlf_control" maxlength="9"  placeholder ="Teléfono"><br>
+			<center><caption><h4>Registrarse</h4></caption>
+
+		<div class="row" id="apartados">
+          	<div class="form-group col-md-6">
+          		<i class="fas fa-signature"></i>
+            	<input class="input" type="text" name="name_control" required autofocus placeholder ="Nombre"><br>
+          	</div>
+        	<div class="form-group col-md-6">
+          		<i class="fas fa-signature"></i>
+           		<input class="input" type="text" name="surname_control" required placeholder ="Apellidos"><br>
+          	</div>
+      	</div>
+
+        <div class="row" id="apartados">
+            <div class="form-group col-md-6">
+             	<i class="fas fa-id-card"></i>
+            	<input class="input" type="text" name="dni_control" required placeholder ="DNI"><br>
+            </div>
+            <div class="form-group col-md-6">
+            	<i class="fas fa-birthday-cake"></i> 
+            	<input class="input" type="date" name="birthdate_control" required placeholder ="Fecha Nacimiento"><br>
+            </div>
+        </div>
+
+		<div class="form-group">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+			<input class="input" id="idMail" type="email" name="email_control" 
+			required placeholder ="Dirección de correo electrónico"><br>	
+		</div>
+
+		<div class="row" id="apartados">
+			<div class="form-group col-md-6">
+        	    <i class="fas fa-user"></i>
+				<input class="input" type="text" name="nick_control" required placeholder ="Nickname"><br>
+            </div>
+            <div class="form-group col-md-6">
+            	<i class="fas fa-key"></i>
+				<input class="input" type="password" name="pass_control" minlength="6" required placeholder ="Contraseña"><br>
+            </div>
+            <div class="form-group col-md-4">
+           		<i class="fas fa-city"></i>
+				<select id="idLocalidad">
+					<option hidden>Localidad...</option>
+					<option>Álava</option>
+					<option>Albacete</option>
+					<option>Alicante</option>
+					<option>Almería</option>
+					<option>Asturias</option>
+					<option>Ávila</option>
+					<option>Badajoz</option>
+					<option>Barcelona</option>
+					<option>Burgos</option>
+					<option>Cáceres</option>
+					<option>Cádiz</option>
+					<option>Cantabria</option>
+					<option>Castellón</option>
+					<option>Ciudad Real</option>
+					<option>Córdoba</option>
+					<option>La Coruña</option>
+					<option>Cuenca</option>
+					<option>Gerona</option>
+					<option>Granada</option>
+					<option>Guadalajara</option>
+					<option>Guipúzcoa</option>
+					<option>Huelva</option>
+					<option>Huesca</option>
+					<option>Islas Baleares</option>
+					<option>Jaén</option>
+					<option>León</option>
+					<option>Lérida</option>
+					<option>Lugo</option>
+					<option>Madrid</option>
+					<option>Málaga</option>
+					<option>Murcia</option>
+					<option>Navarra</option>
+					<option>Ourense</option>
+					<option>Palencia</option>
+					<option>Las Palmas</option>
+					<option>Pontevedra</option>
+					<option>La Rioja</option>
+					<option>Salamanca</option>
+					<option>Segovia</option>
+					<option>Sevilla</option>
+					<option>Soria</option>
+					<option>Tarragona</option>
+					<option>Santa Cruz de Tenerife</option>
+					<option>Teruel</option>
+					<option>Toledo</option>
+					<option>Valencia</option>
+					<option>Valladolid</option>
+					<option>Vizcaya</option>
+					<option>Zamora</option>
+					<option>Zaragoza</option>
+				</select>
+            </div>
+            <div class="form-group col-md-4">
+            	<i class="fas fa-mobile-alt" aria-hidden="true"></i>
+				<input class="input" type="tel" name="tlf_control" maxlength="9"  placeholder ="Teléfono"><br>
+            </div>
+            <div class="form-group col-md-4">
+            <i class="fas fa-neuter"></i>
 			<select id="idSex" name="sexo_control">
 	  			<option value="0" hidden>Sexo ...</option>
 	  			<option value="1">Hombre</option>
 	   			<option value="2">Mujer</option>
 	   			<option value="3">Otro</option>
 			</select><br>
-			<input class="input" type="text" name="nick_control" required placeholder ="Nickname"><br>
-			<input class="input" type="password" name="pass_control" minlength="6" required placeholder ="Contraseña"><br>
-			<input type ="submit" value="Registrarse"> <input type ="reset" value="Borrar Todo"></center>
+        </div>	
+        <input type ="submit" value="Registrarse"> <input type ="reset" value="Borrar Todo"> 
+        </center>       
 		</form>
+
 	</div>
+	
 
 	<a class="appWhatsapp" target="blanck" href="https://api.whatsapp.com/send?phone=34601032880&text=Buenas!&nbsp;Entra&nbsp;en&nbsp;nuestro&nbsp;grupo&nbsp;de&nbsp;calvos">
     <img src = "../img/whats.png" alt= "Whatsapp">
