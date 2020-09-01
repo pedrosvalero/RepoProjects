@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="estilos_register.css">
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -17,6 +17,7 @@
 	<!-- Material Design Bootstrap -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 	</head>
+</head>
 <body>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
@@ -25,131 +26,75 @@
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
-		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-		    <ul class="navbar-nav mr-auto">
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+		  <ul class="navbar-nav mr-auto">
 		      <li class="nav-item">
 		        <a class="nav-link" href="../Login/html_login.html">Iniciar Sesión</a>
 		      </li>
 		    </ul>
-		    <h4>Registro</h4>
-		  </div>
 		</nav>
 	</header>
 
 	<div class="containerbody">
 		<form action = "https://hjava.herokuapp.com/registro.jsp" method = "POST" accept-charset="ISO-8859-1">
-			<center><caption><h4>Registrarse</h4></caption>
+			<center><caption><h4 id="registrarse">Registrarse</h4></caption>
 
-		<div class="row" id="apartados">
-          	<div class="form-group col-md-6">
-          		<i class="fas fa-signature"></i>
-            	<input class="input" type="text" name="name_control" required autofocus placeholder ="Nombre"><br>
-          	</div>
-        	<div class="form-group col-md-6">
-          		<i class="fas fa-signature"></i>
-           		<input class="input" type="text" name="surname_control" required placeholder ="Apellidos"><br>
-          	</div>
-      	</div>
+			<div class="row" id="apartados">
+	          	<div class="form-group col-md-6">
+	          		<i class="fas fa-signature"></i><input class="input" type="text" name="name_control" title="Nombre" required autofocus placeholder ="Nombre">
+	          	</div>
+	        	<div class="form-group col-md-6">
+	          		<i class="fas fa-signature"></i><input class="input" type="text" name="surname_control" title="Segundo nombre" required placeholder ="Apellidos">
+	          	</div>
+	      	</div>
 
-        <div class="row" id="apartados">
-            <div class="form-group col-md-6">
-             	<i class="fas fa-id-card"></i>
-            	<input class="input" type="text" name="dni_control" required placeholder ="DNI"><br>
-            </div>
-            <div class="form-group col-md-6">
-            	<i class="fas fa-birthday-cake"></i> 
-            	<input class="input" type="date" name="birthdate_control" required placeholder ="Fecha Nacimiento"><br>
-            </div>
-        </div>
+	        <div class="row" id="apartados">
+	            <div class="form-group col-md-6">
+	             	<i class="fas fa-id-card"></i><input class="input" type="text" name="dni_control" maxlength="9" title="Número de Documento Identidad" required placeholder ="DNI">
+	            </div>
+	            <div class="form-group col-md-6">
+	            	<i class="fas fa-birthday-cake"></i><input class="input" type="date" name="birthdate_control" title="Fecha de nacimiento" required placeholder ="Fecha Nacimiento">
+	            </div>
+	        </div>
 
-		<div class="form-group">
-            <i class="fas fa-envelope" aria-hidden="true"></i>
-			<input class="input" id="idMail" type="email" name="email_control" 
-			required placeholder ="Dirección de correo electrónico"><br>	
-		</div>
+			<div class="form-group col-md-12">
+	            <i class="fas fa-envelope" aria-hidden="true"></i><input class="input" id="idMail" type="email" name="email_control" 
+				required placeholder="Email" title="Dirección de correo electrónico">
+			</div>
 
-		<div class="row" id="apartados">
-			<div class="form-group col-md-6">
-        	    <i class="fas fa-user"></i>
-				<input class="input" type="text" name="nick_control" required placeholder ="Nickname"><br>
-            </div>
-            <div class="form-group col-md-6">
-            	<i class="fas fa-key"></i>
-				<input class="input" type="password" name="pass_control" minlength="6" required placeholder ="Contraseña"><br>
-            </div>
-            <div class="form-group col-md-4">
-           		<i class="fas fa-city"></i>
-				<select id="idLocalidad">
-					<option hidden>Localidad...</option>
-					<option>Álava</option>
-					<option>Albacete</option>
-					<option>Alicante</option>
-					<option>Almería</option>
-					<option>Asturias</option>
-					<option>Ávila</option>
-					<option>Badajoz</option>
-					<option>Barcelona</option>
-					<option>Burgos</option>
-					<option>Cáceres</option>
-					<option>Cádiz</option>
-					<option>Cantabria</option>
-					<option>Castellón</option>
-					<option>Ciudad Real</option>
-					<option>Córdoba</option>
-					<option>La Coruña</option>
-					<option>Cuenca</option>
-					<option>Gerona</option>
-					<option>Granada</option>
-					<option>Guadalajara</option>
-					<option>Guipúzcoa</option>
-					<option>Huelva</option>
-					<option>Huesca</option>
-					<option>Islas Baleares</option>
-					<option>Jaén</option>
-					<option>León</option>
-					<option>Lérida</option>
-					<option>Lugo</option>
-					<option>Madrid</option>
-					<option>Málaga</option>
-					<option>Murcia</option>
-					<option>Navarra</option>
-					<option>Ourense</option>
-					<option>Palencia</option>
-					<option>Las Palmas</option>
-					<option>Pontevedra</option>
-					<option>La Rioja</option>
-					<option>Salamanca</option>
-					<option>Segovia</option>
-					<option>Sevilla</option>
-					<option>Soria</option>
-					<option>Tarragona</option>
-					<option>Santa Cruz de Tenerife</option>
-					<option>Teruel</option>
-					<option>Toledo</option>
-					<option>Valencia</option>
-					<option>Valladolid</option>
-					<option>Vizcaya</option>
-					<option>Zamora</option>
-					<option>Zaragoza</option>
-				</select>
-            </div>
-            <div class="form-group col-md-4">
-            	<i class="fas fa-mobile-alt" aria-hidden="true"></i>
-				<input class="input" type="tel" name="tlf_control" maxlength="9"  placeholder ="Teléfono"><br>
-            </div>
-            <div class="form-group col-md-4">
-            <i class="fas fa-neuter"></i>
-			<select id="idSex" name="sexo_control">
-	  			<option value="0" hidden>Sexo ...</option>
-	  			<option value="1">Hombre</option>
-	   			<option value="2">Mujer</option>
-	   			<option value="3">Otro</option>
-			</select><br>
-        </div>	
-        <input type ="submit" value="Registrarse"> <input type ="reset" value="Borrar Todo"> 
-        </center>       
-		</form>
-
+			<div class="row" id="apartados">
+				<div class="form-group col-md-6">
+	        	    <i class="fas fa-user"></i><input class="input" type="text" name="nick_control" title="Nombre de usuario" required placeholder ="Nickname">
+	            </div>
+	            <div class="form-group col-md-6">
+	            	<i class="fas fa-key"></i><input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña">
+	            </div>
+	            <div class="form-group col-md-4">
+	           		<i class="fas fa-city"></i><select id="idLocalidad" title="Provincia">
+						<option hidden>Localidad...</option>
+						<option>Álava</option><option>Albacete</option><option>Alicante</option><option>Almería</option><option>Asturias</option><option>Ávila</option><option>Badajoz</option><option>Barcelona</option><option>Burgos</option><option>Cáceres</option>
+						<option>Cádiz</option><option>Cantabria</option><option>Castellón</option><option>Ciudad Real</option><option>Córdoba</option><option>La Coruña</option><option>Cuenca</option><option>Gerona</option><option>Granada</option><option>Guadalajara</option><option>Guipúzcoa</option><option>Huelva</option><option>Huesca</option><option>Islas Baleares</option><option>Jaén</option><option>León</option><option>Lérida</option><option>Lugo</option><option>Madrid</option><option>Málaga</option><option>Murcia</option><option>Navarra</option><option>Ourense</option><option>Palencia</option><option>Las Palmas</option><option>Pontevedra</option><option>La Rioja</option><option>Salamanca</option><option>Segovia</option><option>Sevilla</option><option>Soria</option><option>Tarragona</option><option>Santa Cruz de Tenerife</option><option>Teruel</option><option>Toledo</option><option>Valencia</option><option>Valladolid</option><option>Vizcaya</option><option>Zamora</option><option>Zaragoza</option>
+					</select>
+	            </div>
+	            <div class="form-group col-md-4">
+	            	<i class="fas fa-mobile-alt" aria-hidden="true"></i><input class="input" type="tel" name="tlf_control" maxlength="9"  placeholder ="Teléfono" title="Número de contacto">
+	            </div>
+	            <div class="form-group col-md-4">
+	            <i class="fas fa-neuter"></i><select id="idSex" name="sexo_control" title="Tipo de humano">
+		  			<option value="0" hidden>Sexo ...</option>
+		  			<option value="1">Hombre</option><option value="2">Mujer</option><option value="3">Otro</option>
+				</select><br>
+				</div>
+	        </div>
+        	<div class="row" id="apartados">
+        		<div class="form-group col-md-6">
+        			<input id="Registrarse" type ="submit" value="Registrarse" title="Registrarse en la página">
+        		</div>
+        		<div class="form-group col-md-6">
+        			<input id="Registrarse" type ="reset" value="Borrar Todo" title="Empezar de cero">
+        		</div>
+        	</div>
+		</center></form>
 	</div>
 	
 

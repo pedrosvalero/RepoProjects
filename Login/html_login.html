@@ -23,13 +23,13 @@
 		    <img onclick="myFunction()" src="../img/signo.png" width="50px">
 		  </div>
 		</nav>
-		<p id="demo"></p>
+		<p id="about"></p>
 	</header>
 
 	<form action = "https://hjava.herokuapp.com/registro.jsp" method = "POST" accept-charset="ISO-8859-1">
 		<caption><center><h4>Inicio de sesión</h4></caption>
-		<input class="input" type="email" name="email_control" required autofocus placeholder ="Dirección de correo electrónico"><br>
-		<input class="input" type="password" name="pass_control" minlength="6" required placeholder ="Contraseña "><br>
+		<i class="fas fa-envelope" aria-hidden="true"></i> <input class="input" type="email" name="email_control" title="Email/Correo electrónico" required autofocus placeholder ="Dirección de correo electrónico"><br>
+		<i class="fas fa-key"></i> <input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña "><br>
 		<input type="checkbox" name="recuerdame" /> Recuérdame <br><br>
 		¿Aún no te has registrado? <a href="../Register/html_register.html" style="color: #F1C40F;"> Regístrate</a><br>
 		<input type ="submit" value="Entrar"></center>
@@ -86,6 +86,6 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script>function myFunction() {document.getElementById("demo").innerHTML = "Esto es lo que pasa al clickar en el About.";}</script>
+    <script>function myFunction() {document.getElementById("about").innerHTML = "Esto es lo que pasa al clickar en el About.";}</script>
 </body>	
 </html>	
