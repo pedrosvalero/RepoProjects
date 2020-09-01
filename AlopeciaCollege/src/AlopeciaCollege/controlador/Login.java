@@ -1,11 +1,17 @@
 package AlopeciaCollege.controlador;
 
 import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import proyectoweb.eoi.modelo.Empleado;
 
 /**
  * Servlet implementation class Login
@@ -27,15 +33,33 @@ public class Login extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String email = request.getParameter("email_control");
+		String pass = request.getParameter("pass_control");
+		
+		UsuarioDAO usao = new EmpleadoDAO();
+		String pagDest = "home.jsp";
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+	try {
+		Usuario usu = usao.login(email, pass);
+		
+		if (usu != null) {
+			pagDest = "datosdepartamento.jsp";
+			HttpSession session = request.getSession();
+			session.setAttribute("nomempleado", usu.getNomusu());
+			session.setAttribute("rol", usu.getRol());
+		} else {
+			String msgerr = "Parámetros de login incorrectos!";
+			request.setAttribute("msgerr", msgerr);
+		}
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
 	}
+	
+	RequestDispatcher dispatcher = request.getRequestDispatcher(pagDest);
+	dispatcher.forward(request, response);
+
+}
 
 }
