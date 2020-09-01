@@ -11,7 +11,7 @@ public class Conexion {
 	
 	private static Conexion instancia;
     private Connection connection;
-    private String url = "jdbc:mysql://db4free.net:3306/hdbcrud?serverTimezone=UTC";
+    private String url = "jdbc:mysql://db4free.net:3306/alopeciacollege?serverTimezone=UTC";
     private String username = "teamindecisos";
     private String password = "pepeviyuela69";
 
