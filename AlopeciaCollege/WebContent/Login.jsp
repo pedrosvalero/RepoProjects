@@ -33,7 +33,7 @@
 		<i class="fas fa-envelope" aria-hidden="true"></i> <input class="input" type="email" name="email_control" title="Email/Correo electrónico" required autofocus placeholder ="Dirección de correo electrónico"><br>
 		<i class="fas fa-key"></i> <input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña "><br>
 		<input type="checkbox" name="recuerdame" /> Recuérdame <br><br>
-		¿Aún no te has registrado? <a href="../Register/html_register.html" style="color: #F1C40F;"> Regístrate</a><br>
+		¿Aún no te has registrado? <a href="Registro.jsp" style="color: #F1C40F;"> Regístrate</a><br>
 		<input type ="submit" value="Entrar"></center>
 	</form>
 
