@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="css_registro_lara.css">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<!-- Google Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+</head>	
+	<body>
+
+		<!--Navbar -->
+		<nav id ="nav" class=" navbar navbar-expand-lg navbar-dark">
+			<a class="navbar-brand">
+    			<img src="logo.jpg" height="60" alt="mdb logo">
+  			</a>
+		  <a class="navbar-brand"><FONT FACE = "Pacifico" COLOR=#eaeaec size = 6>The Alopecia College</FONT> </a>
+		  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  			</button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+		    <ul class="navbar-nav ml-auto">
+		      <li class="nav-item dropdown">
+		        <a class="nav-link" href="../Login/html_login.html">
+		          <i class="fas fa-user"></i> Iniciar Sesión 
+		        </a>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
+		<!--/.Navbar -->
+  
+		<div class="containerbody" >
+		<form class="near-moon-gradient" action = "https://hjava.herokuapp.com/registro.jsp" method = "POST" accept-charset="ISO-8859-1">
+			<center><caption><h1>Registrarse</h1></caption></center>
+		<div class="form-group col-md-12">
+			<div class="form-group col-md-6" id="apartado1">
+        	    <i class="fas fa-user"></i>
+				<input class="input" type="text" name="nick_control" required autofocus placeholder ="Nickname"><br>
+            </div>
+        </div>
+		<div class="row" id="apartados">
+          	<div class="form-group col-md-6">
+          		<i class="fas fa-signature"></i>
+            	<input class="input" type="text" name="name_control" required  placeholder ="Nombre"><br>
+          	</div>
+        	<div class="form-group col-md-6">
+          		<i class="fas fa-signature"></i>
+           		<input class="input" type="text" name="surname_control" required placeholder ="Apellidos"><br>
+          	</div>
+      	</div>
+
+        <div class="row" id="apartados">
+            <div class="form-group col-md-6">
+             	<i class="fas fa-id-card"></i>
+            	<input class="input" type="text" name="dni_control" required placeholder ="DNI"><br>
+            </div>
+            <div id ="cumple" class="form-group col-md-6">
+            	<i class="fas fa-birthday-cake"></i> 
+            	<input class="input" type="date" name="birthdate_control" required placeholder ="Fecha Nacimiento"><br>
+            </div>
+        </div>
+
+		<div id = "correo" class="form-group col-md-12">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+			<input class="input" id="idMail" type="email" name="email_control" 
+			required placeholder ="Dirección de correo electrónico"><br>	
+		</div>
+
+        <div class="row" id="apartados">
+        	<div class="form-group col-md-6">
+           		<i class="fas fa-city"></i>
+				<select id="idLocalidad" class="input">
+					<option hidden>Localidad...</option>
+					<option>Álava</option>
+					<option>Albacete</option>
+					<option>Alicante</option>
+					<option>Almería</option>
+					<option>Asturias</option>
+					<option>Ávila</option>
+					<option>Badajoz</option>
+					<option>Barcelona</option>
+					<option>Burgos</option>
+					<option>Cáceres</option>
+					<option>Cádiz</option>
+					<option>Cantabria</option>
+					<option>Castellón</option>
+					<option>Ciudad Real</option>
+					<option>Córdoba</option>
+					<option>La Coruña</option>
+					<option>Cuenca</option>
+					<option>Gerona</option>
+					<option>Granada</option>
+					<option>Guadalajara</option>
+					<option>Guipúzcoa</option>
+					<option>Huelva</option>
+					<option>Huesca</option>
+					<option>Islas Baleares</option>
+					<option>Jaén</option>
+					<option>León</option>
+					<option>Lérida</option>
+					<option>Lugo</option>
+					<option>Madrid</option>
+					<option>Málaga</option>
+					<option>Murcia</option>
+					<option>Navarra</option>
+					<option>Ourense</option>
+					<option>Palencia</option>
+					<option>Las Palmas</option>
+					<option>Pontevedra</option>
+					<option>La Rioja</option>
+					<option>Salamanca</option>
+					<option>Segovia</option>
+					<option>Sevilla</option>
+					<option>Soria</option>
+					<option>Tarragona</option>
+					<option>Santa Cruz de Tenerife</option>
+					<option>Teruel</option>
+					<option>Toledo</option>
+					<option>Valencia</option>
+					<option>Valladolid</option>
+					<option>Vizcaya</option>
+					<option>Zamora</option>
+					<option>Zaragoza</option>
+				</select>	
+            </div>
+            <div class="form-group col-md-6">
+            	<i id="tel" class="fas fa-mobile-alt" aria-hidden="true"></i>
+				<input class="input" type="tel" name="tlf_control" maxlength="9"  placeholder ="Teléfono"><br>
+            </div>
+        </div>
+        <div class="row" id="apartados">
+			<div class="form-group col-md-6">
+            	<i id ="sexo" class="fas fa-neuter"></i>
+					<select class="input" id="idSex" name="sexo_control">
+		  			<option value="0" hidden>Sexo ...</option>
+		  			<option value="1">Hombre</option>
+		   			<option value="2">Mujer</option>
+		   			<option value="3">Otro</option>
+				</select><br>
+			</div>	
+            <div class="form-group col-md-6">
+            	<i class="fas fa-key"></i>
+				<input class="input" type="password" name="pass_control" minlength="6" required placeholder ="Contraseña"><br>
+            </div>
+        </div>  	
+        <input type ="submit" value="Registrarse"> <input type ="reset" value="Borrar Todo">       
+		</form>
+
+	</div>
+		<a class="appWhatsapp" target="blanck" href="https://api.whatsapp.com/send?phone=34601032880&text=Buenas!&nbsp;Entra&nbsp;en&nbsp;nuestro&nbsp;grupo&nbsp;de&nbsp;calvos">
+		<img src = "whats.png" alt= "Whatsapp" width="50">
+		</a>
+		<!-- Footer -->
+		<footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+		<!-- Footer Links -->
+		    <div class="container text-center text-md-left">
+
+		      <!-- Grid row -->
+		      <div class="row">
+
+		        <!-- Grid column -->
+		        <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+		          <!-- Links -->
+		          <h5 class="font-weight-bold text-uppercase mb-4">Política de Privacidad</h5>
+
+		          <ul class="list-unstyled">
+		            <li>
+		              <p>
+		                <a href="https://www.edp.com/es/terminos-y-condiciones-de-uso-y-politica-de-privacidad" target="_blank">Términos y Privacidad</a>
+		              </p>
+		            </li>
+		            <li>
+		              <p>
+		                <a href="http://www.interior.gob.es/politica-de-cookies" target="_blank">Cookies</a>
+		              </p>
+		            </li>
+		          </ul>
+
+		        </div>
+		        <!-- Grid column -->
+		        <!-- Grid column -->
+
+		        <hr class="clearfix w-100 d-md-none">
+
+		        <!-- Grid column -->
+		        <div id ="redes" class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+		          <!-- Social buttons -->
+		          <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+		          <!-- Facebook -->
+		          <a href="#"><img src ="face.png" width="45"></a>
+
+		          <!-- Twitter -->
+		          <a href="#"><img src ="twit.png" width="45"></a>
+		          
+		          <!-- Intagram +-->
+		         
+		          <a href="#"><img src ="insta.png" width="45"></a>
+
+
+		        </div>
+
+		        <hr class="clearfix w-100 d-md-none">
+
+		        <!-- Grid column -->
+		        <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+		          <!-- Contact details -->
+		          <h5 class="font-weight-bold text-uppercase mb-4">Contacto</h5>
+
+		          <ul class="list-unstyled">
+		            <li>
+		              <p>
+		                <i class="fas fa-home mr-3"></i><a href="https://goo.gl/maps/JPYZ3RfNxEk62jKZA" target="_blank"> País de Nunca Jamás</a></p>
+		            </li>
+		            <li>
+		              <p>
+		                <i class="fas fa-envelope mr-3"></i><a href="mailto:aplocia.collage@gmail.com" target="_blank"> alopecia.collage@gmail.com</a></p>
+		            </li>
+		            <li>
+		              <p>
+		                <i class="fas fa-phone mr-3"></i> + 00 666 666 666</p>
+		            </li>
+		          </ul>
+
+		        </div>
+
+		        <!-- Grid column -->
+
+		      </div>
+		      <!-- Grid row -->
+
+		    </div>
+		    <!-- Footer Links -->
+
+		    <!-- Copyright -->
+		    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:
+		      <a href="#"> paginaweb.com</a>
+		    </div>
+		    <!-- Copyright -->
+
+		</footer>
+		<!-- JQuery -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!-- Bootstrap tooltips -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+		<!-- MDB core JavaScript -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+	</body>	
+</head>
+</html>
