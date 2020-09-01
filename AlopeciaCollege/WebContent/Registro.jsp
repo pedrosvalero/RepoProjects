@@ -31,7 +31,7 @@
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
 		  <ul class="navbar-nav mr-auto">
 		      <li class="nav-item">
-		        <a class="nav-link" href="Login/html_login.html"><i class="fas fa-user"></i> Iniciar Sesión</a>
+		        <a class="nav-link" href="Login.jsp"><i class="fas fa-user"></i> Iniciar Sesión</a>
 		      </li>
 		    </ul>
 		</nav>
