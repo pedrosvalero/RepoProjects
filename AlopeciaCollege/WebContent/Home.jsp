@@ -62,7 +62,7 @@
 		        <div class="dropdown-menu dropdown-menu-right dropdown-default"
 		          aria-labelledby="navbarDropdownMenuLink-333">
 		          <a class="dropdown-item" href="#"><i class="fas fa-user" style="margin-right: 5px"></i>Perfil</a>
-				  <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt" style="margin-right: 5px"></i>Cerrar Sesión</a>
+				  <a class="dropdown-item" href="Logout"><i class="fas fa-sign-out-alt" style="margin-right: 5px"></i>Cerrar Sesión</a>
 		        </div>
 		      </li>
 		    </ul>
@@ -144,26 +144,6 @@
 		    <p class="card-text">                                                                                                        Crea un nuevo Usuario de la página. </p>
 		    <!-- Button -->
 		    <a href="#" class="btn btn-primary">Crear</a>
-		  </div>
-	    </div>
-		<!-- Card -->
-		<div class="card hoverable" id="cards">
-		  <!-- Card image -->
-		  <div class="view overlay">
-		    <img class="card-img-top" src="img/listausers.png"
-		      alt="Card image cap">
-		    <a href="#!">
-		      <div class="mask rgba-white-slight"></div>
-		    </a>
-		  </div>
-		  <!-- Card content -->
-		  <div class="card-body">
-		    <!-- Title -->
-		    <h4 class="card-title"><a>Lista de usuarios</a></h4>
-		    <!-- Text -->
-		    <p class="card-text">                                                                                                        Lista de usuarios en la página. </p>
-		    <!-- Button -->
-		    <a href="#" class="btn btn-primary">Acceder</a>
 		  </div>
 	    </div>
 		<div class="card hoverable" id="cards">		
