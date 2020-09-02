@@ -93,7 +93,7 @@
 	        </div>
         	<div class="row" id="apartados">
         		<div class="form-group col-md-6">
-        			<input id="Registrarse" type ="submit" value="Registrarse" title="Registrarse en la página"<a href="Home.jsp"</a>
+        			<input id="Registrarse" type ="submit" value="Registrarse" title="Registrarse en la página">
         		</div>
         		<div class="form-group col-md-6">
         			<input id="Registrarse" type ="reset" value="Borrar Todo" title="Empezar de cero">
