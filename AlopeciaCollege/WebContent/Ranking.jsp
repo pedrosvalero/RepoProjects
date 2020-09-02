@@ -22,7 +22,7 @@
 		<!--Navbar -->
 		<nav id ="nav" class=" navbar navbar-expand-lg navbar-dark bg-dark">
 			<a class="navbar-brand">
-    			<img src="img/logo.jpg" height="60" alt="mdb logo">
+    			<img src="img/TheAlopeciaCollegeMay.png" height="60" alt="mdb logo">
   			</a>
 		  <a class="navbar-brand"><FONT id="fuente" COLOR=#eaeaec size = 6>The Alopecia College</FONT> </a>
 		  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,17 +67,12 @@
 
 
 
-		<center><a class="the-most" target="_blank" >
-		  <img src="https://raw.githubusercontent.com/supahfunk/supah-codepen/master/themost-2016.png">
+		<center><a id="cabezera" class="the-most" >
+		  <img src="img/RankingCalvitiumIllustrisColor.png" width="200">
 		</a>
 		</center>
 		<!--Table-->
 		<table id="table" class="table table-striped w-auto">
-		  <thead>
-		    <tr class ="aqua-gradient">
-		      <th><i class="fas fa-trophy" style ="margin-right: 5px"></i>Ranking</th>
-		    </tr> 
-		  </thead>
 		  <!--Table head-->
 		  <thead >
 		    <tr class ="aqua-gradient">
