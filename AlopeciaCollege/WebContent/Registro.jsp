@@ -41,7 +41,7 @@
 	</header>
 
 	<div class="containerbody">
-		<form action = "Home.jsp" method = "POST" accept-charset="ISO-8859-1">
+		<form action = "Registro" method = "POST" accept-charset="ISO-8859-1">
 			<center><caption><h4 id="registrarse" style="font-weight: bold;">Registrarse</h4></caption>
 
 			<div class="row" id="apartados">
@@ -49,7 +49,7 @@
 	          		<i class="fas fa-signature"></i><input class="input" type="text" name="name_control" title="Nombre" required autofocus placeholder ="Nombre">
 	          	</div>
 	        	<div class="form-group col-md-6">
-	          		<i class="fas fa-signature"></i><input class="input" type="text" name="surname_control" title="Segundo nombre" required placeholder ="Apellidos">
+	          		<i class="fas fa-signature"></i><input class="input" type="text" name="surname_control" title="Apellidos" required placeholder ="Apellidos">
 	          	</div>
 	      	</div>
 
@@ -75,7 +75,7 @@
 	            	<i class="fas fa-key"></i><input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña">
 	            </div>
 	            <div class="form-group col-md-4">
-	           		<i class="fas fa-city"></i><select id="idLocalidad" title="Provincia">
+	           		<i class="fas fa-city"></i><select id="idLocalidad" title="Localidad" name="localidad_control">
 						<option hidden>Localidad...</option>
 						<option>Álava</option><option>Albacete</option><option>Alicante</option><option>Almería</option><option>Asturias</option><option>Ávila</option><option>Badajoz</option><option>Barcelona</option><option>Burgos</option><option>Cáceres</option>
 						<option>Cádiz</option><option>Cantabria</option><option>Castellón</option><option>Ciudad Real</option><option>Córdoba</option><option>La Coruña</option><option>Cuenca</option><option>Gerona</option><option>Granada</option><option>Guadalajara</option><option>Guipúzcoa</option><option>Huelva</option><option>Huesca</option><option>Islas Baleares</option><option>Jaén</option><option>León</option><option>Lérida</option><option>Lugo</option><option>Madrid</option><option>Málaga</option><option>Murcia</option><option>Navarra</option><option>Ourense</option><option>Palencia</option><option>Las Palmas</option><option>Pontevedra</option><option>La Rioja</option><option>Salamanca</option><option>Segovia</option><option>Sevilla</option><option>Soria</option><option>Tarragona</option><option>Santa Cruz de Tenerife</option><option>Teruel</option><option>Toledo</option><option>Valencia</option><option>Valladolid</option><option>Vizcaya</option><option>Zamora</option><option>Zaragoza</option>
@@ -87,7 +87,7 @@
 	            <div class="form-group col-md-4">
 	            <i class="fas fa-neuter"></i><select id="idSex" name="sexo_control" title="Tipo de humano">
 		  			<option value="0" hidden>Sexo ...</option>
-		  			<option value="1">Otro</option><option value="2">Mujer</option><option value="3">Hombre</option>
+		  			<option  value="O">Otro</option><option  value="F">Mujer</option><option  value="M">Hombre</option>
 				</select><br>
 				</div>
 	        </div>

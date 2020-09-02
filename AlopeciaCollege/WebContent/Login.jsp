@@ -38,7 +38,7 @@
 	</header>
   
   <div class="containerbody">
-	<form action = "Home.jsp" method = "POST" accept-charset="ISO-8859-1">
+	<form action = "Login" method = "POST" accept-charset="ISO-8859-1">
 		<caption><center><h4 style="font-weight: bold;">Inicio de sesión</h4></caption>
 		<i class="fas fa-envelope" aria-hidden="true"></i> <input class="input" type="email" name="email_control" title="Email/Correo electrónico" required autofocus placeholder ="Dirección de correo electrónico"><br>
 		<i class="fas fa-key"></i> <input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña "><br>

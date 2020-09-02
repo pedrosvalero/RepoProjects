@@ -58,6 +58,7 @@ public class Login extends HttpServlet {
 		} else {
 			String msgerr = "Parámetros de login incorrectos!";
 			request.setAttribute("msgerr", msgerr);
+			pagDest  = "Login.jsp";
 		}
 	} catch (SQLException e) {
 		// TODO Auto-generated catch block

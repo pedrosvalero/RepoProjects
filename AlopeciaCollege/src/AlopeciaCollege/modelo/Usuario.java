@@ -12,6 +12,7 @@ public class Usuario {
 	private String fecNac;
 	private String telefono;
 	private String localidad;
+	private int puntuacion;
 
 
 	public String getNomUsu() {
@@ -107,12 +108,22 @@ public class Usuario {
 		// TODO Auto-generated constructor stub
 	}
 
+	public int getPuntuacion() {
+		return puntuacion;
+	}
+
+	public void setPuntuacion(int puntuacion) {
+		this.puntuacion = puntuacion;
+	}
+
 	@Override
 	public String toString() {
 		return "Usuario [nomUsu=" + nomUsu + ", apellidosUsu=" + apellidosUsu + ", email=" + email + ", pass=" + pass
 				+ ", rol=" + rol + ", DNI=" + DNI + ", nick=" + nick + ", sexUsu=" + sexUsu + ", fecNac=" + fecNac
-				+ ", telefono=" + telefono + ", localidad=" + localidad + "]";
+				+ ", telefono=" + telefono + ", localidad=" + localidad + ", puntuacion=" + puntuacion + "]";
 	}
+	
+	
 
 
 }
