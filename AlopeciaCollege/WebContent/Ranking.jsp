@@ -20,7 +20,7 @@
 </head>
 <body>
 		<!--Navbar -->
-		<nav id ="nav" class=" navbar navbar-expand-lg navbar-dark">
+		<nav id ="nav" class=" navbar navbar-expand-lg navbar-dark bg-dark">
 			<a class="navbar-brand">
     			<img src="img/logo.jpg" height="60" alt="mdb logo">
   			</a>
@@ -31,14 +31,14 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent-555">
 			    <ul class="navbar-nav mr-auto">
 				    <li class="nav-item">
-			         	<a class="nav-link" href="#">Home</a>
+			         	<a class="nav-link" href="Home.jsp">Home</a>
 			        </li>
 			        <li class="nav-item dropdown">
 				        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-555" data-toggle="dropdown"
 				          aria-haspopup="true" aria-expanded="false">Opciones
 				        </a>
 				        <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-555">
-				          <a class="dropdown-item" href="#">Ranking</a>
+				          <a class="dropdown-item" href="Ranking.jsp">Ranking</a>
 				          <a class="dropdown-item" href="#">Exámenes</a>
 				        </div>
 				    </li>
@@ -54,8 +54,9 @@
 				        </a>
 				        <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
 				          aria-labelledby="navbarDropdownMenuLink-55">
-				          <a class="dropdown-item" href="#"><i class="fas fa-user"></i>Perfil</a>
-				          <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a>
+				          <a class="dropdown-item" href="#"><i class="fas fa-user cyan-text" style = "margin-right: 5px"></i>Perfil</a>
+				          <a class="dropdown-item" href="#"><i class="fas fa-cog fa-spin fa-1px cyan-text" style ="margin-right: 5px"></i>Ajustes</a>
+				          <a class="dropdown-item" href="Login.jsp"><i class="fas fa-sign-out-alt red-text" style ="margin-right: 5px"></i>Cerrar Sesión</a>
 				        </div>
 				      </li>
 				    </ul>
@@ -63,10 +64,6 @@
 
 		</nav>
 		<!--/.Navbar -->
-
-
-
-
 
 
 
@@ -78,7 +75,7 @@
 		<table id="table" class="table table-striped w-auto">
 		  <thead>
 		    <tr class ="aqua-gradient">
-		      <th><i class="fas fa-trophy"></i>Ranking</th>
+		      <th><i class="fas fa-trophy" style ="margin-right: 5px"></i>Ranking</th>
 		    </tr> 
 		  </thead>
 		  <!--Table head-->

@@ -12,10 +12,6 @@ table{
 }
 
 
-
-i{
-	margin-right: 5px;
-}
 .appWhatsapp{
 	position:fixed;
 	right: 26px;
@@ -29,9 +25,7 @@ i{
 	height: auto;
 }
 
-#nav{
-	background: black;
-}
+
 #fuente{
 	font-family: 'Pacifico';
 }
