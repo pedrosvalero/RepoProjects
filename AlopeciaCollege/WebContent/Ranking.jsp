@@ -22,7 +22,7 @@
 		<!--Navbar -->
 		<nav id ="nav" class=" navbar navbar-expand-lg navbar-dark bg-dark">
 			<a class="navbar-brand">
-    			<img src="img/TheAlopeciaCollegeMay.png" height="60" alt="mdb logo">
+    			<img src="img/TheAlopeciaCollegeMay.png" class="animated shake slower infinite" height="60" alt="mdb logo">
   			</a>
 		  <a class="navbar-brand"><FONT id="fuente" COLOR=#eaeaec size = 6>The Alopecia College</FONT> </a>
 		  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,8 +65,7 @@
 		</nav>
 		<!--/.Navbar -->
 
-
-
+	<a href="Ranking.jsp">ranking.com</a>
 		<center><a id="cabezera" class="the-most" >
 		  <img src="img/RankingCalvitiumIllustrisColor.png" width="200">
 		</a>
