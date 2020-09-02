@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import proyectoweb.eoi.modelo.Empleado;
+import AlopeciaCollege.modelo.Usuario;
+import AlopeciaCollege.modelo.UsuarioDAO;
+
 
 /**
  * Servlet implementation class Login
@@ -27,26 +29,31 @@ public class Login extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
+    
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String email = request.getParameter("email_control");
 		String pass = request.getParameter("pass_control");
 		
-		UsuarioDAO usao = new EmpleadoDAO();
+		UsuarioDAO usao = new UsuarioDAO();
 		String pagDest = "home.jsp";
-	}
+	
 
 	try {
 		Usuario usu = usao.login(email, pass);
 		
 		if (usu != null) {
-			pagDest = "datosdepartamento.jsp";
+			pagDest = "Home.jsp";
 			HttpSession session = request.getSession();
-			session.setAttribute("nomempleado", usu.getNomusu());
+			session.setAttribute("nomUsuario", usu.getNomUsu());
 			session.setAttribute("rol", usu.getRol());
 		} else {
 			String msgerr = "Parámetros de login incorrectos!";
