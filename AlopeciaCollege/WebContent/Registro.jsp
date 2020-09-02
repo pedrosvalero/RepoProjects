@@ -41,7 +41,7 @@
 	</header>
 
 	<div class="containerbody">
-		<form action = "https://hjava.herokuapp.com/registro.jsp" method = "POST" accept-charset="ISO-8859-1">
+		<form action = "Home.jsp" method = "POST" accept-charset="ISO-8859-1">
 			<center><caption><h4 id="registrarse" style="font-weight: bold;">Registrarse</h4></caption>
 
 			<div class="row" id="apartados">
@@ -93,7 +93,7 @@
 	        </div>
         	<div class="row" id="apartados">
         		<div class="form-group col-md-6">
-        			<input id="Registrarse" type ="submit" value="Registrarse" title="Registrarse en la página">
+        			<input id="Registrarse" type ="submit" value="Registrarse" title="Registrarse en la página"<a href="Home.jsp"</a>
         		</div>
         		<div class="form-group col-md-6">
         			<input id="Registrarse" type ="reset" value="Borrar Todo" title="Empezar de cero">
