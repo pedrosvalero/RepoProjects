@@ -108,4 +108,27 @@ public class UsuarioDAO {
 
 		return u;
 	}
+	
+	//RECOGER RANKING USUARIOS
+	public Usuario getRanking(Usuario u) throws SQLException {
+
+		String sql = "SELECT nick, puntuacion, rol FROM alopeciacollege.usuario order by puntuacion";
+		con = Conexion.getInstance().getConnection();
+		pst = con.prepareStatement(sql);
+		pst.setString(1, u.getNick());
+		pst.setInt(2, u.getPuntuacion());
+		pst.setString(3, u.getRol());
+		
+
+		rs = pst.executeQuery();
+
+		if (rs.next()) {
+			u = new Usuario();
+			u.setNick(rs.getString("nick"));
+			u.setPuntuacion(rs.getInt("puntuacion"));
+			u.setRol(rs.getString("rol"));	
+		}
+
+		return u;
+	}
 }

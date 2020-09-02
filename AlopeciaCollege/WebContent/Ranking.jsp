@@ -65,7 +65,7 @@
 		</nav>
 		<!--/.Navbar -->
 
-	<a href="Ranking.jsp">ranking.com</a>
+	<a href="Ranking"></a>
 		<center><a id="cabezera" class="the-most" >
 		  <img src="img/RankingCalvitiumIllustrisColor.png" width="200">
 		</a>
