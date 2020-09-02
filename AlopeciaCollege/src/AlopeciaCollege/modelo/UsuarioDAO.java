@@ -41,7 +41,7 @@ public class UsuarioDAO {
 	//QUERY ALTA USUARIO - REGISTER
 	public void altaUsuario(Usuario u) throws SQLException {
 
-		String sql = "INSERT INTO alopeciacollege.usuario (DNI, nomUsu, apellidosUsu, sexUsu, fecNac, localidad, telefono, email, pass, nick) VALUES (?,?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO alopeciacollege.usuario VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(sql);
 		pst.setString(1, u.getDNI());
@@ -52,8 +52,10 @@ public class UsuarioDAO {
 		pst.setString(6, u.getLocalidad());
 		pst.setString(7, u.getTelefono());
 		pst.setString(8, u.getEmail());
-		pst.setString(9, u.getPass());
-		pst.setString(10, u.getNick());
+		pst.setString(9, u.getRol());
+		pst.setString(10, u.getPass());
+		pst.setString(11, u.getNick());
+		pst.setInt(12, u.getPuntuacion());
 
 		pst.executeUpdate();
 
