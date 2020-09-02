@@ -6,8 +6,6 @@
 	<title>The Alopecia College - Home</title>
 	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/estilos_home.css">
 	<link href="carousel.css" rel="stylesheet">
@@ -22,44 +20,9 @@
 </head>
 <body>
 	<header>
-		<!--<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-		  <img src ="img/pepe1.jpg" width="50px">
-		  <a class="navbar-brand" href="#"><h2> The Alopecia College</h2></a>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
-		  </button>
-
-		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-		    <ul class="navbar-nav mr-auto">
-		      <li class="nav-item active">
-		        <a class="nav-link">Home<span class="sr-only">(current)</span></a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="#">Link</a>
-		      </li>
-		      <li class="nav-item dropdown">
-		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		          Dropdown
-		        </a>
-		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="#">Action</a>
-		          <a class="dropdown-item" href="#">Another action</a>
-		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="#">Something else here</a>
-		        </div>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-		      </li>
-		    </ul>
-		    <h4>Bienvenido Usuario</h4>
-		  </div>
-		</nav> -->
-		
-		
-		
 		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark default-color bg-dark">
-		  <a class="navbar-brand" href="#">Navbar</a>
+		  <img src ="img/pepe1.jpg" width="30px">
+		  <a class="navbar-brand" href="#">The Alopecia College</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 		    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
@@ -72,43 +35,34 @@
 		        </a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Features</a>
+		        <a class="nav-link" href="#">Ranking</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Pricing</a>
+		        <a class="nav-link" href="#">Examenes</a>
 		      </li>
 		      <li class="nav-item dropdown">
 		        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-		          aria-haspopup="true" aria-expanded="false">Dropdown
+		          aria-haspopup="true" aria-expanded="false">Usuarios
 		        </a>
+		        
+		        <!-- Solo admins -->
 		        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-		          <a class="dropdown-item" href="#">Action</a>
-		          <a class="dropdown-item" href="#">Another action</a>
-		          <a class="dropdown-item" href="#">Something else here</a>
+		          <a class="dropdown-item" href="#">Crear Usuario</a>
+		          <a class="dropdown-item" href="#">Lista Usuarios</a>
 		        </div>
+		        
 		      </li>
 		    </ul>
 		    <ul class="navbar-nav ml-auto nav-flex-icons">
-		      <li class="nav-item">
-		        <a class="nav-link waves-effect waves-light">
-		          <i class="fab fa-twitter"></i>
-		        </a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link waves-effect waves-light">
-		          <i class="fab fa-google-plus-g"></i>
-		        </a>
-		      </li>
 		      <li class="nav-item dropdown">
-		        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+		        <a class="nav-link" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
 		          aria-haspopup="true" aria-expanded="false">
-		          <i class="fas fa-user"></i>
+		          <img src="img/usuario.png" class="rounded-circle z-depth-0" alt="avatar image" height="30">
 		        </a>
 		        <div class="dropdown-menu dropdown-menu-right dropdown-default"
 		          aria-labelledby="navbarDropdownMenuLink-333">
-		          <a class="dropdown-item" href="#">Action</a>
-		          <a class="dropdown-item" href="#">Another action</a>
-		          <a class="dropdown-item" href="#">Something else here</a>
+		          <a class="dropdown-item" href="#">Editar Usuario</a>
+		          <a class="dropdown-item" href="#">Desconectarse</a>
 		        </div>
 		      </li>
 		    </ul>
@@ -122,8 +76,9 @@
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 </form> 
 -->
-	<div class="containerbody">
-		  <center><div id="myCarousel" class="carousel slide" data-ride="carousel">
+	
+	<center>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		    <ol class="carousel-indicators">
 		      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 		      <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -144,7 +99,7 @@
 		        <div class="container">
 		          <div class="carousel-caption">
 		            <h1 style="font-size: 8mm; color: white;">LAS MEJORES BECAS</h1>
-		            <p style="font-size: 5mm; color: white;">¡Tenemos las mejores becas que pueden ofrecerte!</p>
+		            <p style="font-size: 5mm; color: white;">¡Tenemos las mejores becas que te pueden ofrecer!</p>
 		            <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver</a></p>
 		          </div>
 		        </div>
@@ -168,37 +123,69 @@
 		      <span class="carousel-control-next-icon" aria-hidden="true"></span>
 		      <span class="sr-only">Next</span>
 		    </a>
-		  </div></center>
+		</div></center>
 
-		<center><form action="../Login/html_login.html">
-			<input type="submit" value="Crear Examen"> <input type="submit" value="Crear Usuario"> <input type="submit" value="Ranking">
-		</form></center>
-		
-		
+	<center>
 		<!-- Card -->
-		<div class="card" id="cards">
-		
+		<div class="card hoverable" id="cards">
 		  <!-- Card image -->
-		  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap">
-		
+		  <div class="view overlay">
+		    <img class="card-img-top" src="img/user.jpg"
+		      alt="Card image cap">
+		    <a href="#!">
+		      <div class="mask rgba-white-slight"></div>
+		    </a>
+		  </div>
 		  <!-- Card content -->
 		  <div class="card-body">
-		
 		    <!-- Title -->
-		    <h4 class="card-title"><a>Card title</a></h4>
+		    <h4 class="card-title"><a>Crear usuario</a></h4>
 		    <!-- Text -->
-		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-		      content.</p>
+		    <p class="card-text">                                                                                                        Crea un nuevo Usuario de la página. </p>
 		    <!-- Button -->
-		    <a href="#" class="btn btn-primary">Button</a>
-		
+		    <a href="#" class="btn btn-primary">Crear</a>
 		  </div>
-		
+	    </div>
+		<!-- Card -->
+		<div class="card hoverable" id="cards">
+		  <!-- Card image -->
+		  <div class="view overlay">
+		    <img class="card-img-top" src="img/listausers.png"
+		      alt="Card image cap">
+		    <a href="#!">
+		      <div class="mask rgba-white-slight"></div>
+		    </a>
+		  </div>
+		  <!-- Card content -->
+		  <div class="card-body">
+		    <!-- Title -->
+		    <h4 class="card-title"><a>Lista de usuarios</a></h4>
+		    <!-- Text -->
+		    <p class="card-text">                                                                                                        Lista de usuarios en la página. </p>
+		    <!-- Button -->
+		    <a href="#" class="btn btn-primary">Acceder</a>
+		  </div>
+	    </div>
+		<div class="card hoverable" id="cards">		
+		  <!-- Card image -->
+		  <div class="view overlay">
+		    <img class="card-img-top" src="img/examen1.png"
+		      alt="Card image cap">
+		    <a href="#!">
+		      <div class="mask rgba-white-slight"></div>
+		    </a>
+		  </div>
+		  <!-- Card content -->
+		  <div class="card-body">
+		    <!-- Title -->
+		    <h4 class="card-title">Crear examen</h4>
+		    <!-- Text -->
+		    <p class="card-text">Crea un examen con preguntas aleatorias y sube en el Ranking. ¡Qué calvario!</p>
+		    <!-- Button -->
+		    <a href="#" class="btn btn-primary">Crear</a>
+		  </div>
 		</div>
-		<!-- Card -->
-		
-		<!-- Card -->
-		<div class="card" id="cards">		
+		<div class="card hoverable" id="cards">
 		  <!-- Card image -->
 		  <div class="view overlay">
 		    <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
@@ -210,15 +197,15 @@
 		  <!-- Card content -->
 		  <div class="card-body">
 		    <!-- Title -->
-		    <h4 class="card-title">Card title</h4>
+		    <h4 class="card-title"><a>Ranking de usuarios</a></h4>
 		    <!-- Text -->
-		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		    <p class="card-text">Visita el ranking de usuarios calvos para saber la mejor nota del curso.</p>
 		    <!-- Button -->
-		    <a href="#" class="btn btn-primary">Button</a>
+		    <a href="#" class="btn btn-primary">Acceder</a>
 		  </div>
 		</div>
 		<!-- Card -->
-	</div>
+	</center>
 
 	<a class="appWhatsapp" target="blanck" href="https://api.whatsapp.com/send?phone=34601032880&text=Buenas!&nbsp;Entra&nbsp;en&nbsp;nuestro&nbsp;grupo&nbsp;de&nbsp;calvos">
     <img src = "img/whats.png" alt= "Whatsapp">
@@ -284,15 +271,13 @@
     </div>
     <!-- Footer Links -->
     <!-- Copyright -->
-    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:
-      <a href="#"> paginaweb.com</a>
+    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:<a href="#"> paginaweb.com</a>
     </div>
     <!-- Copyright -->
   </footer>
 
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <!-- Footer --><script src="https://kit.fontawesome.com/2ab430d3ec.js" crossorigin="anonymous"></script>
     <!-- JQuery -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

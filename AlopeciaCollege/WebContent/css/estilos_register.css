@@ -6,7 +6,7 @@
 }
 
 body {background: #F4F6F7;}
-h2{margin-left: 24px; }
+nav a[class="navbar-brand"]{margin-left: 10px;}
 header img { border-radius: 15%; }
 header h4 { color: white; }
 nav { border-bottom: inset grey 2px; }
@@ -16,8 +16,8 @@ nav { border-bottom: inset grey 2px; }
 form{
 	margin-left: 35%;
 	margin-right: 35%;
-	margin-top: 15vh;
-	margin-bottom: 4vh;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
 	width: auto;
 	padding: 30px;
 	background-color: #2E86C1;
@@ -91,6 +91,8 @@ form input[type="submit"]:hover, form input[type="reset"]:hover{
 	background: #ccc;
 }
 
+footer{ margin-top: 20px; bottom: 0; }
+
 .appWhatsapp{
 	position:fixed;
 	right: 26px;
@@ -104,6 +106,4 @@ form input[type="submit"]:hover, form input[type="reset"]:hover{
 	height: auto;
 }
 
-#redes img{
-	margin-left: 5px;
-}
+#redes img{ margin-left: 5px; }

@@ -5,22 +5,22 @@
 	box-sizing: border-box;
 }
 
-carousel-inner {font-family: 'Quicksand', sans-serif;}
-
-body {background: #F4F6F7;}
-h2{margin-left: 24px;}
+body{background: #F4F6F7;}
+nav a[class="navbar-brand"]{margin-left: 10px;}
 header img { border-radius: 15%; }
 header h4 { color: white; }
 header nav { border-bottom: inset grey 2px; }
-.carousel { margin-top: 100px; }
+.carousel { margin-top: 30px; margin-bottom: 20px; }
 #myCarousel{width: 70%; border-radius: 10px; border: 1px solid black;}
 
 form input[type="submit"] {background: orange; padding: 50px; margin-top: 5%; margin-bottom: 5%; border: 5px solid black; border-radius: 30px; transition: 0.3s;}
 form input[type="submit"]:hover {background: lightgrey;}
 
-.containerbody{min-height: calc(100vh - 100px - 300px);}
+#cards{ width: 300px; display: inline-block; margin: 25px; border-radius: 10px; jusfity-content: center; }
+#cards img{ border-radius: 10px; }
+#cards a{ border-radius: 20px; }
 
-#cards { padding: 30px;}
+footer{ margin-top: 20px; }
 
 .appWhatsapp{
 	position:fixed;
@@ -35,6 +35,4 @@ form input[type="submit"]:hover {background: lightgrey;}
 	height: auto;
 }
 
-#redes img{
-	margin-left: 5px;
-}
+#redes img{ margin-left: 5px; }

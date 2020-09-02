@@ -22,24 +22,27 @@
 </head>
 <body>
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-		  <img src ="img/pepe1.jpg" width="50px">
-		  <a class="navbar-brand" href="#"><h2> The Alopecia College</h2></a>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark default-color bg-dark" style="height: 56px;">
+		  <img src ="img/pepe1.jpg" width="30px">
+		  <a class="navbar-brand" href="#">The Alopecia College</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+		    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
-		  <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
-		  <ul class="navbar-nav mr-auto">
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+		    <ul class="navbar-nav mr-auto"></ul>
+		    <ul class="navbar-nav ml-auto nav-flex-icons">
 		      <li class="nav-item">
 		        <a class="nav-link" href="Login.jsp"><i class="fas fa-user"></i> Iniciar Sesión</a>
 		      </li>
 		    </ul>
+		  </div>
 		</nav>
 	</header>
 
 	<div class="containerbody">
 		<form action = "https://hjava.herokuapp.com/registro.jsp" method = "POST" accept-charset="ISO-8859-1">
-			<center><caption><h4 id="registrarse">Registrarse</h4></caption>
+			<center><caption><h4 id="registrarse" style="font-weight: bold;">Registrarse</h4></caption>
 
 			<div class="row" id="apartados">
 	          	<div class="form-group col-md-6">
@@ -98,7 +101,6 @@
         	</div>
 		</center></form>
 	</div>
-	
 
 	<a class="appWhatsapp" target="blanck" href="https://api.whatsapp.com/send?phone=34601032880&text=Buenas!&nbsp;Entra&nbsp;en&nbsp;nuestro&nbsp;grupo&nbsp;de&nbsp;calvos">
     <img src = "img/whats.png" alt= "Whatsapp">
@@ -106,19 +108,14 @@
 
   <!-- Footer -->
   <footer class="page-footer font-small mdb-color lighten-3 pt-4">
-
     <!-- Footer Links -->
     <div class="container text-center text-md-left">
-
       <!-- Grid row -->
       <div class="row">
-
         <!-- Grid column -->
         <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
-
           <!-- Links -->
           <h5 class="font-weight-bold text-uppercase mb-4">Política de Privacidad</h5>
-
           <ul class="list-unstyled">
             <li>
               <p>
@@ -131,75 +128,51 @@
               </p>
             </li>
           </ul>
-
         </div>
         <!-- Grid column -->
-        <!-- Grid column -->
-
+        <!-- Grid column -->        
         <hr class="clearfix w-100 d-md-none">
-
         <!-- Grid column -->
         <div id ="redes" class="col-md-2 col-lg-2 text-center mx-auto my-4">
-
           <!-- Social buttons -->
           <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
           <!-- Facebook -->
           <a href="#"><img src ="img/face.png" width="45"></a>
-
           <!-- Twitter -->
-          <a href="#"><img src ="img/twit.png" width="45"></a>
-          
-          <!-- Intagram +-->
-         
+          <a href="#"><img src ="img/twit.png" width="45"></a>          
+          <!-- Intagram +-->         
           <a href="#"><img src ="img/insta.png" width="45"></a>
-
-
         </div>
-
         <hr class="clearfix w-100 d-md-none">
-
         <!-- Grid column -->
         <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
-
           <!-- Contact details -->
           <h5 class="font-weight-bold text-uppercase mb-4">Contacto</h5>
-
           <ul class="list-unstyled">
             <li>
-              <p>
-                <i class="fas fa-home mr-3"></i><a href="https://goo.gl/maps/JPYZ3RfNxEk62jKZA" target="_blank"> País de Nunca Jamás</a></p>
+              <p><i class="fas fa-home mr-3"></i><a href="https://goo.gl/maps/JPYZ3RfNxEk62jKZA" target="_blank"> País de Nunca Jamás</a></p>
             </li>
             <li>
-              <p>
-                <i class="fas fa-envelope mr-3"></i><a href="mailto:aplocia.collage@gmail.com" target="_blank"> alopecia.collage@gmail.com</a></p>
+              <p><i class="fas fa-envelope mr-3"></i><a href="mailto:aplocia.collage@gmail.com" target="_blank"> alopecia.collage@gmail.com</a></p>
             </li>
             <li>
-              <p>
-                <i class="fas fa-phone mr-3"></i> + 00 666 666 666</p>
+              <p><i class="fas fa-phone mr-3"></i> + 00 666 666 666</p>
             </li>
           </ul>
-
         </div>
-
         <!-- Grid column -->
-
       </div>
       <!-- Grid row -->
-
     </div>
     <!-- Footer Links -->
-
     <!-- Copyright -->
-    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:
-      <a href="#"> paginaweb.com</a>
+    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:<a href="#"> paginaweb.com</a>
     </div>
     <!-- Copyright -->
-
   </footer>
 
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <!-- Footer --><script src="https://kit.fontawesome.com/2ab430d3ec.js" crossorigin="anonymous"></script>
     <!-- JQuery -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
