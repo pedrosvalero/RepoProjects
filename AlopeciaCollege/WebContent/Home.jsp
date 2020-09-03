@@ -5,6 +5,7 @@
 <head>
 	<title>The Alopecia College - Home</title>
 	<meta charset="UTF-8">
+		<title>Icono en el navegador</title> <link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="32x32">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
