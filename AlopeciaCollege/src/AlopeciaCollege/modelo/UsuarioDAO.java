@@ -61,6 +61,22 @@ public class UsuarioDAO {
 		pst.executeUpdate();
 
 	}
+	
+	//QUERY UPDATE USUARIO - EDIT
+	public void updateUsuario(Usuario u) throws SQLException {
+
+		String sql = "UPDATE alopeciacollege.usuario SET telefono = ?, email = ?, pass = ?, nick = ? where dni = ?";
+		con = Conexion.getInstance().getConnection();
+		pst = con.prepareStatement(sql);
+		pst.setString(1, u.getDNI());;
+		pst.setString(2, u.getTelefono());
+		pst.setString(3, u.getEmail());
+		pst.setString(4, u.getPass());
+		pst.setString(5, u.getNick());
+
+		pst.executeUpdate();
+
+	}
 
 	//QUERY ACTUALIZACION NICK Y ROL A PARTIR DE EMAIL - ESTO SERÄ DESDE MODO ADMIN
 	public void modificarUsuario(Usuario u) throws SQLException {
