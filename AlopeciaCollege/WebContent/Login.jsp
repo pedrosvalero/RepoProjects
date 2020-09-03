@@ -51,8 +51,8 @@
 	</form>
   </div>
 
-	<a class="appWhatsapp" target="blanck" href="https://api.whatsapp.com/send?phone=34601032880&text=Buenas!&nbsp;Entra&nbsp;en&nbsp;nuestro&nbsp;grupo&nbsp;de&nbsp;calvos">
-    <img src = "img/whats.png" alt= "Whatsapp">
+	<a class="appWhatsapp" title="WhatsApp" target="blanck" href="https://chat.whatsapp.com/J9FrHHS0MYq5M0xwYEJUfD">
+    <img src = "img/whats.png" id="whats" alt= "Whatsapp">
   	</a>
 
   <!-- Footer -->
@@ -86,11 +86,11 @@
           <!-- Social buttons -->
           <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
           <!-- Facebook -->
-          <a href="#"><img src ="img/face.png" width="45"></a>
+          <a href="#" title="Facebook"><img src ="img/face.png" id = "face" width="45"></a>
           <!-- Twitter -->
-          <a href="#"><img src ="img/twit.png" width="45"></a>          
+          <a href="#" title="Twitter"><img src ="img/twit.png" id = "twit" width="45"></a>          
           <!-- Intagram +-->         
-          <a href="#"><img src ="img/insta.png" width="45"></a>
+          <a href="#" title="Instagram"><img src ="img/insta.png" id = "insta" width="45"></a>
         </div>
         <hr class="clearfix w-100 d-md-none">
         <!-- Grid column -->
@@ -134,5 +134,84 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	<!-- MDB core JavaScript -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+	<script>
+		window.addEventListener('load', iniciarf, false);
+	
+		function iniciarf() {
+		  
+		  var face = document.getElementById('face');
+		  
+		  face.addEventListener('mouseover', colorf, false);
+		  face.addEventListener('mouseout', restaurarf, false);
+		}
+	
+		function restaurarf(){
+		  var face = document.getElementById('face').src = "img/face.png";
+		}
+	
+		function colorf() {
+		  var face = document.getElementById('face').src = "img/face_color.png";
+		}
+	</script>
+	<script>
+		window.addEventListener('load', iniciart, false);
+	
+		function iniciart() {
+		  
+		  var twit = document.getElementById('twit');
+		  
+		  twit.addEventListener('mouseover', colort, false);
+		  twit.addEventListener('mouseout', restaurart, false);
+		}
+	
+		function restaurart(){
+		  var twit = document.getElementById('twit').src = "img/twit.png";
+		}
+	
+		function colort() {
+		  var twit = document.getElementById('twit').src = "img/twit_color.png";
+		  
+		}
+	</script>
+	<script>
+		window.addEventListener('load', iniciari, false);
+	
+		function iniciari() {
+		  
+		  var insta = document.getElementById('insta');
+		  
+		  insta.addEventListener('mouseover', colori, false);
+		  insta.addEventListener('mouseout', restaurari, false);
+		}
+	
+		function restaurari(){
+		  var insta = document.getElementById('insta').src = "img/insta.png";
+		}
+	
+		function colori() {
+		  var insta = document.getElementById('insta').src = "img/insta_color.png";
+		  
+		}
+	</script>
+	<script>
+		window.addEventListener('load', iniciarw, false);
+	
+		function iniciarw() {
+		  
+		  var whats = document.getElementById('whats');
+		  
+		  whats.addEventListener('mouseover', colorw, false);
+		  whats.addEventListener('mouseout', restaurarw, false);
+		}
+	
+		function restaurarw(){
+		  var whats = document.getElementById('whats').src = "img/whats.png";
+		}
+	
+		function colorw() {
+		  var whats = document.getElementById('whats').src = "img/whats_color.png";
+		}
+	</script>
+
 </body>	
 </html>	
