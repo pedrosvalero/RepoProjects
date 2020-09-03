@@ -1,0 +1,43 @@
+*{
+	margin:0px;
+	padding: 0px;
+	font-family: 'Alata', sans-serif;
+	box-sizing: border-box;
+}
+
+
+table{
+	margin: auto;
+	font-family: 'Alata';
+}
+
+#color{
+	color:#00C851;
+
+}
+
+#borrar{
+	color:red;
+}
+#editar {
+	color:#33b5e5;
+}
+.appWhatsapp{
+	position:fixed;
+	right: 26px;
+	bottom: 100px;
+	width: 60px;
+	z-index: 1000;
+}
+
+.appWhatsapp img{
+	width: 100%;
+	height: auto;
+}
+
+#edit{
+	width: 15px;
+}
+#fuente{
+	font-family: 'Pacifico';
+}
