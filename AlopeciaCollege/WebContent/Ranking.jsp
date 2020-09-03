@@ -22,7 +22,7 @@
 <div id="bg" style="background-image: url('img/College.jpg');">
 		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
 		  <img src ="img/TheAlopeciaCollegeBLANCO3.png" width="45px">
-		  <a class="navbar-brand"><font id="navfont">The Alopecia College</font></a>
+		  <a class="navbar-brand"><font id="navstyle">The Alopecia College</font></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 		    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
@@ -72,7 +72,7 @@
 
 	<a href="Ranking"></a>
 		<center><a id="cabezera" class="the-most" >
-		  <img src="img/RankingCalvitiumIllustrisColor.png" width="200">
+		  <img id="rankingcalvitium" src="img/RankingCalvitiumIllustrisColor.png" width="200px">
 		</a>
 		</center>
 		<!--Table-->
@@ -94,70 +94,65 @@
 		      <th scope="row">1</th>
 		      <td>El Mejor Calvo</td>
 		      <td>400</td>
-		      <td><img src="img/bruce.jpg" width="40" class="rounded-circle z-depth-0"alt="avatar image">  Bruce Willis </td>
+		      <td><img src="img/bruce.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Bruce Willis</td>
 		    </tr>
 		    <tr class = "peach-gradient">
 		      <th scope="row">2</th>
 		      <td>Amadeo44</td>
 		      <td>300</td>
-		      <td><img src="img/jason.jpg" width="40"class="rounded-circle z-depth-0"alt="avatar image">Jason Statham</td>
+		      <td><img src="img/jason.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Jason Statham</td>
 		    </tr>
 		    <tr class="tempting-azure-gradient">
 		      <th scope="row">3</th>
 		      <td>Lolo1234</td>
 		      <td>200</td>
-		      <td><img src="img/vin.jpg" width="50"class="rounded-circle z-depth-0"alt="avatar image"> Vin Diesel</td>
-	
+		      <td><img src="img/vin.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Vin Diesel</td>
 		    </tr>
 		    <tr class = "peach-gradient">
 		      <th scope="row">4</th>
 		      <td>Tom Jerry</td>
 		      <td>150</td>
-		      <td><img src="img/pepe.jpg" width="60"class="rounded-circle z-depth-0"alt="avatar image">Pepe viyuela</td>
+		      <td><img src="img/pepe.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Pepe viyuela</td>
 		    </tr>
-	
 		    <tr class="tempting-azure-gradient">
 		      <th scope="row">5</th>
 		      <td>Popeye</td>
 		      <td>100</td>
-		      <td><img src="img/danny.png" width="60"class="rounded-circle z-depth-0"alt="avatar image">Danny DeVito</td>
+		      <td><img src="img/danny.png" width="40" class="rounded-circle z-depth-0" alt="avatar image">Danny DeVito</td>
 		    </tr>
 		    <tr class="peach-gradient">
 		      <th scope="row">1</th>
 		      <td>Super Nena</td>
 		      <td>400</td>
-		      <td><img src="img/porman.jpg" width="40"class="rounded-circle z-depth-0"alt="avatar image">  Natalie Porman </td>
+		      <td><img src="img/porman.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Natalie Porman </td>
 		    </tr>
 		    <tr class = "tempting-azure-gradient">
 		      <th scope="row">2</th>
 		      <td>Super Woman</td>
 		      <td>300</td>
-		      <td><img src="img/britney.jpg" width="40"class="rounded-circle z-depth-0"alt="avatar image">Britney Spears</td>
+		      <td><img src="img/britney.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Britney Spears</td>
 		    </tr>
 		    <tr class="peach-gradient">
 		      <th scope="row">3</th>
 		      <td>Lolo1234</td>
 		      <td>200</td>
-		      <td><img src="img/moore.jpg" width="50"class="rounded-circle z-depth-0"alt="avatar image"> Demi Moore</td>
-	
+		      <td><img src="img/moore.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Demi Moore</td>
 		    </tr>
 		    <tr class = "tempting-azure-gradient">
 		      <th scope="row">4</th>
 		      <td>Tom Jerry</td>
 		      <td>150</td>
-		      <td><img src="img/anne.jpg" width="60"class="rounded-circle z-depth-0"alt="avatar image">Anne Hathaway</td>
+		      <td><img src="img/anne.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Anne Hathaway</td>
 		    </tr>
-	
 		    <tr class="peach-gradient">
 		      <th scope="row">5</th>
 		      <td>Popeye</td>
 		      <td>100</td>
-		      <td><img src="img/Charlie.jpg" width="60"class="rounded-circle z-depth-0"alt="avatar image">Charlize Theron</td>
+		      <td><img src="img/Charlie.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Charlize Theron</td>
 		    </tr>
 		  </tbody>
 		  <!--Table body-->
-	
-	
+
 		</table>
 
 		<a class="appWhatsapp" target="blanck" href="https://api.whatsapp.com/send?phone=34601032880&text=Buenas!&nbsp;Entra&nbsp;en&nbsp;nuestro&nbsp;grupo&nbsp;de&nbsp;calvos">
