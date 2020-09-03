@@ -5,11 +5,14 @@
 	box-sizing: border-box;
 }
 
+#navfont{margin-left: 10px; font-family: 'Pacifico', sans-serif; color: #eaeaec; font-size: 5;}
+header nav { border-bottom: inset grey 2px; }
 
-table{
-	margin: auto;
-	font-family: 'Alata';
+#bg {
+  background-position: center;
+  background-size: cover;
 }
+
 
 #color{
 	color:#00C851;
@@ -37,7 +40,4 @@ table{
 
 #edit{
 	width: 15px;
-}
-#fuente{
-	font-family: 'Pacifico';
 }
