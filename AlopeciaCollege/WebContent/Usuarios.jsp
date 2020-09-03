@@ -154,8 +154,8 @@
 
     <div class="text-center">
     	
-      <a href="" class="text-succes" data-toggle="modal" data-target="#modalAdd1" ><i
-            id="color" class="fas fa-plus fa-2x" aria-hidden="true" ></i></a>
+      <a href="" class="text-succes" data-toggle="modal" data-target="#modalAdd1" ><img
+            id="color" src="img/plus.png" aria-hidden="true" style="width: 30px;"></a>
     </div>
 
     <div class="modal fade modalEditClass" id="modalEdit1" tabindex="-1" role="dialog" aria-hidden="true">
@@ -222,7 +222,7 @@
     </div>
 
     <div class="text-center buttonEditWrapper">
-    	<a href="#!" class="text-success"><i id="editar" style ="margin-left: 15px" class="fas fa-edit fa-2x" disabled></i></a></span>
+    	<a href="#!" class="text-success"><img id="editar" style ="margin-left: 15px; width: 30px;" src="img/edit.png"></a></span>
     </div>
 
     <div class="modal fade" id="modalDelete1" tabindex="-1" role="dialog" aria-labelledby="modalDelete1"
@@ -248,7 +248,7 @@
     </div>
 
     <div class="text-center">
-    	<a href="#!" class="text-success"><i id="borrar" class="fas fa-trash-alt fa-2x" style ="margin-left: 15px"></i></a></span>
+    	<a href="#!" class="text-success"><img id="borrar" src="img/delete.png" style ="margin-left: 15px; width: 30px;"></a></span>
     </div>
   </div>
 
