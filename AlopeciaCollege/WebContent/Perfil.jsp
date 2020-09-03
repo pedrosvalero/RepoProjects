@@ -6,6 +6,7 @@
 <meta charset="ISO-8859-1">
 <title> Perfil - <% out.print(session.getAttribute("nickUsu")); %> </title>
 	<meta charset="ISO-8859-1">
+	<title>Icono en el navegador</title> <link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="64x64">
 	<title>Usuarios - The Alopecia College</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
@@ -44,7 +45,7 @@
 		        <a class="nav-link" href="Ranking.jsp">Ranking</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Examenes</a>
+		        <a class="nav-link" href="Examen.jsp">Examenes</a>
 		      </li>
 		      <li class="nav-item dropdown">
 		        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
@@ -85,35 +86,89 @@
                     <span><% out.print(session.getAttribute("nickUsu")); %></span>
                     <strong>
                         <i class="fa fa-fw fa-star"></i>
-                        Bruce Willis
+                        Jason Statham
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-christopher-walken.jpg">
+                        <img class="img-responsive" src="img/jason2.jpg" width="500">
                     </div>
                     <div class="mc-description">
-                        He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
+                        Eres un apredíz de calvos, aún puedes mejorar más, sigue haciendo exámanes. Demomento tienes el rol Jason Statham
                     </div>
                 </div>
                 <a class="mc-btn-action">
                     <i class="fa fa-bars"></i>
                 </a>
-                <div class="mc-footer">
-                    <h4>
-                        Social
-                    </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
-                </div>
             </article>
         </div>
     </div>
 </section>
 
-<a href="https://github.com/marlenesco/material-cards" class="github-corner" aria-label="View source on Github" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#f44336; color:#ECEFF1; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>	
+
+
+<div class="container-sm">
+      <div class="modal-body mx-4">
+        <div class="md-form mb-5">
+          <i class="fas fa-signature prefix"></i>
+          <input type="text" id="form34" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form34">Nombre</label>
+        </div>
+        <div class="md-form mb-5">
+          <i class="fas fa-signature prefix"></i>
+          <input type="text" id="form29" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form29">Apellidos</label>
+        </div>
+        <div class="md-form mb-5">
+          <i class="fas fa-id-card prefix"></i>
+          <input type="email" id="form29" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form29">DNI</label>
+        </div>
+        <div class="md-form mb-5">
+          <i class="fas fa-birthday-cake prefix"></i>
+          <input type="date" id="inputDate1" class="form-control" placeholder="Select Date">
+          <label data-error="wrong" data-success="right" for="form29">Fecha de nacimiento</label>
+        </div>
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="text" id="form29" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form29">Correo electrónico</label>
+        </div>
+	    <div class="md-form mb-5">
+          <i class="fas fa-user prefix"></i>
+          <input type="email" id="form29" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form29">Nickname</label>
+        </div>
+        <div class="md-form mb-4">
+          <i class="fas fa-neuter prefix"></i>
+          <input type="email" id="form29" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form29">Sexo</label>
+        </div>
+        <div class="md-form mb-4">
+          <i class="fas fa-city prefix"></i>
+          <input type="email" id="form29" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form29">Localidad</label>
+        </div>
+        <div class="md-form mb-4">
+          <i class="fas fa-mobile-alt prefix" aria-hidden="true"></i>
+          <input type="email" id="form29" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form29">Teléfono</label>
+        </div>
+        <div class="md-form mb-4">
+          <i class="fas fa-key prefix"></i>
+          <input type="email" id="form29" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form29">Contraseña</label>
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm">Editar</a>
+</div>
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm">Borrar</a>
+</div>
+
 	
 	<!-- Whatsapp -->
 	<a class="appWhatsapp" title="WhatsApp" target="blanck" href="https://chat.whatsapp.com/J9FrHHS0MYq5M0xwYEJUfD">
@@ -274,6 +329,39 @@
 			function colorw() {
 			  var whats = document.getElementById('whats').src = "img/whats_color.png";
 			}
+		</script>
+		
+		<script>
+		$(function() {
+        $('.material-card > .mc-btn-action').click(function () {
+            var card = $(this).parent('.material-card');
+            var icon = $(this).children('i');
+            icon.addClass('fa-spin-fast');
+
+            if (card.hasClass('mc-active')) {
+                card.removeClass('mc-active');
+
+                window.setTimeout(function() {
+                    icon
+                        .removeClass('fa-arrow-left')
+                        .removeClass('fa-spin-fast')
+                        .addClass('fa-bars');
+
+                }, 800);
+            } else {
+                card.addClass('mc-active');
+
+                window.setTimeout(function() {
+                    icon
+                        .removeClass('fa-bars')
+                        .removeClass('fa-spin-fast')
+                        .addClass('fa-arrow-left');
+
+                }, 800);
+            }
+        });
+    });
+		
 		</script>
 
 </body>
