@@ -20,7 +20,7 @@ public class UsuarioDAO {
 	public Usuario login(String email, String pass) throws SQLException {
 		
 		Usuario u = null;
-		String query = "Select nomUsu, email, pass, rol FROM alopeciacollege.usuario WHERE email = ? AND pass = ?";
+		String query = "Select nomUsu, nick, email, pass, rol FROM alopeciacollege.usuario WHERE email = ? AND pass = ?";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(query);
 		pst.setString(1, email);
@@ -30,6 +30,7 @@ public class UsuarioDAO {
 		if(rs.next()) {
 			u = new Usuario();
 			u.setNomUsu(rs.getNString("nomUsu"));
+			u.setNick(rs.getNString("nick"));
 			u.setEmail(rs.getString("email"));
 			u.setPass(rs.getString("pass"));
 			u.setRol(rs.getString("rol"));

@@ -5,22 +5,30 @@
 	box-sizing: border-box;
 }
 
-body{background: #F4F6F7;}
-nav a[class="navbar-brand"]{margin-left: 10px;}
-header img { border-radius: 15%; }
-header h4 { color: white; }
+#bg {
+  background-position: center;
+  background-size: cover;
+}
+
+#navfont{margin-left: 10px; font-family: 'Pacifico', sans-serif; color: #eaeaec; font-size: 5;}
 header nav { border-bottom: inset grey 2px; }
 .carousel { margin-top: 30px; margin-bottom: 20px; }
-#myCarousel{width: 70%; border-radius: 10px; border: 1px solid black;}
-
-form input[type="submit"] {background: orange; padding: 50px; margin-top: 5%; margin-bottom: 5%; border: 5px solid black; border-radius: 30px; transition: 0.3s;}
-form input[type="submit"]:hover {background: lightgrey;}
+#myCarousel{width: 70%; border-radius: 11px; border: 1px solid black;}
+.carousel, .slide,
+.carousel .carousel-inner,
+.carousel .carousel-item,
+.carousel .carousel-item img,
+.carousel .carousel-control {
+  border-radius: $11;
+  overflow: hidden;
+}
 
 #cards{ width: 300px; display: inline-block; margin: 25px; border-radius: 10px; jusfity-content: center; }
-#cards img{ border-radius: 10px; }
+#cards img{ border-radius: 10px; padding: 1%; }
 #cards a{ border-radius: 20px; }
 
-footer{ margin-top: 20px; }
+footer{ position: relative; width: 100%; bottom: 0px; opacity: 0.9; }
+#redes img{ margin-left: 5px; }
 
 .appWhatsapp{
 	position:fixed;
@@ -34,5 +42,3 @@ footer{ margin-top: 20px; }
 	width: 100%;
 	height: auto;
 }
-
-#redes img{ margin-left: 5px; }

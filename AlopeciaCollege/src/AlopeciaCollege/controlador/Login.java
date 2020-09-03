@@ -54,6 +54,7 @@ public class Login extends HttpServlet {
 			pagDest = "Home.jsp";
 			HttpSession session = request.getSession();
 			session.setAttribute("nomUsuario", usu.getNomUsu());
+			session.setAttribute("nickUsu", usu.getNick());
 			session.setAttribute("rol", usu.getRol());
 		} else {
 			String msgerr = "Parámetros de login incorrectos!";

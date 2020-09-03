@@ -6,10 +6,10 @@
 	<title>The Alopecia College - Registrarse</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/estilos_register.css">
-	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 	<!-- Google Fonts -->
@@ -21,10 +21,11 @@
 	</head>
 </head>
 <body>
+<div id="bg" style="background-image: url('img/Lwp.jpg');">
 	<header>
 		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark default-color bg-dark" style="height: 56px;">
-		  <img src ="img/pepe1.jpg" width="30px">
-		  <a class="navbar-brand" href="#">The Alopecia College</a>
+		  <img src ="img/TheAlopeciaCollegeBLANCO3.png" width="45px">
+		  <a class="navbar-brand"><font id="navfont">The Alopecia College</font></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 		    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>

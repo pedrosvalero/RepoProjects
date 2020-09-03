@@ -6,9 +6,9 @@
 <meta charset="ISO-8859-1">
 <title>Ranking - The Alopecia College</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/css_ranking.css">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/estilos_ranking.css">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 	<!-- Google Fonts -->
@@ -19,51 +19,56 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 </head>
 <body>
-		<!--Navbar -->
-		<nav id ="nav" class=" navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand">
-    			<img src="img/TheAlopeciaCollegeMay.png" class="animated shake slower infinite" height="60" alt="mdb logo">
-  			</a>
-		  <a class="navbar-brand"><FONT id="fuente" COLOR=#eaeaec size = 6>The Alopecia College</FONT> </a>
-		  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
-    		<span class="navbar-toggler-icon"></span>
-  			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent-555">
-			    <ul class="navbar-nav mr-auto">
-				    <li class="nav-item">
-			         	<a class="nav-link" href="Home.jsp">Home</a>
-			        </li>
-			        <li class="nav-item dropdown">
-				        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-555" data-toggle="dropdown"
-				          aria-haspopup="true" aria-expanded="false">Opciones
-				        </a>
-				        <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-555">
-				          <a class="dropdown-item" href="Ranking.jsp">Ranking</a>
-				          <a class="dropdown-item" href="#">Exámenes</a>
-				        </div>
-				    </li>
-			    </ul>
-
-			    <ul class="navbar-nav ml-auto nav-flex-icons">
-
-			    	<li class="nav-item avatar dropdown">
-				        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
-				          aria-haspopup="true" aria-expanded="false">
-				          <img src="img/bruce.jpg"  width="30" class="rounded-circle z-depth-0"
-				            alt="avatar image">
-				        </a>
-				        <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
-				          aria-labelledby="navbarDropdownMenuLink-55">
-				          <a class="dropdown-item" href="#"><i class="fas fa-user cyan-text" style = "margin-right: 5px"></i>Perfil</a>
-				          <a class="dropdown-item" href="#"><i class="fas fa-cog fa-spin fa-1px cyan-text" style ="margin-right: 5px"></i>Ajustes</a>
-				          <a class="dropdown-item" href="Login.jsp"><i class="fas fa-sign-out-alt red-text" style ="margin-right: 5px"></i>Cerrar Sesión</a>
-				        </div>
-				      </li>
-				    </ul>
-			</div>      
-
+<div id="bg" style="background-image: url('img/College.jpg');">
+		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
+		  <img src ="img/TheAlopeciaCollegeBLANCO3.png" width="45px">
+		  <a class="navbar-brand"><font id="navfont">The Alopecia College</font></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+		    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item">
+		        <a class="nav-link" href="Home.jsp">Home</a>
+		      </li>
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">Ranking
+		        <span class="sr-only">(current)</span>
+		        </a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Examenes</a>
+		      </li>
+		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+		          aria-haspopup="true" aria-expanded="false">Usuarios
+		        </a>
+		        
+		        <!-- Solo admins -->
+		        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+		          <a class="dropdown-item" href="#"><i class="fas fa-user" style="margin-right: 9px"></i>Crear Usuario</a>
+		          <a class="dropdown-item" href="#"><i class="fas fa-bars" style="margin-right: 9px"></i>Lista Usuarios</a>
+		        </div>
+		        
+		      </li>
+		    </ul>
+		    <ul class="navbar-nav ml-auto nav-flex-icons">
+		      <li class="nav-item dropdown">
+		        <a class="nav-link" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+		          aria-haspopup="true" aria-expanded="false">
+		          <img src="img/usuario.png" class="rounded-circle z-depth-0" alt="avatar image" height="33" style="margin-right: 5px">
+		          	<% out.print(session.getAttribute("nickUsu")); %>
+		        </a>
+		        <div class="dropdown-menu dropdown-menu-right dropdown-default"
+		          aria-labelledby="navbarDropdownMenuLink-333">
+		          <a class="dropdown-item" href="#"><i class="fas fa-user cyan-text" style="margin-right: 9px"></i>Perfil</a>
+				  <a class="dropdown-item" href="Logout"><i class="fas fa-sign-out-alt red-text" style="margin-right: 9px"></i>Cerrar Sesión</a>
+		        </div>
+		      </li>
+		    </ul>
+		  </div>
 		</nav>
-		<!--/.Navbar -->
 
 	<a href="Ranking"></a>
 		<center><a id="cabezera" class="the-most" >

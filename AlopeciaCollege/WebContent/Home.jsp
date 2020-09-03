@@ -6,6 +6,7 @@
 	<title>The Alopecia College - Home</title>
 	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/estilos_home.css">
 	<link href="carousel.css" rel="stylesheet">
@@ -19,10 +20,11 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 </head>
 <body>
+<div id="bg" style="background-image: url('img/College.jpg');">
 	<header>
-		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark default-color bg-dark">
-		  <img src ="img/pepe1.jpg" width="30px">
-		  <a class="navbar-brand" href="#">The Alopecia College</a>
+		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
+		  <img src ="img/TheAlopeciaCollegeBLANCO3.png" width="45px">
+		  <a class="navbar-brand"><font id="navfont">The Alopecia College</font></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 		    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
@@ -35,7 +37,7 @@
 		        </a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Ranking</a>
+		        <a class="nav-link" href="Ranking.jsp">Ranking</a>
 		      </li>
 		      <li class="nav-item">
 		        <a class="nav-link" href="#">Examenes</a>
@@ -47,8 +49,8 @@
 		        
 		        <!-- Solo admins -->
 		        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-		          <a class="dropdown-item" href="#">Crear Usuario</a>
-		          <a class="dropdown-item" href="#">Lista Usuarios</a>
+		          <a class="dropdown-item" href="#"><i class="fas fa-user" style="margin-right: 9px"></i>Crear Usuario</a>
+		          <a class="dropdown-item" href="#"><i class="fas fa-bars" style="margin-right: 9px"></i>Lista Usuarios</a>
 		        </div>
 		        
 		      </li>
@@ -57,12 +59,13 @@
 		      <li class="nav-item dropdown">
 		        <a class="nav-link" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
 		          aria-haspopup="true" aria-expanded="false">
-		          <img src="img/usuario.png" class="rounded-circle z-depth-0" alt="avatar image" height="30">
+		          <img src="img/usuario.png" class="rounded-circle z-depth-0" alt="avatar image" height="33" style="margin-right: 5px">
+		          	<% out.print(session.getAttribute("nickUsu")); %>
 		        </a>
 		        <div class="dropdown-menu dropdown-menu-right dropdown-default"
 		          aria-labelledby="navbarDropdownMenuLink-333">
-		          <a class="dropdown-item" href="#"><i class="fas fa-user" style="margin-right: 5px"></i>Perfil</a>
-				  <a class="dropdown-item" href="Logout"><i class="fas fa-sign-out-alt" style="margin-right: 5px"></i>Cerrar Sesión</a>
+		          <a class="dropdown-item" href="#"><i class="fas fa-user cyan-text" style="margin-right: 9px"></i>Perfil</a>
+				  <a class="dropdown-item" href="Logout"><i class="fas fa-sign-out-alt red-text" style="margin-right: 9px"></i>Cerrar Sesión</a>
 		        </div>
 		      </li>
 		    </ul>
@@ -70,23 +73,16 @@
 		</nav>
 	</header>
 
-<!-- Para hacer un botón de búsqueda:
-<form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-</form> 
--->
-	
+	<!-- Carousel -->
 	<center>
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		    <ol class="carousel-indicators">
 		      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 		      <li data-target="#myCarousel" data-slide-to="1"></li>
-		      <li data-target="#myCarousel" data-slide-to="2"></li>
 		    </ol>
-		    <div class="carousel-inner">
+		    <div class="carousel-inner" role="listbox">
 		      <div class="carousel-item active">
-		        <center><img src="img/Banner1border.png" alt="Bienvenido" style="width:100%; height:100%; border-radius: 10px;"></center>
+		        <center><img src="img/Banner1.png" alt="Bienvenido" style="width:100%; height:100%; border-radius: 10px;"></center>
 		        <div class="container">
 		          <div class="carousel-caption">
 		            <h1 style="font-size: 8mm; -webkit-text-stroke: 1px white; color: black;">BIENVENIDO</h1>
@@ -95,22 +91,12 @@
 		        </div>
 		      </div>
 		      <div class="carousel-item">
-		        <img src="img/Banner2border.png" alt="Becas" style="width:100%;height:100%; border-radius: 10px;">
+		        <img src="img/Banner2.png" alt="Becas" style="width:100%;height:100%; border-radius: 10px;">
 		        <div class="container">
 		          <div class="carousel-caption">
 		            <h1 style="font-size: 8mm; color: white;">LAS MEJORES BECAS</h1>
 		            <p style="font-size: 5mm; color: white;">¡Tenemos las mejores becas que te pueden ofrecer!</p>
 		            <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver</a></p>
-		          </div>
-		        </div>
-		      </div>
-		      <div class="carousel-item">
-		        <img src="img/Banner3.png" alt="Banner3" style="width: 100%;height: 100%; border-radius: 10px;">
-		        <div class="container">
-		          <div class="carousel-caption">
-		            <h1>One more for good measure.</h1>
-		            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-		            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
 		          </div>
 		        </div>
 		      </div>
@@ -125,19 +111,19 @@
 		    </a>
 		</div></center>
 
+	<!-- Tarjetas -->
 	<center>
 		<!-- Card -->
 		<div class="card hoverable" id="cards">
 		  <!-- Card image -->
 		  <div class="view overlay">
-		    <img class="card-img-top" src="img/user.jpg"
-		      alt="Card image cap">
+		    <img class="card-img-top" src="img/user.jpg" alt="Card image cap">
 		    <a href="#!">
 		      <div class="mask rgba-white-slight"></div>
 		    </a>
 		  </div>
 		  <!-- Card content -->
-		  <div class="card-body">
+		  <div class="card-body" id="cardbody">
 		    <!-- Title -->
 		    <h4 class="card-title"><a>Crear usuario</a></h4>
 		    <!-- Text -->
@@ -149,14 +135,13 @@
 		<div class="card hoverable" id="cards">		
 		  <!-- Card image -->
 		  <div class="view overlay">
-		    <img class="card-img-top" src="img/examen1.png"
-		      alt="Card image cap">
+		    <img class="card-img-top" src="img/examen1.png" alt="Card image cap">
 		    <a href="#!">
 		      <div class="mask rgba-white-slight"></div>
 		    </a>
 		  </div>
 		  <!-- Card content -->
-		  <div class="card-body">
+		  <div class="card-body" id="cardbody">
 		    <!-- Title -->
 		    <h4 class="card-title">Crear examen</h4>
 		    <!-- Text -->
@@ -168,25 +153,25 @@
 		<div class="card hoverable" id="cards">
 		  <!-- Card image -->
 		  <div class="view overlay">
-		    <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-		      alt="Card image cap">
-		    <a href="#!">
+		    <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+		    <a href="Ranking.jsp">
 		      <div class="mask rgba-white-slight"></div>
 		    </a>
 		  </div>
 		  <!-- Card content -->
-		  <div class="card-body">
+		  <div class="card-body" id="cardbody">
 		    <!-- Title -->
 		    <h4 class="card-title"><a>Ranking de usuarios</a></h4>
 		    <!-- Text -->
 		    <p class="card-text">Visita el ranking de usuarios calvos para saber la mejor nota del curso.</p>
 		    <!-- Button -->
-		    <a href="#" class="btn btn-primary">Acceder</a>
+		    <a href="Ranking.jsp" class="btn btn-primary">Acceder</a>
 		  </div>
 		</div>
 		<!-- Card -->
 	</center>
 
+	<!-- Whatsapp -->
 	<a class="appWhatsapp" target="blanck" href="https://api.whatsapp.com/send?phone=34601032880&text=Buenas!&nbsp;Entra&nbsp;en&nbsp;nuestro&nbsp;grupo&nbsp;de&nbsp;calvos">
     <img src = "img/whats.png" alt= "Whatsapp">
   	</a>
@@ -255,8 +240,11 @@
     </div>
     <!-- Copyright -->
   </footer>
+  
+</div>
 
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <!-- Scripts -->
+  	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <!-- Footer --><script src="https://kit.fontawesome.com/2ab430d3ec.js" crossorigin="anonymous"></script>
     <!-- JQuery -->

@@ -5,10 +5,11 @@
 <head>
 	<title>The Alopecia College - Inicio de sesión</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
+	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/estilos_login.css">
-	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 	<!-- Google Fonts -->
@@ -19,10 +20,11 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 </head>
 <body>
+<div id="bg" style="background-image: url('img/Lwp.jpg');">
 	<header>
-		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark default-color bg-dark" style="height: 56px;">
-		  <img src ="img/pepe1.jpg" width="30px">
-		  <a class="navbar-brand" href="#">The Alopecia College</a>
+		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
+		  <img src ="img/TheAlopeciaCollegeBLANCO3.png" width="45px">
+		  <a class="navbar-brand"><font id="navfont">The Alopecia College</font></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 		    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
@@ -39,12 +41,13 @@
   
   <div class="containerbody">
 	<form action = "Login" method = "POST" accept-charset="ISO-8859-1">
-		<caption><center><h4 style="font-weight: bold;">Inicio de sesión</h4></caption>
+		<center><img src="img/TheAlopeciaCollegeMay.png" width="200px"><br><br>
 		<i class="fas fa-envelope" aria-hidden="true"></i> <input class="input" type="email" name="email_control" title="Email/Correo electrónico" required autofocus placeholder ="Dirección de correo electrónico"><br>
+		<span style="color: red"><%=(request.getAttribute("msgerr") == null) ? "" : request.getAttribute("msgerr") %></span><br>
 		<i class="fas fa-key"></i> <input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña "><br>
 		<input type="checkbox" name="recuerdame" /> Recuérdame <br><br>
-		¿Aún no te has registrado? <a href="Registro.jsp" style="color: #F1C40F;"> Regístrate</a><br>
-		<input type ="submit" value="Entrar"></center><span style="color: red"><%=(request.getAttribute("msgerr") == null) ? "" : request.getAttribute("msgerr") %></span>
+		¿Aún no te has registrado? <a href="Registro.jsp" style="color: #2E86C1;"> Regístrate</a><br>
+		<input type ="submit" value="Entrar"></center>
 	</form>
   </div>
 
@@ -53,7 +56,7 @@
   	</a>
 
   <!-- Footer -->
-  <footer class="page-footer font-small mdb-color lighten-3 pt-4">
+  <footer class="page-footer font-small mdb-color lighten-3 pt-4" style="color: lightgrey;">
     <!-- Footer Links -->
     <div class="container text-center text-md-left">
       <!-- Grid row -->
