@@ -5,6 +5,7 @@
 <head>
 	<title>The Alopecia College - Inicio de sesión</title>
 	<meta charset="UTF-8">
+	    <title>Icono en el navegador</title> <link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="32x32">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
