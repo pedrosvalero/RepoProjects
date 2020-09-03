@@ -7,5 +7,6 @@
     <welcome-file>Home.jsp</welcome-file>
     <welcome-file>Ranking.jsp</welcome-file>
     <welcome-file>Usuarios.jsp</welcome-file>
+	<welcome-file>Examen.jsp</welcome-file>
   </welcome-file-list>
 </web-app>
