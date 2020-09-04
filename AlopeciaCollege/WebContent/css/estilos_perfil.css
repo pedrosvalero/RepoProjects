@@ -39,9 +39,12 @@ footer{ position: relative; width: 100%; bottom: 0; opacity: 0.9; }
 }
 
 #rol{
-	margin:auto;
+	margin: auto;
 }
 
+#localidad{
+	padding:100px;
+}
 
 div.container-sm{width: 70%; height: 40%;}
 div.transbox {

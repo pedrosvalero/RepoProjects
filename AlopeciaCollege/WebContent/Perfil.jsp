@@ -97,43 +97,93 @@
     
 <!-- Apartados -->
 	<div class="col active-with-click"id="block">
-	<form action = "ActualizaPerfil" method = "POST" accept-charset="ISO-8859-1">
 		<div class="transbox" >
 	    <div class="modal-body mx-5">
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-envelope prefix"></i>
-	          <input type="email" name = "email" id="form29" class="form-control validate">
+	          <input type="email" id="form29" class="form-control validate">
 	          <label id="text" data-error="wrong" data-success="right" for="form29">Correo electrónico</label>
 	        </div>
 		    <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-user prefix"></i>
-	          <input  type="text"  name = "nick"  id="form29" class="form-control validate">
+	          <input  type="text" id="form29" class="form-control validate">
 	          <label id="text" data-error="wrong" data-success="right" for="form29">Nickname</label>
 	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-city prefix"></i>
-	          <input  type="text"  name = "localidad" id="form29" class="form-control validate">
-	          <label id="text" data-error="wrong" data-success="right" for="form29">Localidad</label>
+	          
+	          <select id =" localidad" class="custom-select browser-default">
+                <option value="" disabled selected>Localidad...</option>
+                <option value="1" >Álava</option>
+                <option value="2">Albacete</option>
+                <option value="3">Alicante</option>
+                <option value="5">Almería</option>
+                <option value="6">Asturias</option>
+                <option value="7">Ávila</option>
+                <option value="8">Badajoz</option>
+                <option value="9">Barcelona</option>
+                <option value="10">Burgos</option>
+                <option value="11">Cáceres</option>
+                <option value="12">Cádiz</option>
+                <option value="13">Cantabria</option>
+                <option value="14">Castellón</option>
+                <option value="15">Ciudad Real</option>
+                <option value="16">Córdoba</option>
+                <option value="17">A Coruña</option>
+                <option value="18">Cuenca</option>
+                <option value="19">Girona</option>
+                <option value="20">Granada</option>
+                <option value="21">Guadalajara</option>
+                <option value="22">Gipuzkoa</option>
+                <option value="23">Huelva</option>
+                <option value="24">Huesca</option>
+                <option value="25">Illes Balears</option>
+                <option value="26">Jaén</option>
+                <option value="27">León</option>
+                <option value="28">Lleida</option>
+                <option value="29">Lugo</option>
+                <option value="30">Madrid</option>
+                <option value="31">Málaga</option>
+                <option value="32">Murcia</option>
+                <option value="33">Navarra</option>
+                <option value="34">Ourense</option>
+                <option value="35">Palencia</option>
+                <option value="36">Las Palmas</option>
+                <option value="37">Pontevedra</option>
+                <option value="38">La Rioja</option>
+                <option value="39">Salamanca</option>
+                <option value="40">Segovia</option>
+                <option value="41">Sevilla</option>
+                <option value="42">Soria</option>
+                <option value="43">Tarragona</option>
+                <option value="44">Santa Cruz de Tenerife</option>
+                <option value="45">Teruel</option>
+                <option value="46">Toledo</option>
+                <option value="47">Valencia</option>
+                <option value="48">Valladolid</option>
+                <option value="49">Bizkaia</option>
+                <option value="50">Zamora</option>
+                <option value="50">Zaragoza</option>
+                
+            </select>
 	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-mobile-alt prefix" aria-hidden="true"></i>
-	          <input  type="tel"  name = "tlf"  id="form29" class="form-control validate">
+	          <input  type="tel" id="form29" class="form-control validate">
 	          <label id="text" data-error="wrong" data-success="right" for="form29">Teléfono</label>
 	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-key prefix"></i>
-	          <input  type="password" name = "pass" minlength="6" id="form29" class="form-control validate">
+	          <input  type="password" id="form29" class="form-control validate">
 	          <label id="text" data-error="wrong" data-success="right" for="form29">Contraseña</label>
 	        </div>
 	    </div>
 	 </div>
-	</form>
 	</div>
 </section>
 
 <div id="boton"class="text-center">
   <a href="" class="btn btn-default btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Editar</a>
-  <input id="ACtualizaPerfil" type ="submit" value="ActualizaPerfil">
 </div>
 <div id="boton" class="text-center">
   <a href="" class="btn btn-red btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Eliminar cuenta</a>
