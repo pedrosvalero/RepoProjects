@@ -51,13 +51,16 @@
 		<input type ="submit" value="Entrar"></center>
 	</form>
   </div>
+  
+  
 
-	<a class="appWhatsapp" title="WhatsApp" target="blanck" href="https://chat.whatsapp.com/J9FrHHS0MYq5M0xwYEJUfD">
-    <img src = "img/whats.png" id="whats" alt= "Whatsapp">
+	<!-- Whatsapp -->
+	<a class="appWhatsapp" target="blanck" href="https://api.whatsapp.com/send?phone=34601032880&text=Buenas!&nbsp;Entra&nbsp;en&nbsp;nuestro&nbsp;grupo&nbsp;de&nbsp;calvos" title="WhatsApp">
+    <img src="img/whats.png" id="whats" alt= "Whatsapp">
   	</a>
 
   <!-- Footer -->
-  <footer class="page-footer font-small mdb-color lighten-3 pt-4" style="color: lightgrey;">
+  <footer class="page-footer font-small mdb-color lighten-3 pt-4">
     <!-- Footer Links -->
     <div class="container text-center text-md-left">
       <!-- Grid row -->

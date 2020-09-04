@@ -69,9 +69,9 @@
 	</header>
 	
 	
-<section class="container">
-    <div class="row active-with-click" id="block">
-        <div class="col-md-4 col-sm-6 col-xs-12">
+<section  class="container">
+    <div class="col active-with-click" id="block" >
+        <div id="rol" class="col-md-5 col-sm-6 col-xs-12">
             <article class="material-card Red">
                 <h2>
                     <span><% out.print(session.getAttribute("nickUsu")); %></span>
@@ -96,68 +96,43 @@
     </div>
     
 <!-- Apartados -->
-<div class="container-sm" id="block">
-	<div class="transbox">
-    <div class="modal-body mx-4">
-        <div class="md-form mb-5">
-          <i class="fas fa-signature prefix"></i>
-          <input type="text" id="form34" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form34">Nombre</label>
-        </div>
-        <div class="md-form mb-5">
-          <i class="fas fa-signature prefix"></i>
-          <input type="text" id="form29" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form29">Apellidos</label>
-        </div>
-        <div class="md-form mb-5">
-          <i class="fas fa-id-card prefix"></i>
-          <input type="email" id="form29" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form29">DNI</label>
-        </div>
-        <div class="md-form mb-5">
-          <i class="fas fa-birthday-cake prefix"></i>
-          <input type="date" id="inputDate1" class="form-control" placeholder="Select Date">
-          <label data-error="wrong" data-success="right" for="form29">Fecha de nacimiento</label>
-        </div>
-        <div class="md-form mb-5">
-          <i class="fas fa-envelope prefix grey-text"></i>
-          <input type="text" id="form29" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form29">Correo electrónico</label>
-        </div>
-	    <div class="md-form mb-5">
-          <i class="fas fa-user prefix"></i>
-          <input type="email" id="form29" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form29">Nickname</label>
-        </div>
-        <div class="md-form mb-4">
-          <i class="fas fa-neuter prefix"></i>
-          <input type="email" id="form29" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form29">Sexo</label>
-        </div>
-        <div class="md-form mb-4">
-          <i class="fas fa-city prefix"></i>
-          <input type="email" id="form29" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form29">Localidad</label>
-        </div>
-        <div class="md-form mb-4">
-          <i class="fas fa-mobile-alt prefix" aria-hidden="true"></i>
-          <input type="email" id="form29" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form29">Teléfono</label>
-        </div>
-        <div class="md-form mb-4">
-          <i class="fas fa-key prefix"></i>
-          <input type="email" id="form29" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form29">Contraseña</label>
-        </div>
-    </div>
-    </div>
-</div>
+	<div class="col active-with-click"id="block">
+		<div class="transbox" >
+	    <div class="modal-body mx-5">
+	        <div class="md-form mb-5">
+	          <i id="simbolos" class="fas fa-envelope prefix"></i>
+	          <input type="text" id="form29" class="form-control validate">
+	          <label id="text" data-error="wrong" data-success="right" for="form29">Correo electrónico</label>
+	        </div>
+		    <div class="md-form mb-5">
+	          <i id="simbolos" class="fas fa-user prefix"></i>
+	          <input  type="email" id="form29" class="form-control validate">
+	          <label id="text" data-error="wrong" data-success="right" for="form29">Nickname</label>
+	        </div>
+	        <div class="md-form mb-5">
+	          <i id="simbolos" class="fas fa-city prefix"></i>
+	          <input  type="email" id="form29" class="form-control validate">
+	          <label id="text" data-error="wrong" data-success="right" for="form29">Localidad</label>
+	        </div>
+	        <div class="md-form mb-5">
+	          <i id="simbolos" class="fas fa-mobile-alt prefix" aria-hidden="true"></i>
+	          <input  type="email" id="form29" class="form-control validate">
+	          <label id="text" data-error="wrong" data-success="right" for="form29">Teléfono</label>
+	        </div>
+	        <div class="md-form mb-5">
+	          <i id="simbolos" class="fas fa-key prefix"></i>
+	          <input  type="email" id="form29" class="form-control validate">
+	          <label id="text" data-error="wrong" data-success="right" for="form29">Contraseña</label>
+	        </div>
+	    </div>
+	 </div>
+	</div>
 </section>
 
-<div class="text-center">
+<div id="boton"class="text-center">
   <a href="" class="btn btn-default btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Editar</a>
 </div>
-<div class="text-center">
+<div id="boton" class="text-center">
   <a href="" class="btn btn-red btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Eliminar cuenta</a>
 </div>
 

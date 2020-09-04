@@ -51,7 +51,7 @@ public class Registro extends HttpServlet {
 		String pass = request.getParameter("pass_control");
 		String localidad = request.getParameter("localidad_control");
 		String sexo = request.getParameter("sexo_control");
-		String rol = "level1";
+		String rol = "level 1";
 		String telefono = request.getParameter("tlf_control");
 		int puntuacion = 0;		
 		

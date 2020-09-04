@@ -32,16 +32,34 @@ footer{ position: relative; width: 100%; bottom: 0; opacity: 0.9; }
 	height: auto;
 }
 
-#block{inline-block: center;}
+
+#block{	
+    text-align: justify;
+
+}
+
+#rol{
+	margin:auto;
+}
+
+
 div.container-sm{width: 70%; height: 40%;}
 div.transbox {
   inline-block: center;
-  margin: 30px;
+  margin: 11px;
   background-color: #ffffff;
-  border: 1px solid black;
-  opacity: 0.4;
+  opacity: 0.55;
 }
 
+
+#simbolos{
+	
+	opacity: 1;
+}
+#text{
+	opacity: 1;
+	color:black;
+}
 @import "https://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700";
 .fa-spin-fast {
   -webkit-animation: fa-spin-fast 0.2s infinite linear;
