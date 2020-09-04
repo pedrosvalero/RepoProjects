@@ -304,7 +304,14 @@ const contenedor = document.getElementById("test");
 	  },
 	];
 	/*----------Aquí van las funciones---------*/
-
+	
+	let opcionRandom = [];
+	opcionRandom.push(0);
+	for (var i = 0; i < 5; i++) {
+		var aleatorio = Math.round(Math.random()*20);
+		opcionRandom[aleatorio]++;
+	}
+	
 	function mostrarTest() {
 	  const preguntasYrespuestas = [];
 
