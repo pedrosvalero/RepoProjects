@@ -97,35 +97,37 @@
     
 <!-- Apartados -->
 	<div class="col active-with-click"id="block">
+	<form action = "ActualizaPerfil" method = "POST" accept-charset="ISO-8859-1">
 		<div class="transbox" >
 	    <div class="modal-body mx-5">
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-envelope prefix"></i>
-	          <input type="text" id="form29" class="form-control validate">
+	          <input type="email" name = "email" id="form29" class="form-control validate">
 	          <label id="text" data-error="wrong" data-success="right" for="form29">Correo electrónico</label>
 	        </div>
 		    <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-user prefix"></i>
-	          <input  type="email" id="form29" class="form-control validate">
+	          <input  type="text"  name = "nick"  id="form29" class="form-control validate">
 	          <label id="text" data-error="wrong" data-success="right" for="form29">Nickname</label>
 	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-city prefix"></i>
-	          <input  type="email" id="form29" class="form-control validate">
+	          <input  type="text"  name = "localidad" id="form29" class="form-control validate">
 	          <label id="text" data-error="wrong" data-success="right" for="form29">Localidad</label>
 	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-mobile-alt prefix" aria-hidden="true"></i>
-	          <input  type="email" id="form29" class="form-control validate">
+	          <input  type="tel"  name = "tlf"  id="form29" class="form-control validate">
 	          <label id="text" data-error="wrong" data-success="right" for="form29">Teléfono</label>
 	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-key prefix"></i>
-	          <input  type="email" id="form29" class="form-control validate">
+	          <input  type="password" name = "pass" minlength="6" id="form29" class="form-control validate">
 	          <label id="text" data-error="wrong" data-success="right" for="form29">Contraseña</label>
 	        </div>
 	    </div>
 	 </div>
+	</form>
 	</div>
 </section>
 
