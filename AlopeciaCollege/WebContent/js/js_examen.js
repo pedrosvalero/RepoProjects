@@ -64,7 +64,7 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta:
-	      "5. &iquestCu&aacutel es el porcentaje de hombres y mujeres que con la edad sufren alopecia en España?",
+	      "5. &iquestCu&aacutel es el porcentaje de hombres y mujeres que con la edad sufren alopecia en Espa&ntildea?",
 	    respuestas: {
 	      a: "40% en hombres y 15% en mujeres",
 	      b: "50% en hombres y entre un 30% y 50% en mujeres",
@@ -83,7 +83,7 @@ const contenedor = document.getElementById("test");
 	    respuestas: {
 	      a: "Te haces un tatuaje tribal super agresivo para que la gente entienda que no te la dan con queso.",
 	      b: "Nada de tatus. Mi calva es sagrada.",
-	      c: "Te tat&uacuteas una tela de araña. THUG LIFE hasta la muerte.",
+	      c: "Te tat&uacuteas una tela de ara&nacutea. THUG LIFE hasta la muerte.",
 	      d: "Te haces uno estilo floral. Muy TIKI.",
 	    },
 	    respuesta10pts: "b",
@@ -219,7 +219,7 @@ const contenedor = document.getElementById("test");
 	      a: "La peluca es para mujeres y el peluqu&iacuten para hombres.",
 	      b: "Las pelucas cubren la totalidad de la cabeza y el peluqu&iacuten solo cubre la parte delantera de la cabeza.",
 	      c: "El peluqu&iacuten y la peluca es lo mismo, pero la palabra peluqu&iacuten tiene mejor sonoridad.",
-	      d: "El peluqu&iacuten es una peluca de talla pequeña.",
+	      d: "El peluqu&iacuten es una peluca de talla peque&nacutea.",
 	    },
 	    respuesta10pts: "b",
 	    respuesta5pts: "a",
@@ -277,7 +277,7 @@ const contenedor = document.getElementById("test");
 	    pregunta:
 	      "19. &iquestCu&aacutel es el pa&iacutes con m&aacutes alopecia a nivel mundial?",
 	    respuestas: {
-	      a: "Espa&nacutea",
+	      a: "Espa&ntildea",
 	      b: "Francia",
 	      c: "Holanda",
 	      d: "Rep&uacuteblica Checa",
@@ -290,12 +290,12 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta:
-	      "20. &iquestDebes de ponerte un gorro de ba&nacuteo en una piscina p&uacuteblica siendo calvo?",
+	      "20. &iquestDebes de ponerte un gorro de ba&ntildeo en una piscina p&uacuteblica siendo calvo?",
 	    respuestas: {
 	      a: "Claramente. Son sus costumbres y hay que respetarlas.",
 	      b: "Si no hay pelo no tiene ning&uacuten sentido hacerlo &iquestQu&eacute funci&oacuten cumple el gorro?",
-	      c: "Solo si va a juego con mi ba&nacuteador.",
-	      d: "Ning&uacuten no calvo me va a obligar a cumplir una norma dise&nacuteada para no calvos.",
+	      c: "Solo si va a juego con mi ba&ntildeador.",
+	      d: "Ning&uacuten no calvo me va a obligar a cumplir una norma dise&ntildeada para no calvos.",
 	    },
 	    respuesta10pts: "b",
 	    respuesta5pts: "d",
