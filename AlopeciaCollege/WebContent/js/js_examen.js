@@ -5,9 +5,9 @@ const contenedor = document.getElementById("test");
 	const preguntas = [
 	  {
 	    pregunta:
-	      "1. Te levantas un buen d&iacutea, y al verte frente al espejo, observas que esa pedazo melena tuya empieza a clarear ¿Qu&eacute haces?",
+	      "1. Te levantas un buen d&iacutea, y al verte frente al espejo, observas que esa pedazo melena tuya empieza a clarear &iquestQu&eacute haces?",
 	    respuestas: {
-	      a: "Aceptas que ha llegado la hora y te marcas un Brtiney",
+	      a: "Aceptas que ha llegado la hora y te marcas un Britney",
 	      b: "Buscas en Google informaci&oacuten sobre Turqu&iacutea",
 	      c: "Te mientes a ti mismo diciendo que no pasa nada",
 	      d: "Comienzas a llevar gorras y sombreros",
@@ -19,12 +19,11 @@ const contenedor = document.getElementById("test");
 	  },
 
 	  {
-	    pregunta: "2. ¿Cu&aacutel crees que es la mayor ventaja de ser calv@",
+	    pregunta: "2. &iquestCu&aacutel crees que es la mayor ventaja de ser calv@",
 	    respuestas: {
 	      a: "No hay ninguna. Ser calv@ es una desgracia",
-	      b: "Poder usar pelucas. ¡Un nuevo yo cada d&iacutea!",
-	      c:
-	        "La fraternidad que se genera con los que tienen el mismo problema. Entre nostr@a nos entendemos",
+	      b: "Poder usar pelucas. &iexclUn nuevo yo cada d&iacutea!",
+	      c:"La fraternidad que se genera con los que tienen el mismo problema. Entre nostr@a nos entendemos",
 	      d: "El ahorro. Sobretodo en champ&uacute y peluquerias",
 	    },
 	    respuesta10pts: "d",
@@ -35,7 +34,7 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta:
-	      "3. Del 1 al 4, siendo 1 el m&iacutenimo y 4 el m&aacuteximo ¿C&oacutemo de acuerdo est&aacutes con la siguiente afirmaci&oacuten?: Una calva bien llevada puede aumentar tu Sex-appeal",
+	      "3. Del 1 al 4, siendo 1 el m&iacutenimo y 4 el m&aacuteximo &iquestC&oacutemo de acuerdo est&aacutes con la siguiente afirmaci&oacuten?: Una calva bien llevada puede aumentar tu Sex-appeal",
 	    respuestas: {
 	      a: "1 - Nada de acuerdo",
 	      b: "2 - Poco de acuerdo",
@@ -50,7 +49,7 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta:
-	      "4. ¿Qu&eacute crees que significa el lema de la Alopecia College?: Calvis et Veritas",
+	      "4. &iquestQu&eacute crees que significa el lema de la Alopecia College?: Calvis et Veritas",
 	    respuestas: {
 	      a: "La verdad duele",
 	      b: "La verdad est&aacute en la calvicie",
@@ -65,7 +64,7 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta:
-	      "5. ¿Cu&aacutel es el porcentaje de hombres y mujeres que con la edad sufren alopecia en España?",
+	      "5. &iquestCu&aacutel es el porcentaje de hombres y mujeres que con la edad sufren alopecia en España?",
 	    respuestas: {
 	      a: "40% en hombres y 15% en mujeres",
 	      b: "50% en hombres y entre un 30% y 50% en mujeres",
@@ -80,7 +79,7 @@ const contenedor = document.getElementById("test");
         
          {
 	    pregunta:
-	      "6. Est&aacutes a tope de rebelde. Quieres marcar la diferencia, y buscando una soluci&oacuten a tu alopecia, piensas que un tatuaje en la calva puede ser ese factor x que buscas ¿Qu&eacute haces? ",
+	      "6. Est&aacutes a tope de rebelde. Quieres marcar la diferencia, y buscando una soluci&oacuten a tu alopecia, piensas que un tatuaje en la calva puede ser ese factor x que buscas &iquestQu&eacute haces? ",
 	    respuestas: {
 	      a: "Te haces un tatuaje tribal super agresivo para que la gente entienda que no te la dan con queso.",
 	      b: "Nada de tatus. Mi calva es sagrada.",
@@ -95,7 +94,7 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta: 
-          "7. ¿Cu&aacutel de estos actores calvos crees que es m&aacutes atractivo?",
+          "7. &iquestCu&aacutel de estos actores calvos crees que es m&aacutes atractivo?",
 	    respuestas: {
 	      a: "Vin Diesel.",
 	      b: "Dwayne Johnson.",
@@ -110,7 +109,7 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta:
-	      "8. Hoy toca convenci&oacuten de complementos de moda, y quieres impresionar a todo el mundo. ¿Qu&eacute te pones?",
+	      "8. Hoy toca convenci&oacuten de complementos de moda, y quieres impresionar a todo el mundo. &iquestQu&eacute te pones?",
 	    respuestas: {
 	      a: "Una bonita gorra Herringbone. Un classic c&aacutelvico.",
 	      b: "Una buena peluca Rastafari con gorrito incluido.",
@@ -125,7 +124,7 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta:
-	      "9. Un buen calvo sabe diferenciar una gorra Herrignbone de una gorra Gatsby Hatteras ¿En qu&eacute se diferencian?",
+	      "9. Un buen calvo sabe diferenciar una gorra Herrignbone de una gorra Gatsby Hatteras &iquestEn qu&eacute se diferencian?",
 	    respuestas: {
 	      a: "Todo el mundo sabe que a la Herrignbone no le sobresale la visera, y a la Gatsby Hatteras le suele sobresalir un bot&oacuten en el centro.",
 	      b: "La Herrignbone es para chulear y la Gatsby Hatteras para hacerse respetar.",
@@ -140,7 +139,7 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta:
-	      "10. ¿Cu&aacutel de estos trabajos no es Calvic friendly?",
+	      "10. &iquestCu&aacutel de estos trabajos no es Calvic friendly?",
 	    respuestas: {
 	      a: "T&eacutecnico de sonido.",
 	      b: "Actor porno.",
@@ -155,7 +154,7 @@ const contenedor = document.getElementById("test");
         
          {
 	    pregunta:
-	      "11. ¿Es recomendable en invierno el uso de gorros para evitar resfriados?",
+	      "11. &iquestEs recomendable en invierno el uso de gorros para evitar resfriados?",
 	    respuestas: {
 	      a: "Es puramente decorativo. La cabeza es la parte del cuerpo que m&aacutes calor desprende y no har&iacutea falta.",
 	      b: "Hasta cierto punto. En climas muy fr&iacuteos s&iacute.",
@@ -170,7 +169,7 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta: 
-          "12. Diriges la nueva revista Vogue pero con tem&aacutetica c&aacutelvica y quieres hacer un art&iacuteculo sobre actrices que se tuvieron que rapar el pelo para un papel. ¿A qui&eacuten pones en la portada?",
+          "12. Diriges la nueva revista Vogue pero con tem&aacutetica c&aacutelvica y quieres hacer un art&iacuteculo sobre actrices que se tuvieron que rapar el pelo para un papel. &iquestA qui&eacuten pones en la portada?",
 	    respuestas: {
 	      a: "Natalie Portman en V de Vendetta.",
 	      b: "Charlize Theron en Mad Max 4: Fury Road.",
@@ -185,7 +184,7 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta:
-	      "13. Entras en un herbolario y en una secci&oacuten ves un cartel que indica: Lociones para la calva ¿Qu&eacute loci&oacuten te llevas?",
+	      "13. Entras en un herbolario y en una secci&oacuten ves un cartel que indica: Lociones para la calva &iquestQu&eacute loci&oacuten te llevas?",
 	    respuestas: {
 	      a: "Una loci&oacuten crece pelo que causa furor en Turqu&iacutea.",
 	      b: "Una loci&oacuten hidratante para tener una calva suave y sana.",
@@ -200,7 +199,7 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta:
-	      "14. Del 1 al 4, siendo 1 el m&iacutenimo y 4 el m&aacuteximo ¿C&oacutemo de acuerdo est&aacutes con la siguiente afirmaci&oacuten?: Antes tapa calva que peluqu&iacuten.",
+	      "14. Del 1 al 4, siendo 1 el m&iacutenimo y 4 el m&aacuteximo &iquestC&oacutemo de acuerdo est&aacutes con la siguiente afirmaci&oacuten?: Antes tapa calva que peluqu&iacuten.",
 	    respuestas: {
 	      a: "1 - La tapa calva es lo m&aacutes vergonzoso que puedes hacer. Ten un poco de dignidad y hazte el favor.",
 	      b: "2 - Puede. Si el peluqu&iacuten es de mala calidad, next.",
@@ -215,7 +214,7 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta:
-	      "15. ¿Cu&aacutel es la diferencia entre un peluqu&iacuten y una peluca?",
+	      "15. &iquestCu&aacutel es la diferencia entre un peluqu&iacuten y una peluca?",
 	    respuestas: {
 	      a: "La peluca es para mujeres y el peluqu&iacuten para hombres.",
 	      b: "Las pelucas cubren la totalidad de la cabeza y el peluqu&iacuten solo cubre la parte delantera de la cabeza.",
@@ -230,7 +229,7 @@ const contenedor = document.getElementById("test");
         
          {
 	    pregunta:
-	      "16. ¿Cu&aacutel es el pa&iacutes con menos alopecia a nivel mundial?",
+	      "16. &iquestCu&aacutel es el pa&iacutes con menos alopecia a nivel mundial?",
 	    respuestas: {
 	      a: "Turqu&iacutea",
 	      b: "China",
@@ -245,7 +244,7 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta: 
-          "17. Del 1 al 4, siendo 1 el m&iacutenimo y 4 el m&aacuteximo ¿C&oacutemo de orgulloso est&aacutes de la expresi&oacuten?: Ni un pelo de tonto.",
+          "17. Del 1 al 4, siendo 1 el m&iacutenimo y 4 el m&aacuteximo &iquestC&oacutemo de orgulloso est&aacutes de la expresi&oacuten?: Ni un pelo de tonto.",
 	    respuestas: {
 	      a: "1 - Me resulta ofensiva. La alopecia es un tema serio.",
 	      b: "2 - Es solo una expresi&oacuten. Me resulta indiferente.",
@@ -261,7 +260,7 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta:
-	      "18. Vas a una revisi&oacuten m&eacutdica para hacerte unos an&aacutelisis est&aacutendar, y al recibir los resultados tu m&eacutedico te dice que te quedan 6 meses DE VIDA con pelo ¿Qu&eacute haces?",
+	      "18. Vas a una revisi&oacuten m&eacutdica para hacerte unos an&aacutelisis est&aacutendar, y al recibir los resultados tu m&eacutedico te dice que te quedan 6 meses DE VIDA con pelo &iquestQu&eacute haces?",
 	    respuestas: {
 	      a: "Pides la excedencia en el curro y te marcas un YOLO (You Only Live Once) en el sudeste Asi&aacutetico. T&uacute y tu pelo juntos, por &uacuteltima vez.",
 	      b: "Pillas un depresi&oacuten de caballo y piensas en pasar los &uacuteltimos meses en una casa rural alejado de todo.",
@@ -276,7 +275,7 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta:
-	      "19. ¿Cu&aacutel es el pa&iacutes con m&aacutes alopecia a nivel mundial?",
+	      "19. &iquestCu&aacutel es el pa&iacutes con m&aacutes alopecia a nivel mundial?",
 	    respuestas: {
 	      a: "Espa&nacutea",
 	      b: "Francia",
@@ -291,10 +290,10 @@ const contenedor = document.getElementById("test");
 
 	  {
 	    pregunta:
-	      "20. ¿Debes de ponerte un gorro de ba&nacuteo en una piscina p&uacuteblica siendo calvo?",
+	      "20. &iquestDebes de ponerte un gorro de ba&nacuteo en una piscina p&uacuteblica siendo calvo?",
 	    respuestas: {
 	      a: "Claramente. Son sus costumbres y hay que respetarlas.",
-	      b: "Si no hay pelo no tiene ning&uacuten sentido hacerlo ¿Qu&eacute funci&oacuten cumple el gorro?",
+	      b: "Si no hay pelo no tiene ning&uacuten sentido hacerlo &iquestQu&eacute funci&oacuten cumple el gorro?",
 	      c: "Solo si va a juego con mi ba&nacuteador.",
 	      d: "Ning&uacuten no calvo me va a obligar a cumplir una norma dise&nacuteada para no calvos.",
 	    },
