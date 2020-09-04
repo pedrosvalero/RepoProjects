@@ -23,7 +23,7 @@
 <div id="bg" style="background-image: url('img/College.jpg');">
 		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
 		  <img src ="img/TheAlopeciaCollegeBLANCO3.png" width="45px">
-		  <a class="navbar-brand"><font id="navstyle">The Alopecia College</font></a>
+		  <a class="navbar-brand" href="Home.jsp"><font id="navstyle">The Alopecia College</font></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 		    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
