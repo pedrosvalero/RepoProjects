@@ -133,6 +133,7 @@
 
 <div id="boton"class="text-center">
   <a href="" class="btn btn-default btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Editar</a>
+  <input id="ACtualizaPerfil" type ="submit" value="ActualizaPerfil">
 </div>
 <div id="boton" class="text-center">
   <a href="" class="btn btn-red btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Eliminar cuenta</a>
