@@ -37,16 +37,11 @@
 		          <span class="sr-only">(current)</span>
 		        </a>
 		      </li>
-		      <li class="nav-item dropdown">
-		        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-		          aria-haspopup="true" aria-expanded="false">
-		        </a>
-		        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-		          <a class="dropdown-item"  href="Examen.jsp"><i class="far fa-file-alt" style="margin-right: 9px"></i></i>Examen</a>
-		          <a class="dropdown-item"  href="Ranking.jsp"><i class="far fa-chart-bar" style="margin-right: 9px"></i></i>Ranking</a>
-		          <a class="dropdown-item"  href="Usuarios.jsp"><i class="fas fa-user-cog" style="margin-right: 9px"></i></i>Lista Usuarios</a>
-		        </div>
+		      <% if (session.getAttribute("rol").equals("Admin")) { %>
+			  <li class="nav-item">
+		        <a class="nav-link" href="Usuarios.jsp">Usuarios</a>
 		      </li>
+			  <% } %>
 		    </ul>
 		    <ul class="navbar-nav ml-auto nav-flex-icons">
 		      <li class="nav-item dropdown">
@@ -143,6 +138,7 @@
 		    <a href="Examen.jsp" class="btn btn-primary">Entrar</a>
 		  </div>
 		</div>
+		<% if (session.getAttribute("rol").equals("Admin")) { %>
 		<div class="card hoverable" id="cards">
 		  <!-- Card image -->
 		  <div class="view overlay">
@@ -161,6 +157,7 @@
 		    <a href="Usuarios.jsp" class="btn btn-primary">Acceder</a>
 		  </div>
 	    </div>
+	    <% } %>
 		<!-- Card -->
 	</center>
 

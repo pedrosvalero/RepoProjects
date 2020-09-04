@@ -48,9 +48,11 @@
 		        <span class="sr-only">(current)</span>
 		        </a>
 		      </li>
-		      <li class="nav-item">
+		      <% if (session.getAttribute("rol").equals("Admin")) { %>
+			  <li class="nav-item">
 		        <a class="nav-link" href="Usuarios.jsp">Usuarios</a>
 		      </li>
+			  <% } %>
 		    </ul>
 		    <ul class="navbar-nav ml-auto nav-flex-icons">
 		      <li class="nav-item dropdown">

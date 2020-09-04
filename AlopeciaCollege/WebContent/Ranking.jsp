@@ -25,7 +25,7 @@
 <%
 	Connection conn = Conexion.getInstance().getConnection();
 	Statement st = conn.createStatement();
-	String query = "SELECT * FROM alopeciacollege.usuario";
+	String query = "SELECT nick, puntuacion, rol FROM alopeciacollege.usuario WHERE rol <> 'Admin' order by puntuacion";
 	ResultSet rs = st.executeQuery(query);
 	%>
 <div id="bg" style="background-image: url('img/College.jpg');">
@@ -49,9 +49,11 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="Examen.jsp">Examenes</a>
 		      </li>
-		      <li class="nav-item">
+		      <% if (session.getAttribute("rol").equals("Admin")) { %>
+			  <li class="nav-item">
 		        <a class="nav-link" href="Usuarios.jsp">Usuarios</a>
 		      </li>
+			  <% } %>
 		    </ul>
 		    <ul class="navbar-nav ml-auto nav-flex-icons">
 		      <li class="nav-item dropdown">
@@ -78,14 +80,9 @@
 
 	<table>
 		<tr class ="aqua-gradient">
-			<th>Posición</th>
 			<th>Nick</th>
 			<th>Rol</th>
 			<th>Puntuación</th>
-			
-	<% if (session.getAttribute("rol").equals("Admin")) { %>
-	<% } %>
-	
 		</tr>
 
 		<%
@@ -93,7 +90,6 @@
 		%>
 		
 		<tr class ="aqua-gradient">
-			<td></td>
 			<td><%=rs.getString("nick")%></td>
 			<td><%=rs.getString("rol")%></td>
 			<td><%=rs.getInt("puntuacion")%></td>
