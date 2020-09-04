@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="AlopeciaCollege.servicios.Conexion"%>
+<%@ page import="java.sql.*"%>
 <!DOCTYPE html>
 <html lang = "es">
 <head>
@@ -20,6 +22,12 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 </head>
 <body>
+<%
+	Connection conn = Conexion.getInstance().getConnection();
+	Statement st = conn.createStatement();
+	String query = "SELECT * FROM alopeciacollege.usuario";
+	ResultSet rs = st.executeQuery(query);
+	%>
 <div id="bg" style="background-image: url('img/College.jpg');">
 		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
 		  <img src ="img/TheAlopeciaCollegeBLANCO3.png" width="45px">
@@ -65,87 +73,44 @@
 	<a href="Ranking"></a>
 		<center><a id="cabezera" class="the-most" >
 		  <img id="rankingcalvitium" src="img/RankingCalvitiumIllustrisColor.png" width="200px">
-		</a>
 		</center>
-		<!--Table-->
-		<table id="table" class="table table-striped w-auto">
-		  <!--Table head-->
-		  <thead >
-		    <tr class ="aqua-gradient">
-		      <th>Posición</th>
-		      <th>Nick Name</th>
-		      <th>Puntuación</th>
-		      <th>Rol</th>
-		    </tr>
-		  </thead>
-		  <!--Table head-->
-	
-		  <!--Table body-->
-		  <tbody>
-		    <tr class="tempting-azure-gradient">
-		      <th scope="row">1</th>
-		      <td>El Mejor Calvo</td>
-		      <td>400</td>
-		      <td><img src="img/bruce.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Bruce Willis</td>
-		    </tr>
-		    <tr class = "peach-gradient">
-		      <th scope="row">2</th>
-		      <td>Amadeo44</td>
-		      <td>300</td>
-		      <td><img src="img/jason.png" width="40" class="rounded-circle z-depth-0" alt="avatar image">Jason Statham</td>
-		    </tr>
-		    <tr class="tempting-azure-gradient">
-		      <th scope="row">3</th>
-		      <td>Lolo1234</td>
-		      <td>200</td>
-		      <td><img src="img/vin.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Vin Diesel</td>
-		    </tr>
-		    <tr class = "peach-gradient">
-		      <th scope="row">4</th>
-		      <td>Tom Jerry</td>
-		      <td>150</td>
-		      <td><img src="img/pepe.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Pepe viyuela</td>
-		    </tr>
-		    <tr class="tempting-azure-gradient">
-		      <th scope="row">5</th>
-		      <td>Popeye</td>
-		      <td>100</td>
-		      <td><img src="img/danny.png" width="40" class="rounded-circle z-depth-0" alt="avatar image">Danny DeVito</td>
-		    </tr>
-		    <tr class="peach-gradient">
-		      <th scope="row">1</th>
-		      <td>Super Nena</td>
-		      <td>400</td>
-		      <td><img src="img/porman.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Natalie Porman </td>
-		    </tr>
-		    <tr class = "tempting-azure-gradient">
-		      <th scope="row">2</th>
-		      <td>Super Woman</td>
-		      <td>300</td>
-		      <td><img src="img/britney.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Britney Spears</td>
-		    </tr>
-		    <tr class="peach-gradient">
-		      <th scope="row">3</th>
-		      <td>Lolo1234</td>
-		      <td>200</td>
-		      <td><img src="img/moore.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Demi Moore</td>
-		    </tr>
-		    <tr class = "tempting-azure-gradient">
-		      <th scope="row">4</th>
-		      <td>Tom Jerry</td>
-		      <td>150</td>
-		      <td><img src="img/anne.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Anne Hathaway</td>
-		    </tr>
-		    <tr class="peach-gradient">
-		      <th scope="row">5</th>
-		      <td>Popeye</td>
-		      <td>100</td>
-		      <td><img src="img/Charlie.jpg" width="40" class="rounded-circle z-depth-0" alt="avatar image">Charlize Theron</td>
-		    </tr>
-		  </tbody>
-		  <!--Table body-->
+	</a>
 
-		</table>
+	<table>
+		<tr class ="aqua-gradient">
+			<th>Posición</th>
+			<th>Nick</th>
+			<th>Rol</th>
+			<th>Puntuación</th>
+			
+	<% if (session.getAttribute("rol").equals("Admin")) { %>
+	<% } %>
+	
+		</tr>
+
+		<%
+			while (rs.next()) {
+		%>
+		
+		<tr class ="aqua-gradient">
+			<td></td>
+			<td><%=rs.getString("nick")%></td>
+			<td><%=rs.getString("rol")%></td>
+			<td><%=rs.getInt("puntuacion")%></td>
+		</tr>
+		
+		<%
+			}
+		%>
+
+	</table>
+
+	<%
+		rs.close();
+	st.close();
+	conn.close();
+	%>
+		
 
 	<!-- Whatsapp -->
 	<a class="appWhatsapp" target="blanck" href="https://api.whatsapp.com/send?phone=34601032880&text=Buenas!&nbsp;Entra&nbsp;en&nbsp;nuestro&nbsp;grupo&nbsp;de&nbsp;calvos" title="WhatsApp">

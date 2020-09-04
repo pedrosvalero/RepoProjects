@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import AlopeciaCollege.modelo.Usuario;
 import AlopeciaCollege.modelo.UsuarioDAO;
@@ -42,16 +43,20 @@ public class Ranking extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String nick = request.getParameter("nick");
-		//int puntuacion = request.get
+		String puntuacion = request.getParameter("puntuacion");
 		String rol = request.getParameter("rol");
 		
 		UsuarioDAO usao = new UsuarioDAO();
 		String pagDest = "Ranking.jsp";
 		
 		try {
-		
 			Usuario u = new Usuario();
 			Usuario usu = usao.getRanking(u);
+			HttpSession session = request.getSession();
+			session.setAttribute("nickUsu", usu.getNick());
+			session.setAttribute("puntos", usu.getPuntuacion());
+			session.setAttribute("rol", usu.getRol());
+			
 			pagDest = "Ranking.jsp";
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

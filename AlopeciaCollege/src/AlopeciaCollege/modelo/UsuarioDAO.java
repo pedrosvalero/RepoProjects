@@ -78,7 +78,7 @@ public class UsuarioDAO {
 
 	}
 
-	//QUERY ACTUALIZACION NICK Y ROL A PARTIR DE EMAIL - ESTO SERÄ DESDE MODO ADMIN
+	//QUERY ACTUALIZACION NICK Y ROL A PARTIR DE EMAIL - ESTO SERÁ DESDE MODO ADMIN
 	public void modificarUsuario(Usuario u) throws SQLException {
 
 		String sql = "UPDATE alopeciacollege.usuario SET nick = ?, rol = ? WHERE email = ?";
@@ -95,7 +95,7 @@ public class UsuarioDAO {
 	//BORRAR USUARIO A PARTIR DEL EMAIL
 	public void borrarUsuario(String email) throws SQLException {
 
-		String sql = "DELETE FROM alopeciacollege.usuario WHERE email = ?";
+		String sql = "DELETE FROM alopeciacollege.usuario WHERE email = ?"; // <- No te olvides del Where...
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(sql);
 		pst.setString(1, email);
@@ -135,7 +135,6 @@ public class UsuarioDAO {
 		pst.setString(1, u.getNick());
 		pst.setInt(2, u.getPuntuacion());
 		pst.setString(3, u.getRol());
-		
 
 		rs = pst.executeQuery();
 
