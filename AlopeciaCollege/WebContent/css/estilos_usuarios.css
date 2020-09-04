@@ -22,9 +22,14 @@ header nav { border-bottom: inset grey 2px; }
 #borrar{
 	color:red;
 }
+
 #editar {
 	color:#33b5e5;
 }
+
+footer{ position: relative; width: 100%; bottom: 0; opacity: 0.9; }
+#redes img{ margin-left: 5px; }
+
 .appWhatsapp{
 	position:fixed;
 	right: 26px;

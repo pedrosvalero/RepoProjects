@@ -35,7 +35,7 @@ button {
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
 }
 
-footer{ position: relative; width: 100%; bottom: 0px; opacity: 0.9; }
+footer{ position: relative; width: 100%; bottom: 0; opacity: 0.9; }
 #redes img{ margin-left: 5px; }
 
 .appWhatsapp{

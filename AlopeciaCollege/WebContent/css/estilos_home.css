@@ -27,7 +27,7 @@ header nav { border-bottom: inset grey 2px; }
 #cards img{ border-radius: 10px; padding: 1%; }
 #cards a{ border-radius: 20px; }
 
-footer{ position: relative; width: 100%; bottom: 0px; opacity: 0.9; }
+footer{ position: relative; width: 100%; bottom: 0; opacity: 0.9; }
 #redes img{ margin-left: 5px; }
 
 .appWhatsapp{

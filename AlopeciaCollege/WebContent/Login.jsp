@@ -21,9 +21,9 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 </head>
 <body>
-<div id="bg" style="background-image: url('img/Lwp.jpg');">
+<div id="bg" style="background-image: url('img/Lwp2.jpg');">
 	<header>
-		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark" size="57">
 		  <img src ="img/TheAlopeciaCollegeBLANCO3.png" width="45px">
 		  <a class="navbar-brand"><font id="navfont">The Alopecia College</font></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
@@ -124,7 +124,7 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script>function myFunction() {document.getElementById("about").innerHTML = "Creada por y para todas aquellas personas que han perdido uno de sus bienes más preciados, tú también puedes estudiar sin ser repudiado. Esta es tu Universidad";}</script>
+    <script>function myFunction() {document.getElementById("about").innerHTML="Creada por y para todas aquellas personas que han perdido uno de sus bienes más preciados, tú también puedes estudiar sin ser repudiado. Esta es tu Universidad";}</script>
     <!-- Footer --><script src="https://kit.fontawesome.com/2ab430d3ec.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2ab430d3ec.js" crossorigin="anonymous"></script>
     <!-- JQuery -->
@@ -213,6 +213,5 @@
 		  var whats = document.getElementById('whats').src = "img/whats_color.png";
 		}
 	</script>
-
 </body>	
 </html>	

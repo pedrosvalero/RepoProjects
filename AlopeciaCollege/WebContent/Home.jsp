@@ -33,27 +33,19 @@
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
 		    <ul class="navbar-nav mr-auto">
 		      <li class="nav-item active">
-		        <a class="nav-link" href="#">Home
+		        <a class="nav-link">Home
 		          <span class="sr-only">(current)</span>
 		        </a>
 		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="Ranking.jsp">Ranking</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="Examen.jsp">Examenes</a>
-		      </li>
 		      <li class="nav-item dropdown">
 		        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-		          aria-haspopup="true" aria-expanded="false">Usuarios
+		          aria-haspopup="true" aria-expanded="false">
 		        </a>
-		        
-		        <!-- Solo admins -->
 		        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-		          <a class="dropdown-item" href="#"><i class="fas fa-user" style="margin-right: 9px"></i>Crear Usuario</a>
-		          <a class="dropdown-item" href="#"><i class="fas fa-bars" style="margin-right: 9px"></i>Lista Usuarios</a>
+		          <a class="dropdown-item"  href="Examen.jsp"><i class="far fa-file-alt" style="margin-right: 9px"></i></i>Examen</a>
+		          <a class="dropdown-item"  href="Ranking.jsp"><i class="far fa-chart-bar" style="margin-right: 9px"></i></i>Ranking</a>
+		          <a class="dropdown-item"  href="Usuarios.jsp"><i class="fas fa-user-cog" style="margin-right: 9px"></i></i>Lista Usuarios</a>
 		        </div>
-		        
 		      </li>
 		    </ul>
 		    <ul class="navbar-nav ml-auto nav-flex-icons">
@@ -65,7 +57,7 @@
 		        </a>
 		        <div class="dropdown-menu dropdown-menu-right dropdown-default"
 		          aria-labelledby="navbarDropdownMenuLink-333">
-		          <a class="dropdown-item" href="#"><i class="fas fa-user cyan-text" style="margin-right: 9px"></i>Perfil</a>
+		          <a class="dropdown-item" href="Perfil.jsp"><i class="fas fa-user cyan-text" style="margin-right: 9px"></i>Perfil</a>
 				  <a class="dropdown-item" href="Logout"><i class="fas fa-sign-out-alt red-text" style="margin-right: 9px"></i>Cerrar Sesión</a>
 		        </div>
 		      </li>
@@ -83,7 +75,7 @@
 		    </ol>
 		    <div class="carousel-inner" role="listbox">
 		      <div class="carousel-item active">
-		        <center><img src="img/Banner1.png" alt="Bienvenido" style="width:100%; height:100%; border-radius: 10px;"></center>
+		        <center><img src="img/Banner1logo.png" alt="Bienvenido" style="width:100%; height:100%; border-radius: 10px;"></center>
 		        <div class="container">
 		          <div class="carousel-caption">
 		            <h1 style="font-size: 8mm; -webkit-text-stroke: 1px white; color: black;">BIENVENIDO</h1>
@@ -92,7 +84,7 @@
 		        </div>
 		      </div>
 		      <div class="carousel-item">
-		        <img src="img/Banner2.png" alt="Becas" style="width:100%;height:100%; border-radius: 10px;">
+		        <img src="img/Banner2logo.png" alt="Becas" style="width:100%;height:100%; border-radius: 10px;">
 		        <div class="container">
 		          <div class="carousel-caption">
 		            <h1 style="font-size: 8mm; color: white;">LAS MEJORES BECAS</h1>
@@ -118,42 +110,6 @@
 		<div class="card hoverable" id="cards">
 		  <!-- Card image -->
 		  <div class="view overlay">
-		    <img class="card-img-top" src="img/user.jpg" alt="Card image cap">
-		    <a href="#!">
-		      <div class="mask rgba-white-slight"></div>
-		    </a>
-		  </div>
-		  <!-- Card content -->
-		  <div class="card-body" id="cardbody">
-		    <!-- Title -->
-		    <h4 class="card-title"><a>Crear usuario</a></h4>
-		    <!-- Text -->
-		    <p class="card-text">                                                                                                        Crea un nuevo Usuario de la página. </p>
-		    <!-- Button -->
-		    <a href="#" class="btn btn-primary">Crear</a>
-		  </div>
-	    </div>
-		<div class="card hoverable" id="cards">		
-		  <!-- Card image -->
-		  <div class="view overlay">
-		    <img class="card-img-top" src="img/examen1.png" alt="Card image cap">
-		    <a href="#!">
-		      <div class="mask rgba-white-slight"></div>
-		    </a>
-		  </div>
-		  <!-- Card content -->
-		  <div class="card-body" id="cardbody">
-		    <!-- Title -->
-		    <h4 class="card-title">Hacer examen</h4>
-		    <!-- Text -->
-		    <p class="card-text">Realiza un examen con preguntas aleatorias y sube en el Ranking. ¡Qué calvario!</p>
-		    <!-- Button -->
-		    <a href="#" class="btn btn-primary">Entrar</a>
-		  </div>
-		</div>
-		<div class="card hoverable" id="cards">
-		  <!-- Card image -->
-		  <div class="view overlay">
 		    <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
 		    <a href="Ranking.jsp">
 		      <div class="mask rgba-white-slight"></div>
@@ -169,6 +125,42 @@
 		    <a href="Ranking.jsp" class="btn btn-primary">Acceder</a>
 		  </div>
 		</div>
+		<div class="card hoverable" id="cards">		
+		  <!-- Card image -->
+		  <div class="view overlay">
+		    <img class="card-img-top" src="img/examen1.png" alt="Card image cap">
+		    <a href="Examen.jsp">
+		      <div class="mask rgba-white-slight"></div>
+		    </a>
+		  </div>
+		  <!-- Card content -->
+		  <div class="card-body" id="cardbody">
+		    <!-- Title -->
+		    <h4 class="card-title">Hacer examen</h4>
+		    <!-- Text -->
+		    <p class="card-text">Realiza un examen con preguntas aleatorias y sube en el Ranking. ¡Qué calvario!</p>
+		    <!-- Button -->
+		    <a href="Examen.jsp" class="btn btn-primary">Entrar</a>
+		  </div>
+		</div>
+		<div class="card hoverable" id="cards">
+		  <!-- Card image -->
+		  <div class="view overlay">
+		    <img class="card-img-top" src="img/listausers.png" alt="Card image cap">
+		    <a href="Usuarios.jsp">
+		      <div class="mask rgba-white-slight"></div>
+		    </a>
+		  </div>
+		  <!-- Card content -->
+		  <div class="card-body" id="cardbody">
+		    <!-- Title -->
+		    <h4 class="card-title"><a>Lista de usuarios</a></h4>
+		    <!-- Text -->
+		    <p class="card-text">Accede a la lista detallada de todos los calvos de la universidad.</p>
+		    <!-- Button -->
+		    <a href="Usuarios.jsp" class="btn btn-primary">Acceder</a>
+		  </div>
+	    </div>
 		<!-- Card -->
 	</center>
 
@@ -235,13 +227,11 @@
       </div>
       <!-- Grid row -->
     </div>
-    <!-- Footer Links -->
     <!-- Copyright -->
-    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:<a href="#"> paginaweb.com</a>
-    </div>
+    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:<a href="#"> paginaweb.com</a></div>
     <!-- Copyright -->
   </footer>
-  
+
 </div>
 
   <!-- Scripts -->

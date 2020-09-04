@@ -12,14 +12,15 @@
 
 #navfont{margin-left: 10px; font-family: 'Pacifico', sans-serif; color: #eaeaec; font-size: 5;}
 header nav { border-bottom: inset grey 2px; }
-.containerbody{min-height: calc(100vh - 300px - 300px);}
+.containerbody{min-height: calc(100vh - 100px - 300px);}
 
 form{
-	margin-left: 35%;
-	margin-right: 35%;
-	margin-top: 5vh;
-	margin-bottom: 5vh;
-	width: auto;
+	margin: auto;
+	margin-top: 6vh;
+	margin-bottom: 6vh;
+	min-width: 200px;
+	width: 500px;
+	justify-content: center;
 	padding: 30px;
 	background-color: lightgrey;
 	border-radius: 20px;
@@ -32,16 +33,6 @@ form{
 
 #registrarse{ margin-bottom: 15px; }
 
-input{
-	display: inline-block;
-	padding: 10px 8px;
-	border: 2px solid #f6f6f6;
-	margin: 10px 0;
-	background-color: #f6f6f6; 
-	border-radius: 5px;
-	margin-right: 13px;
-}
-
 #apartados .input{
 	margin-left: 5%;
 	margin-right: 5%;
@@ -49,6 +40,7 @@ input{
 	padding: 10px 8px;
 	margin: 5px;
 	border-radius: 5px;
+	border: 1px solid black;
 }
 
 #idSex { 
@@ -58,15 +50,16 @@ input{
 	padding: 10px 8px;
 	margin: 5px;
 	border-radius: 5px;
-	}
+	border: 1px solid black;
+}
 
-#idMail {	
-	margin-left: 5%;
-	margin-right: 5%;
-	width: 85%;
+#idMail {
+	margn-right: 5%;
+	width: 94%;
 	padding: 10px 8px;
 	margin: 5px;
 	border-radius: 5px;
+	border: 1px solid black;
 }
 
 #idLocalidad {	
@@ -76,6 +69,7 @@ input{
 	padding: 10px 8px;
 	margin: 5px;
 	border-radius: 5px;
+	border: 1px solid black;
 }
 
 form input[type = "submit"], form input[type = "reset"]{
@@ -86,11 +80,22 @@ form input[type = "submit"], form input[type = "reset"]{
 	background: #000;
 	transition:0.3s;
 	margin-top: 10px;
+	border: 2px solid #f6f6f6;
+}
+
+iput{
+	display: inline-block;
+	padding: 10px 8px;
+	border: 2px solid #f6f6f6;
+	margin: 10px 0;
+	background-color: #f6f6f6; 
+	border-radius: 5px;
+	margin-right: 13px;
 }
 
 form input[type="submit"]:hover, form input[type="reset"]:hover{
 	cursor: pointer;
-	background: #ccc;
+	background: grey;
 }
 
 footer{ margin-top: 20px; bottom: 0; opacity: 0.95; }

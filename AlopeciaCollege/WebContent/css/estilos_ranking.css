@@ -18,12 +18,12 @@ table{
 	font-family: 'Alata', sans serif;
 	border-radius: 20px;
 	position: relative;
-	width: 100%;
+	width: 500px;
 	margin: auto;
 	opacity: 0.9;
 }
 
-footer{ position: relative; width: 100%; bottom: 0px; opacity: 0.9; }
+footer{ position: relative; width: 100%; bottom: 0; opacity: 0.9; }
 #redes img{ margin-left: 5px; }
 
 .appWhatsapp{

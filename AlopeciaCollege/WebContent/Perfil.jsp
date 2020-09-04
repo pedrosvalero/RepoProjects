@@ -22,9 +22,6 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 </head>
 <body>
-	<header>
-
-
 <div id="bg" style="background-image: url('img/College.jpg');">
 	<header>
 		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
@@ -36,10 +33,8 @@
 		  </button>
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
 		    <ul class="navbar-nav mr-auto">
-		      <li class="nav-item active">
-		        <a class="nav-link" href="Home.jsp">Home
-		          <span class="sr-only">(current)</span>
-		        </a>
+		      <li class="nav-item">
+		        <a class="nav-link" href="Home.jsp">Home</a>
 		      </li>
 		      <li class="nav-item">
 		        <a class="nav-link" href="Ranking.jsp">Ranking</a>
@@ -47,16 +42,12 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="Examen.jsp">Examenes</a>
 		      </li>
-		      <li class="nav-item dropdown">
-		        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-		          aria-haspopup="true" aria-expanded="false">Usuarios
-		        </a>
-		        
-		        <!-- Solo admins -->
-		        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-		          <a class="dropdown-item"  href="Usuarios.jsp"><i class="fas fa-user-cog" style="margin-right: 9px"></i></i>Lista Usuarios</a>
-		        </div>
-		        
+		      <li class="nav-item">
+		        <a class="nav-link" href="Usuarios.jsp">Usuarios</a>
+		      </li>
+		      <li class="nav-item active">
+		        <a class="nav-link">Perfil
+		        <span class="sr-only">(current)</span></a>
 		      </li>
 		    </ul>
 		    <ul class="navbar-nav ml-auto nav-flex-icons">
@@ -68,7 +59,7 @@
 		        </a>
 		        <div class="dropdown-menu dropdown-menu-right dropdown-default"
 		          aria-labelledby="navbarDropdownMenuLink-333">
-		          <a class="dropdown-item" href="perfil.jsp"><i class="fas fa-user cyan-text" style="margin-right: 9px"></i>Perfil</a>
+		          <a class="dropdown-item" href="Perfil.jsp"><i class="fas fa-user cyan-text" style="margin-right: 9px"></i>Perfil</a>
 				  <a class="dropdown-item" href="Logout"><i class="fas fa-sign-out-alt red-text" style="margin-right: 9px"></i>Cerrar Sesión</a>
 		        </div>
 		      </li>
@@ -79,7 +70,7 @@
 	
 	
 <section class="container">
-    <div class="row active-with-click">
+    <div class="row active-with-click" id="block">
         <div class="col-md-4 col-sm-6 col-xs-12">
             <article class="material-card Red">
                 <h2>
@@ -91,7 +82,7 @@
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="img/jason2.jpg" width="500">
+                        <img class="img-responsive" src="img/jason.png" width="320">
                     </div>
                     <div class="mc-description">
                         Eres un apredíz de calvos, aún puedes mejorar más, sigue haciendo exámanes. Demomento tienes el rol Jason Statham
@@ -103,12 +94,11 @@
             </article>
         </div>
     </div>
-</section>
-
-
-
-<div class="container-sm">
-      <div class="modal-body mx-4">
+    
+<!-- Apartados -->
+<div class="container-sm" id="block">
+	<div class="transbox">
+    <div class="modal-body mx-4">
         <div class="md-form mb-5">
           <i class="fas fa-signature prefix"></i>
           <input type="text" id="form34" class="form-control validate">
@@ -160,13 +150,15 @@
           <label data-error="wrong" data-success="right" for="form29">Contraseña</label>
         </div>
     </div>
+    </div>
 </div>
+</section>
 
 <div class="text-center">
-  <a href="" class="btn btn-default btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm">Editar</a>
+  <a href="" class="btn btn-default btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Editar</a>
 </div>
 <div class="text-center">
-  <a href="" class="btn btn-default btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm">Borrar</a>
+  <a href="" class="btn btn-red btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Eliminar cuenta</a>
 </div>
 
 	
@@ -238,6 +230,9 @@
     </div>
     <!-- Copyright -->
   </footer>
+
+</div>
+
 	<!-- Scripts -->
   	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -361,8 +356,6 @@
             }
         });
     });
-		
 		</script>
-
 </body>
 </html>
