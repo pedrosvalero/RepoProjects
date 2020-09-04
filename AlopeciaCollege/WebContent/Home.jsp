@@ -5,7 +5,7 @@
 <head>
 	<title>The Alopecia College - Home</title>
 	<meta charset="UTF-8">
-		<title>Icono en el navegador</title> <link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="32x32">
+	<link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="32x32">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -36,6 +36,12 @@
 		        <a class="nav-link">Home
 		          <span class="sr-only">(current)</span>
 		        </a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="Ranking.jsp">Ranking</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="Examen.jsp">Examenes</a>
 		      </li>
 		      <% if (session.getAttribute("rol").equals("Admin")) { %>
 			  <li class="nav-item">
@@ -105,7 +111,7 @@
 		<div class="card hoverable" id="cards">
 		  <!-- Card image -->
 		  <div class="view overlay">
-		    <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+		    <img class="card-img-top" src="img/excelenciaCalvica.jpg" alt="Card image cap">
 		    <a href="Ranking.jsp">
 		      <div class="mask rgba-white-slight"></div>
 		    </a>

@@ -6,8 +6,7 @@
 <meta charset="ISO-8859-1">
 <title> Perfil - <% out.print(session.getAttribute("nickUsu")); %> </title>
 	<meta charset="ISO-8859-1">
-	<title>Icono en el navegador</title> <link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="64x64">
-	<title>Usuarios - The Alopecia College</title>
+	<link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="64x64">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -42,9 +41,11 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="Examen.jsp">Examenes</a>
 		      </li>
+		      <% if (session.getAttribute("rol").equals("Admin")) { %>
 		      <li class="nav-item">
 		        <a class="nav-link" href="Usuarios.jsp">Usuarios</a>
 		      </li>
+		      <% } %>
 		      <li class="nav-item active">
 		        <a class="nav-link">Perfil
 		        <span class="sr-only">(current)</span></a>

@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-		<title>Icono en el navegador</title> <link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="32x32">
+	<title>The Alopecia College - Usuarios</title> <link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="32x32">
 	<title>Usuarios - The Alopecia College</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
@@ -21,6 +21,7 @@
 
 </head>
 <body>
+<% if (session.getAttribute("rol").equals("Admin")) { %>
 <div id="bg" style="background-image: url('img/College.jpg');">
 	<header>
 		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
@@ -465,7 +466,6 @@
 			}
 		</script>
 		<script>
-		
 			$(document).ready(function () {
 		  $('#dt-all-checkbox').dataTable({
 		
@@ -481,6 +481,11 @@
 		  });
 			});
 		</script>
-
+	    <% } else { %>
+	    <div class="alert alert-danger" style="border: 2px solid darkred; margin: auto; width: 800px; margin-top: 20px;">
+	    <center><b style="font-weight: bold;")>Importante:</b><br>
+	    Esta página está reservada a usuarios Administradores.</center>
+	  	</div>
+	    <% } %>
 </body>
 </html>
