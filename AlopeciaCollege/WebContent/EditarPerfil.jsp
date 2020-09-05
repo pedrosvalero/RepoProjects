@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title> Perfil - <% out.print(session.getAttribute("nickUsu")); %> </title>
+<title> Editar perfil - <% out.print(session.getAttribute("nickUsu")); %> </title>
 	<meta charset="ISO-8859-1">
 	<link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="64x64">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -24,11 +24,10 @@
 </head>
 <body>
 <%
-	Connection conn = Conexion.getInstance().getConnection();
-	Statement st = conn.createStatement();
-	String query = "UPDATE alopeciacollege.usuario SET localidad = ?, telefono = ?, email = ?, pass = ?, nick = ? where dni = ?";
-	ResultSet rs = st.executeQuery(query);
+	Usuario u = (Usuario) request.getAttribute("dni");
+
 %>
+
 <div id="bg" style="background-image: url('img/College.jpg');">
 	<header>
 		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
@@ -103,46 +102,49 @@
     </div>
     
 <!-- Apartados -->
+<form action="Controlador" method="POST">
 	<div class="col active-with-click"id="block">
 		<div class="transbox" >
 	    <div class="modal-body mx-5">
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-envelope prefix"></i>
-	          <label id="text" data-error="wrong" data-success="right" for="form29"><% out.print(session.getAttribute("email")); %></label>
-	        	<input type="email" id="form29" class="form-control validate" disabled>
+	          <label id="text" data-error="wrong" data-success="right" for="form29">Correo electrónico</label>
+	          <input type="email" id="form29"  name="email_control" class="form-control validate" value="<%=u.getEmail()%>">
 	        </div>
 		    <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-user prefix"></i>
-	          <label id="text" data-error="wrong" data-success="right" for="form29"><% out.print(session.getAttribute("email")); %></label>
-	          <input  type="text" id="form29" class="form-control validate" disabled>
+	          <label id="text" data-error="wrong" data-success="right" for="form29">Nickname</label>
+	          <input  type="text" id="form29" name="nick_control" class="form-control validate" value="<%=u.getNick()%>">
 	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-city prefix"></i>
 	          
-	          <select id =" localidad" class="custom-select browser-default" disabled>
-                <option hidden><% out.print(session.getAttribute("email")); %></option>
+	          <select id =" localidad"  name="localidad_control" class="custom-select browser-default" value="<%=u.getLocalidad()%>">
+                <option hidden>Localidad...</option>
 				<option>Álava</option><option>Albacete</option><option>Alicante</option><option>Almería</option><option>Asturias</option><option>Ávila</option><option>Badajoz</option><option>Barcelona</option><option>Burgos</option><option>Cáceres</option>
 				<option>Cádiz</option><option>Cantabria</option><option>Castellón</option><option>Ciudad Real</option><option>Córdoba</option><option>La Coruña</option><option>Cuenca</option><option>Gerona</option><option>Granada</option><option>Guadalajara</option><option>Guipúzcoa</option><option>Huelva</option><option>Huesca</option><option>Islas Baleares</option><option>Jaén</option><option>León</option><option>Lérida</option><option>Lugo</option><option>Madrid</option><option>Málaga</option><option>Murcia</option><option>Navarra</option><option>Ourense</option><option>Palencia</option><option>Las Palmas</option><option>Pontevedra</option><option>La Rioja</option><option>Salamanca</option><option>Segovia</option><option>Sevilla</option><option>Soria</option><option>Tarragona</option><option>Santa Cruz de Tenerife</option><option>Teruel</option><option>Toledo</option><option>Valencia</option><option>Valladolid</option><option>Vizcaya</option><option>Zamora</option><option>Zaragoza</option>
             </select>
 	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-mobile-alt prefix" aria-hidden="true"></i>
-	          <label id="text" data-error="wrong" data-success="right" for="form29"><% out.print(session.getAttribute("email")); %></label>
-	          <input  type="tel" id="form29" class="form-control validate" disabled>
+	          <label id="text" data-error="wrong" data-success="right" for="form29">Teléfono</label>
+	          <input  type="tel" id="form29" name="tlf_control" class="form-control validate" value="<%=u.getTelefono()%>">
 	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-key prefix"></i>
-	          <label id="text" data-error="wrong" data-success="right" for="form29"><% out.print(session.getAttribute("email")); %></label>
-	          <input  type="password" id="form29" class="form-control validate" disabled>
+	          <label id="text" data-error="wrong" data-success="right" for="form29">Contraseña</label>
+	          <input  type="password" id="form29"  name="pass_control" class="form-control validate" value="<%=u.getPass()%>">
 	        </div>
 	    </div>
 	 </div>
 	</div>
+	</form>
 </section>
 
 <div id="boton"class="text-center">
-  <a href="Controlador?opcion2=e&dni=<%= rs.getString("dni") %>" class="btn btn-default btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Editar</a>
-  <a href="Controlador?opcion2=b&dni=<%= rs.getString("dni") %>" class="btn btn-red btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Eliminar cuenta</a>
+	<input type="hidden" name="opcion2" value="e">
+  <a href="#" class="btn btn-default btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Modificar cambios</a>
+  <a href="#" class="btn btn-red btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Eliminar cuenta</a>
 </div>
 
 
