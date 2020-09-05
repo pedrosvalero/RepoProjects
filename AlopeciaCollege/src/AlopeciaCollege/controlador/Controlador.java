@@ -43,14 +43,14 @@ public class Controlador extends HttpServlet {
 		UsuarioDAO udao = new UsuarioDAO();
 		Usuario u = null;
 		
-		String destPage = "datosUsuario.jsp";
+		String destPage = "Perfil.jsp";
 		
 		switch (opcion1) {
 		case "e":
 			try {
 				u = udao.getUsuario(email);
 				request.setAttribute("email", u);
-				destPage = "editarUsuario.jsp";
+				destPage = "Perfil.jsp";
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -70,8 +70,8 @@ public class Controlador extends HttpServlet {
 		case "e":
 			try {
 				u = udao.getUsuario(dni);
-				request.setAttribute("dni", u);
-				destPage = "EditarPerfil.jsp";
+				request.setAttribute("DNI", u);
+				destPage = "Perfil.jsp";
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -111,14 +111,14 @@ public class Controlador extends HttpServlet {
 		u.setPass(pass);
 		
 		UsuarioDAO usuDAO = new UsuarioDAO();
-		String pagDest = "index.jsp";
+		String pagDest = "Login.jsp";
 		
 		try {
 			if (opcion1 == null )
 				usuDAO.altaUsuario(u);
 			else
 				usuDAO.modificarUsuario(u);
-			pagDest = "datosUsuario.jsp";
+			pagDest = "Perfil.jsp";
 			RequestDispatcher dispatcher = request.getRequestDispatcher(pagDest);
 			dispatcher.forward(request, response);
 			
@@ -132,7 +132,7 @@ public class Controlador extends HttpServlet {
 				usuDAO.altaUsuario(u);
 			else
 				usuDAO.modificarUsuario(u);
-			pagDest = "datosUsuario.jsp";
+			pagDest = "Perfil.jsp";
 			RequestDispatcher dispatcher = request.getRequestDispatcher(pagDest);
 			dispatcher.forward(request, response);
 			

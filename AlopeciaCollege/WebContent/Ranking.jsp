@@ -27,7 +27,7 @@
 	Statement st = conn.createStatement();
 	String query = "SELECT nick, puntuacion, rol FROM alopeciacollege.usuario WHERE rol <> 'Admin' order by puntuacion";
 	ResultSet rs = st.executeQuery(query);
-	%>
+%>
 <div id="bg" style="background-image: url('img/College.jpg');">
 		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
 		  <img src ="img/TheAlopeciaCollegeBLANCO3.png" width="45px">
