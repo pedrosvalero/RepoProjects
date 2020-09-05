@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ page import="AlopeciaCollege.servicios.Conexion"%>
 <%@ page import="java.sql.*"%>
+<%@ page import="AlopeciaCollege.modelo.Usuario"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -97,7 +98,7 @@
     </div>
 
 	<%
-		Usuario u = (Usuario) request.getAttribute("DNI");		
+		Usuario u = (Usuario) request.getAttribute("dni");		
 	%>
 <!-- Apartados -->
 <form action="Controlador"  method="POST">

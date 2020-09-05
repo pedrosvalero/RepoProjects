@@ -131,20 +131,6 @@ public class UsuarioDAO {
 		pst.executeUpdate();
 
 	}
-
-	//BORRAR USUARIO A PARTIR DEL EMAIL
-	public void borrarUsuario(String email) throws SQLException {
-
-		String sql = "DELETE FROM alopeciacollege.usuario WHERE email = ?"; // <- No te olvides del Where...
-		con = Conexion.getInstance().getConnection();
-		pst = con.prepareStatement(sql);
-		pst.setString(1, email);
-
-		pst.executeUpdate();
-
-	}
-
-	
 	
 	//RECOGER INFO DEL USUARIO
 	public Usuario getUsuario(String email) throws SQLException {
@@ -188,5 +174,17 @@ public class UsuarioDAO {
 		}
 
 		return u;
+	}
+	
+	//BORRAR USUARIO
+	public void borrarUsuario(String dni) throws SQLException {
+
+		String sql = "DELETE FROM alopeciacollege.usuario WHERE dni = ?";
+		con = Conexion.getInstance().getConnection();
+		pst = con.prepareStatement(sql);
+		pst.setString(1, dni);
+
+		pst.executeUpdate();
+
 	}
 }

@@ -14,6 +14,28 @@ public class Usuario {
 	private String localidad;
 	private int puntuacion;
 
+	public Usuario() {
+		super();
+	}
+	
+	
+	public Usuario(String nomUsu, String apellidosUsu, String email, String pass, String rol, String DNI,
+				   String nick, String sexUsu, String fecNac, String telefono, String localidad, int puntuacion) {
+		super();
+		this.nomUsu = nomUsu;
+		this.apellidosUsu = apellidosUsu;
+		this.email = email;
+		this.pass = pass;
+		this.rol = rol;
+		this.DNI = DNI;
+		this.nick = nick;
+		this.sexUsu = sexUsu;
+		this.fecNac = fecNac;
+		this.telefono = telefono;
+		this.localidad = localidad;
+		this.puntuacion = puntuacion;
+	}
+	
 
 	public String getNomUsu() {
 		return nomUsu;
@@ -101,11 +123,6 @@ public class Usuario {
 
 	public void setLocalidad(String localidad) {
 		this.localidad = localidad;
-	}
-
-	public Usuario() {
-		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public int getPuntuacion() {

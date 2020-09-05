@@ -36,41 +36,18 @@ public class Controlador extends HttpServlet {
 	//Usuario
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String opcion1 = request.getParameter("opcion1");
-		String opcion2 = request.getParameter("opcion2");
-		String email = request.getParameter("email");
+		String opcion = request.getParameter("opcion");
 		String dni = request.getParameter("dni");
 		UsuarioDAO udao = new UsuarioDAO();
 		Usuario u = null;
 		
 		String destPage = "Perfil.jsp";
 		
-		switch (opcion1) {
+		switch (opcion) {
 		case "e":
 			try {
-				u = udao.getUsuario(email);
-				request.setAttribute("email", u);
-				destPage = "Perfil.jsp";
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			break;
-		case "b":
-			try {
-				udao.borrarUsuario(email);
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			break;
-		}
-		
-		switch (opcion2) {
-		case "e":
-			try {
-				u = udao.getUsuario(dni);
-				request.setAttribute("DNI", u);
+				u = udao.getPerfil(dni);
+				request.setAttribute("dni", u);
 				destPage = "Perfil.jsp";
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
@@ -97,41 +74,21 @@ public class Controlador extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String email = request.getParameter("email");
 		String nick = request.getParameter("nick");
-		String rol = request.getParameter("rol");
 		String localidad = request.getParameter("localidad");
+		String telefono = request.getParameter("telefono");
 		String pass = request.getParameter("pass");
-		String opcion1 = request.getParameter("opcion1");
-		String opcion2 = request.getParameter("opcion2");
 		
 		Usuario u = new Usuario();
 		u.setEmail(email);
 		u.setNick(nick);
-		u.setRol(rol);
 		u.setLocalidad(localidad);
 		u.setPass(pass);
 		
 		UsuarioDAO usuDAO = new UsuarioDAO();
-		String pagDest = "Login.jsp";
+		String pagDest = "Perfil.jsp";
 		
 		try {
-			if (opcion1 == null )
-				usuDAO.altaUsuario(u);
-			else
-				usuDAO.modificarUsuario(u);
-			pagDest = "Perfil.jsp";
-			RequestDispatcher dispatcher = request.getRequestDispatcher(pagDest);
-			dispatcher.forward(request, response);
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		try {
-			if (opcion2 == null )
-				usuDAO.altaUsuario(u);
-			else
-				usuDAO.modificarUsuario(u);
+			usuDAO.modificarUsuario(u);
 			pagDest = "Perfil.jsp";
 			RequestDispatcher dispatcher = request.getRequestDispatcher(pagDest);
 			dispatcher.forward(request, response);
