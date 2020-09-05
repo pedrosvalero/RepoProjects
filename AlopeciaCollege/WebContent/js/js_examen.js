@@ -304,14 +304,60 @@ const contenedor = document.getElementById("test");
 	  },
 	];
 	/*----------Aquí van las funciones---------*/
-	
-	let opcionRandom = [];
-	opcionRandom.push(0);
-	for (var i = 0; i < 5; i++) {
-		var aleatorio = Math.round(Math.random()*20);
-		opcionRandom[aleatorio]++;
-	}
-	
+
+/*Funcion para preguntas aleatorias*/	
+function scrambleArray(array){
+
+   const scrambledArr = [];
+   
+   for(let i = 0; i < array.length; i++){
+
+      let index = (Math.random() * array.length) | 0;
+      if(scrambledArr.length != 0){
+
+        let j = 0;
+        while(j < scrambledArr.length){
+
+          if(scrambledArr[j].pregunta == array[index].pregunta){
+            j = 0;
+            index = (Math.random() * array.length) | 0;
+          }else{
+            j++;
+          }
+
+        }
+
+        scrambledArr.push(array[index]);
+      }else{
+        scrambledArr.push(array[index]);
+      }
+
+   }
+   
+   return scrambledArr;
+
+}
+
+function* dameLaSiguientePregunta(arrayPreguntas){
+
+        yield* arrayPreguntas;
+ 
+}
+ 
+let preguntasAleatoriasSinRepetir = scrambleArray(preguntas);
+let generadorDePreguntas = dameLaSiguientePregunta(preguntasAleatoriasSinRepetir);
+
+console.log("\nPregunta 1: \n");
+console.log(generadorDePreguntas.next().value);
+console.log("\nPregunta 2: \n");
+console.log(generadorDePreguntas.next().value);
+console.log("\nPregunta 3: \n");
+console.log(generadorDePreguntas.next().value);
+console.log("\nPregunta 4: \n");
+console.log(generadorDePreguntas.next().value);
+console.log("\nPregunta 5: \n");
+console.log(generadorDePreguntas.next().value);
+/*fin funcion preguntas aleatorias*/
 	function mostrarTest() {
 	  const preguntasYrespuestas = [];
 
