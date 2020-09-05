@@ -23,8 +23,6 @@ table, tr, th, td{
 	opacity: 0.9;
 }
 
-table{border-radius: 10px;}
-
 footer{ position: relative; width: 100%; bottom: 0; opacity: 0.9; }
 #redes img{ margin-left: 5px; }
 

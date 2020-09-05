@@ -19,9 +19,7 @@ form{
 	width: 100%;
 	justify-content: center;
 	padding-top: 30px;
-
 }
-
 
 div.transbox {
   inline-block: center;
@@ -30,8 +28,6 @@ div.transbox {
 }
 
 #registrarse{ margin-bottom: 15px; }
-
-
 
 form input[type = "submit"], form input[type = "reset"]{
 	border-radius: 4px;

@@ -144,7 +144,7 @@
       <!-- Grid row -->
     </div>
     <!-- Copyright -->
-    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:<a href="#"> paginaweb.com</a></div>
+    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:<a href="#"> alopeciacollege.herokuapp.com</a></div>
     <!-- Copyright -->
   </footer>
 

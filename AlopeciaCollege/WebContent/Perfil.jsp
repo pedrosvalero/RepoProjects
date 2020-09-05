@@ -41,11 +41,9 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="Examen.jsp">Examenes</a>
 		      </li>
-		      <% if (session.getAttribute("rol").equals("Admin")) { %>
 		      <li class="nav-item">
 		        <a class="nav-link" href="Usuarios.jsp">Usuarios</a>
 		      </li>
-		      <% } %>
 		      <li class="nav-item active">
 		        <a class="nav-link">Perfil
 		        <span class="sr-only">(current)</span></a>
@@ -114,58 +112,9 @@
 	          <i id="simbolos" class="fas fa-city prefix"></i>
 	          
 	          <select id =" localidad" class="custom-select browser-default">
-                <option value="" disabled selected>Localidad...</option>
-                <option value="1" >Álava</option>
-                <option value="2">Albacete</option>
-                <option value="3">Alicante</option>
-                <option value="5">Almería</option>
-                <option value="6">Asturias</option>
-                <option value="7">Ávila</option>
-                <option value="8">Badajoz</option>
-                <option value="9">Barcelona</option>
-                <option value="10">Burgos</option>
-                <option value="11">Cáceres</option>
-                <option value="12">Cádiz</option>
-                <option value="13">Cantabria</option>
-                <option value="14">Castellón</option>
-                <option value="15">Ciudad Real</option>
-                <option value="16">Córdoba</option>
-                <option value="17">A Coruña</option>
-                <option value="18">Cuenca</option>
-                <option value="19">Girona</option>
-                <option value="20">Granada</option>
-                <option value="21">Guadalajara</option>
-                <option value="22">Gipuzkoa</option>
-                <option value="23">Huelva</option>
-                <option value="24">Huesca</option>
-                <option value="25">Illes Balears</option>
-                <option value="26">Jaén</option>
-                <option value="27">León</option>
-                <option value="28">Lleida</option>
-                <option value="29">Lugo</option>
-                <option value="30">Madrid</option>
-                <option value="31">Málaga</option>
-                <option value="32">Murcia</option>
-                <option value="33">Navarra</option>
-                <option value="34">Ourense</option>
-                <option value="35">Palencia</option>
-                <option value="36">Las Palmas</option>
-                <option value="37">Pontevedra</option>
-                <option value="38">La Rioja</option>
-                <option value="39">Salamanca</option>
-                <option value="40">Segovia</option>
-                <option value="41">Sevilla</option>
-                <option value="42">Soria</option>
-                <option value="43">Tarragona</option>
-                <option value="44">Santa Cruz de Tenerife</option>
-                <option value="45">Teruel</option>
-                <option value="46">Toledo</option>
-                <option value="47">Valencia</option>
-                <option value="48">Valladolid</option>
-                <option value="49">Bizkaia</option>
-                <option value="50">Zamora</option>
-                <option value="50">Zaragoza</option>
-                
+                <option hidden>Localidad...</option>
+				<option>Álava</option><option>Albacete</option><option>Alicante</option><option>Almería</option><option>Asturias</option><option>Ávila</option><option>Badajoz</option><option>Barcelona</option><option>Burgos</option><option>Cáceres</option>
+				<option>Cádiz</option><option>Cantabria</option><option>Castellón</option><option>Ciudad Real</option><option>Córdoba</option><option>La Coruña</option><option>Cuenca</option><option>Gerona</option><option>Granada</option><option>Guadalajara</option><option>Guipúzcoa</option><option>Huelva</option><option>Huesca</option><option>Islas Baleares</option><option>Jaén</option><option>León</option><option>Lérida</option><option>Lugo</option><option>Madrid</option><option>Málaga</option><option>Murcia</option><option>Navarra</option><option>Ourense</option><option>Palencia</option><option>Las Palmas</option><option>Pontevedra</option><option>La Rioja</option><option>Salamanca</option><option>Segovia</option><option>Sevilla</option><option>Soria</option><option>Tarragona</option><option>Santa Cruz de Tenerife</option><option>Teruel</option><option>Toledo</option><option>Valencia</option><option>Valladolid</option><option>Vizcaya</option><option>Zamora</option><option>Zaragoza</option>
             </select>
 	        </div>
 	        <div class="md-form mb-5">
@@ -185,10 +134,9 @@
 
 <div id="boton"class="text-center">
   <a href="" class="btn btn-default btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Editar</a>
-</div>
-<div id="boton" class="text-center">
   <a href="" class="btn btn-red btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Eliminar cuenta</a>
 </div>
+
 
 	
 	<!-- Whatsapp -->
@@ -255,7 +203,7 @@
     </div>
     <!-- Footer Links -->
     <!-- Copyright -->
-    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:<a href="#"> paginaweb.com</a>
+    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:<a href="#"> alopeciacollege.herokuapp.com</a>
     </div>
     <!-- Copyright -->
   </footer>

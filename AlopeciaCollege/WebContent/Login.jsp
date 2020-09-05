@@ -5,7 +5,7 @@
 <head>
 	<title>The Alopecia College - Inicio de sesión</title>
 	<meta charset="UTF-8">
-	    <title>Icono en el navegador</title> <link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="32x32">
+	<link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="32x32">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -19,13 +19,15 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Material Design Bootstrap -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div id="bg" style="background-image: url('img/Lwp2.jpg');">
 	<header>
-		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark" size="57">
+		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark" height="57">
 		  <img src ="img/TheAlopeciaCollegeBLANCO3.png" width="45px">
-		  <a class="navbar-brand"><font id="navfont">The Alopecia College</font></a>
+		  <a class="navbar-brand" href="Login.jsp"><font id="navfont">The Alopecia College</font></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 		    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
@@ -33,26 +35,59 @@
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
 		    <ul class="navbar-nav mr-auto"></ul>
 		    <ul class="navbar-nav ml-auto nav-flex-icons">
-		      <img onclick="myFunction()" src="img/signo.png" width="40px">
+		    	<div class="container">
+				  <!-- Trigger the modal with a button -->
+				  <img data-toggle="modal" data-target="#myModal" src="img/signo.png" width="40px">
+				  <!-- Modal -->
+				  <div class="modal fade" id="myModal" role="dialog">
+				    <div class="modal-dialog">
+				      <!-- Modal content-->
+				      <div class="modal-content" style="opacity: 0.85; border-radius: 10px; padding: 5px;">
+				        <div class="modal-header">
+				          <h4 class="modal-title"><b style="font-family: 'Pacifico', sans-serif;">About</b></h4>
+				          <img class="close" data-dismiss="modal" src="img/close.png" width="40">
+				        </div>
+				        <div class="modal-body">
+				          <h5 style="text-align: center;">Creada por y para todas aquellas personas que han perdido uno de sus bienes más preciados, tú también puedes estudiar sin ser repudiado. Esta es tu Universidad</h5>
+				        </div>
+				        <div class="modal-footer"">
+				          <button type="button" class="btn btn-success" data-dismiss="modal" style="border-radius: 20px; margin: auto;">Cerrar</button>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
 		    </ul>
 		  </div>
 		</nav>
-		<p id="about"></p>
 	</header>
-  
+
   <div class="containerbody">
 	<form action = "Login" method = "POST" accept-charset="ISO-8859-1">
-		<center><img src="img/TheAlopeciaCollegeMay.png" width="200px"><br><br>
-		<i class="fas fa-envelope" aria-hidden="true"></i> <input class="input" type="email" name="email_control" title="Email/Correo electrónico" required autofocus placeholder ="Dirección de correo electrónico"><br>
-		<span style="color: red"><%=(request.getAttribute("msgerr") == null) ? "" : request.getAttribute("msgerr") %></span><br>
-		<i class="fas fa-key"></i> <input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña "><br>
+		<center><img src="img/TheAlopeciaCollegeMay.png" width="200px"><br><br></center>
+		
+		<div class="md-form mb-5">
+			<i id="simbolos" class="fas fa-envelope prefix"></i> 
+			<!-- <input class="input" type="email" name="email_control" title="Email/Correo electrónico" required autofocus placeholder ="Dirección de correo electrónico"><br> -->
+			<input type="email" name="email_control" id="form29" class="form-control validate" title="Email/Correo electrónico" required>
+			<label id="text" data-error="wrong" data-success="right" for="form29" title="Email/Correo electrónico">Correo electrónico</label>
+		</div>
+		<div class="md-form mb-5">
+			<i class="fas fa-key prefix"></i> 
+			<!-- <input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña "><br> -->
+			<input type="password" name="pass_control" minlength="6" id="form29"  class="form-control validate" title="Contraseña de la cuenta" required>
+			<label id="text" data-error="wrong" data-success="right" for="form29" title="Contraseña de la cuenta">Contraseña</label>
+		</div>
+		<center>
+		<span style="color: red"><%=(request.getAttribute("msgerr") == null) ? "" : request.getAttribute("msgerr") %></span>
+		
 		<input type="checkbox" name="recuerdame" /> Recuérdame <br><br>
-		¿Aún no te has registrado? <a href="Registro.jsp" style="color: #2E86C1;"> Regístrate</a><br>
-		<input type ="submit" value="Entrar"></center>
+		
+		¿Aún no te has registrado? <a href="Registro.jsp" style="color: #2E86C1;"> Regístrate</a><br><br>
+		
+		<button class="btn btn-default btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;" type="submit">Entrar</button>
 	</form>
   </div>
-  
-  
 
 	<!-- Whatsapp -->
 	<a class="appWhatsapp" target="blanck" href="https://api.whatsapp.com/send?phone=34601032880&text=Buenas!&nbsp;Entra&nbsp;en&nbsp;nuestro&nbsp;grupo&nbsp;de&nbsp;calvos" title="WhatsApp">
@@ -119,15 +154,16 @@
     </div>
     <!-- Footer Links -->
     <!-- Copyright -->
-    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:<a href="#"> paginaweb.com</a>
+    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:<a href="#"> alopeciacollege.herokuapp.com</a>
     </div>
     <!-- Copyright -->
-  </footer>
-	
+  </footer> 
+</div><!-- <- Este div es para el background, no borrar! -->
+
+<!-- Scripts -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script>function myFunction() {document.getElementById("about").innerHTML="Creada por y para todas aquellas personas que han perdido uno de sus bienes más preciados, tú también puedes estudiar sin ser repudiado. Esta es tu Universidad";}</script>
     <!-- Footer --><script src="https://kit.fontawesome.com/2ab430d3ec.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2ab430d3ec.js" crossorigin="anonymous"></script>
     <!-- JQuery -->

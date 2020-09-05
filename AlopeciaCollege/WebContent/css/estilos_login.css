@@ -11,8 +11,7 @@
 }
 
 #navfont{margin-left: 10px; font-family: 'Pacifico', sans-serif; color: #eaeaec; font-size: 5;}
-nav { border-bottom: inset grey 2px; }
-#about { text-align: center; border: solid grey; margin-top: -8px; margin-left: 30%; margin-right: 30%; }
+nav {border-bottom: inset grey 2px;}
 .containerbody{min-height: calc(100vh - 100px - 300px); position: relative;}
 
 form{

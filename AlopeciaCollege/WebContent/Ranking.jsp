@@ -78,11 +78,12 @@
 		</center>
 	</a>
 
+<div class="table-responsive">
 	<table>
 		<tr class ="aqua-gradient">
-			<th>Nick</th>
-			<th>Rol</th>
-			<th>Puntuación</th>
+			<th scope="col"><b>Nick</b></th>
+			<th scope="col"><b>Rol</b></th>
+			<th scope="col"><b>Puntuación</b></th>
 		</tr>
 
 		<%
@@ -100,6 +101,7 @@
 		%>
 
 	</table>
+</div>
 
 	<%
 		rs.close();
@@ -172,7 +174,7 @@
       <!-- Grid row -->
     </div>
     <!-- Copyright -->
-    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:<a href="#"> paginaweb.com</a></div>
+    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:<a href="#"> alopeciacollege.herokuapp.com</a></div>
     <!-- Copyright -->
   </footer>
 
