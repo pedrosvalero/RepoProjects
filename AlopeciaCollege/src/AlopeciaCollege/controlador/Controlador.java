@@ -57,6 +57,7 @@ public class Controlador extends HttpServlet {
 		case "b":
 			try {
 				udao.borrarUsuario(dni);
+				destPage = "Login.jsp";
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

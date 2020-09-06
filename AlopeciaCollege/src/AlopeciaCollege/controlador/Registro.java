@@ -74,7 +74,7 @@ public class Registro extends HttpServlet {
 		
 		try {
 			usao.altaUsuario(u);
-			pagDest = "Home.jsp";
+			pagDest = "Login.jsp";
 			HttpSession session = request.getSession();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
