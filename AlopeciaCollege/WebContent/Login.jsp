@@ -70,13 +70,13 @@
 			<i id="simbolos" class="fas fa-envelope prefix"></i> 
 			<!-- <input class="input" type="email" name="email_control" title="Email/Correo electrónico" required autofocus placeholder ="Dirección de correo electrónico"><br> -->
 			<input type="email" name="email_control" id="form29" class="form-control validate" title="Email/Correo electrónico" required>
-			<label id="text" data-error="wrong" data-success="right" for="form29" title="Email/Correo electrónico">Correo electrónico</label>
+			<label id="email" data-error="wrong" data-success="right" for="form29" title="Email/Correo electrónico">Correo electrónico</label>
 		</div>
 		<div class="md-form mb-5">
 			<i class="fas fa-key prefix"></i> 
 			<!-- <input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña "><br> -->
 			<input type="password" name="pass_control" minlength="6" id="form29"  class="form-control validate" title="Contraseña de la cuenta" required>
-			<label id="text" data-error="wrong" data-success="right" for="form29" title="Contraseña de la cuenta">Contraseña</label>
+			<label id="password" data-error="wrong" data-success="right" for="form29" title="Contraseña de la cuenta">Contraseña</label>
 		</div>
 		<center>
 		<span style="color: red"><%=(request.getAttribute("msgerr") == null) ? "" : request.getAttribute("msgerr") %></span>
@@ -85,7 +85,7 @@
 		
 		¿Aún no te has registrado? <a href="Registro.jsp" style="color: #2E86C1;"> Regístrate</a><br><br>
 		
-		<button class="btn btn-default btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;" type="submit">Entrar</button>
+		<button class="btn btn-blue btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;" type="submit">Entrar</button>
 	</form>
   </div>
 

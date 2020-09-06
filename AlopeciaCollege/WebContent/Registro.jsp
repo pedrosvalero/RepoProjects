@@ -48,33 +48,33 @@
 
 			<div class="row" id="apartados">
 	          	<div class="form-group col-md-6">
-	          		<i class="fas fa-signature"></i><input class="input" type="text" name="name_control" title="Nombre" required autofocus placeholder ="Nombre">
+	          		<i class="fas fa-signature"></i><input class="input" type="text" name="name_control" title="Nombre" required autofocus placeholder ="Nombre *">
 	          	</div>
 	        	<div class="form-group col-md-6">
-	          		<i class="fas fa-signature"></i><input class="input" type="text" name="surname_control" title="Apellidos" required placeholder ="Apellidos">
+	          		<i class="fas fa-signature"></i><input class="input" type="text" name="surname_control" title="Apellidos" required placeholder ="Apellidos *">
 	          	</div>
 	      	</div>
 
 	        <div class="row" id="apartados">
 	            <div class="form-group col-md-6">
-	             	<i class="fas fa-id-card"></i><input class="input" type="text" name="dni_control" maxlength="9" title="Número de Documento Identidad" required placeholder ="DNI">
+	             	<i class="fas fa-id-card"></i><input class="input" type="text" name="dni_control" maxlength="9" title="Número de Documento Identidad" required placeholder ="DNI *">
 	            </div>
 	            <div class="form-group col-md-6">
-	            	<i class="fas fa-birthday-cake"></i><input class="input" type="date" name="birthdate_control" title="Fecha de nacimiento" required placeholder ="Fecha Nacimiento">
+	            	<i class="fas fa-birthday-cake"></i><input class="input" type="date" name="birthdate_control" title="Fecha de nacimiento *" required>
 	            </div>
 	        </div>
 
-			<div class="form-group col-md-12">
+			<div class="form-group col-md-10">
 	            <i class="fas fa-envelope" aria-hidden="true"></i><input class="input" id="idMail" type="email" name="email_control" 
-				required placeholder="Email" title="Dirección de correo electrónico">
+				required placeholder="Email *" title="Dirección de correo electrónico">
 			</div>
 
 			<div class="row" id="apartados">
 				<div class="form-group col-md-6">
-	        	    <i class="fas fa-user"></i><input class="input" type="text" name="nick_control" title="Nombre de usuario" required placeholder ="Nickname">
+					<i class="fas fa-user"></i><input class="input" type="text" name="nick_control" title="Nombre de usuario" required placeholder ="Nickname *">
 	            </div>
 	            <div class="form-group col-md-6">
-	            	<i class="fas fa-key"></i><input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña">
+	            	<i class="fas fa-key"></i><input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña *">
 	            </div>
 	            <div class="form-group col-md-4">
 	           		<i class="fas fa-city"></i><select id="idLocalidad" title="Localidad" name="localidad_control">
@@ -93,13 +93,9 @@
 				</select><br>
 				</div>
 	        </div>
-        	<div class="row" id="apartados">
-        		<div class="form-group col-md-6">
-        			<input id="Registrarse" type ="submit" value="Registrarse" title="Registrarse en la página">
-        		</div>
-        		<div class="form-group col-md-6">
-        			<input id="Registrarse" type ="reset" value="Borrar Todo" title="Empezar de cero">
-        		</div>
+        	<div class="row" id="apartados" style="justify-content: center;">
+        			<button class="btn btn-blue btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;" type="submit" title="Crear cuenta en la página">Registrarse</button>
+        			<button class="btn btn-red btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px; margin-left: 45px;" type="reset" title="Empezar de cero">Borrar todo</button>
         	</div>
 		</center></form>
 	</div>

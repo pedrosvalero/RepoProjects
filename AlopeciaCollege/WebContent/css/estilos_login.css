@@ -40,22 +40,6 @@ form{
 	border: 1px solid black;
 }
 
-form input[type = "submit"]{
-	width: 40%;
-	border-radius: 4px;
-	padding: 8px 10px;
-	margin-top: 22px;
-	color: #fff;
-	border: 2px solid #f6f6f6;
-	background: #000;
-	transition:0.3s;
-}
-
-form input[type="submit"]:hover{
-	cursor: pointer;
-	background: grey;
-}
-
 footer{ margin-top: 5%; position: relative; width: 100%; bottom: 0; opacity: 0.9; }
 
 #redes img{ margin-left: 5px; }
