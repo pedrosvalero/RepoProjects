@@ -94,8 +94,8 @@
 				</div>
 	        </div>
         	<div class="row" id="apartados" style="justify-content: center;">
-        			<button class="btn btn-blue btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;" type="submit" title="Crear cuenta en la página">Registrarse</button>
-        			<button class="btn btn-red btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px; margin-left: 45px;" type="reset" title="Empezar de cero">Borrar todo</button>
+        		<button class="btn btn-blue btn-rounded mb-3" style="border-radius: 20px;" type="submit" title="Crear cuenta en la página">Registrarse</button>
+        		<button class="btn btn-red btn-rounded mb-3" style="border-radius: 20px; margin-left: 45px;" type="reset" title="Empezar de cero">Borrar todo</button>
         	</div>
 		</center></form>
 	</div>

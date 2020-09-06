@@ -69,9 +69,8 @@ public class Registro extends HttpServlet {
 		u.setNick(nick);
 		u.setPuntuacion(puntuacion);
 
-		
 		UsuarioDAO usao = new UsuarioDAO();	
-		String pagDest = "Home.jsp";
+		String pagDest = "Login.jsp";
 		
 		try {
 			usao.altaUsuario(u);

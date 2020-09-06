@@ -140,7 +140,7 @@
     </div>
 
     <div class="text-center">
-      <a href="" class="text-succes" data-toggle="modal" data-target="#modalAdd1" >
+      <a href="" class="text-succes" data-toggle="modal" data-target="#modalAdd1">
       <img class="hoverable" id="color" src="img/plus.png" aria-hidden="true" style="width: 30px; border-radius: 100%; margin-top: 40px; position: relative;"></a> 
     </div>
 
@@ -155,7 +155,7 @@
           </div>
           <div class="modal-body mx-3">
             <div class="md-form mb-5">
-              <input type="text" id="formNameEdit1" class="form-control validate">
+              <input type="text" id="formNameEdit1" class="form-control validate" value="">
               <label data-error="wrong" data-success="right" for="formNameEdit1">Nombre</label>
             </div>
 
@@ -196,7 +196,7 @@
             </div>
           </div>
           <div class="modal-footer d-flex justify-content-center editInsideWrapper">
-            <button class="btn btn-outline-secondary btn-block editInside" data-dismiss="modal">Editar Usuario
+            <button href="Controlador?opcion=e&dni=<%=rs.getString("dni") %>" class="btn btn-outline-secondary btn-block editInside" data-dismiss="modal">Editar Usuario
               <i class="fas fa-paper-plane-o ml-1"></i>
             </button>
           </div>
@@ -218,7 +218,7 @@
             <p class="text-center h4">¿Estás seguro que quieres borrar al usuario?</p>
           </div>
           <div class="modal-footer d-flex justify-content-center deleteButtonsWrapper">
-            <button type="button" class="btn btn-danger btnYesClass" id="btnYes1" data-dismiss="modal">Si</button>
+            <button href="Controlador?opcion=b&dni=<%=rs.getString("dni") %>" type="button" class="btn btn-danger btnYesClass" id="btnYes1" data-dismiss="modal">Si</button>
             <button type="button" class="btn btn-primary btnNoClass" id="btnNo1" data-dismiss="modal">No</button>
           </div>
         </div>
@@ -260,8 +260,8 @@
         <td><%= rs.getString("rol") %></td>
         <td><%= rs.getString("pass") %></td>
         <td>
-	    	<center><a href="Controlador?opcion=e&dni=<%=rs.getString("dni") %>"><img class="hoverable" id="editar" style ="width: 25px; border-radius: 100%;" src="img/edit.png"></a>
-			<!-- ¡Botón borrar listo aquí! - Deshabilitado porque funciona y no avisa: <a href="Controlador?opcion=b&dni=<%=rs.getString("dni") %>"><img class="hoverable" id="borrar" src="img/delete.png" style ="margin-left: 15px; width: 25px; border-radius: 100%;"></a></center> -->
+	    	<center><img data-tarjet="#modalEdit1" class="hoverable" id="editar" style ="width: 25px; border-radius: 100%;" src="img/edit.png">
+			<img data-tarjet="#modaldelete1" class="hoverable" id="borrar" src="img/delete.png" style ="margin-left: 15px; width: 25px; border-radius: 100%;"></center>
 		</td>
       </tr>
     <%
