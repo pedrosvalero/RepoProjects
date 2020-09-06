@@ -64,7 +64,7 @@
 	            </div>
 	        </div>
 
-			<div class="form-group col-md-10">
+			<div class="form-group col-md-12">
 	            <i class="fas fa-envelope" aria-hidden="true"></i><input class="input" id="idMail" type="email" name="email_control" 
 				required placeholder="Email *" title="Dirección de correo electrónico">
 			</div>
