@@ -47,7 +47,7 @@ public class Controlador extends HttpServlet {
 		case "e":
 			try {
 				u = udao.getPerfil(dni);
-				request.setAttribute("dni", u);
+				request.setAttribute("nomUsu", u);
 				destPage = "Perfil.jsp";
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block

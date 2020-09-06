@@ -78,22 +78,22 @@
 		</center>
 	</a>
 
-<div class="table-responsive">
+<div class="table-responsive" style="border-radius: 10px;">
 	<table>
-		<tr class ="aqua-gradient">
-			<th scope="col"><b>Nick</b></th>
-			<th scope="col"><b>Rol</b></th>
-			<th scope="col"><b>Puntuación</b></th>
+		<tr style="background: black; opacity: 0.9; text-align: center;">
+			<th scope="col"><h5 style="font-weight: bold; color: white;">Nick</h5></th>
+			<th scope="col"><h5 style="font-weight: bold; color: white;">Rol</h5></th>
+			<th scope="col"><h5 style="font-weight: bold; color: white;">Puntuación</h5></th>
 		</tr>
 
 		<%
 			while (rs.next()) {
 		%>
 		
-		<tr class ="aqua-gradient">
-			<td><%=rs.getString("nick")%></td>
-			<td><%=rs.getString("rol")%></td>
-			<td><%=rs.getInt("puntuacion")%></td>
+		<tr style="background: lightyellow; opacity: 0.9; font-size: 8px;">
+			<td><h6><%=rs.getString("nick")%></h6></td>
+			<td><h6><%=rs.getString("rol")%></h6></td>
+			<td style="background: #F7DC6F;"><h6><%=rs.getInt("puntuacion")%></h6></td>
 		</tr>
 		
 		<%

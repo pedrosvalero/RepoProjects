@@ -13,18 +13,11 @@ header nav { border-bottom: inset grey 2px; }
   background-size: cover;
 }
 
-
-#color{
-	color:#00C851;
-
-}
-
-#borrar{
-	color:red;
-}
-
-#editar {
-	color:#33b5e5;
+tr, th, td{
+	padding: 10px;
+	width: 900px;
+	border: 1px solid black;
+	opacity: 0.9;
 }
 
 footer{ position: relative; width: 100%; bottom: 0; opacity: 0.9; }

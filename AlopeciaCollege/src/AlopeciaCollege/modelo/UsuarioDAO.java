@@ -66,7 +66,7 @@ public class UsuarioDAO {
 	public Usuario getPerfil(String dni) throws SQLException {
 
 		Usuario u = null;
-		String sql = "SELECT email, nick, localidad, telefono, pass nick FROM alopeciacollege.usuario WHERE dni = ?";
+		String sql = "SELECT email, nick, localidad, telefono, pass FROM alopeciacollege.usuario WHERE nick = ?";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(sql);
 		pst.setString(1, dni);
@@ -91,11 +91,11 @@ public class UsuarioDAO {
 		String sql = "SELECT localidad, telefono, email, pass, nick FROM alopeciacollege.usuario WHERE nick = ?";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(sql);
-		pst.setString(1, u.getLocalidad());
-		pst.setString(2, u.getTelefono());
-		pst.setString(3, u.getEmail());
-		pst.setString(4, u.getPass());
-		pst.setString(5, u.getNick());
+		pst.setString(1, u.getEmail());
+		pst.setString(2, u.getNick());
+		pst.setString(3, u.getLocalidad());
+		pst.setString(4, u.getTelefono());
+		pst.setString(5, u.getPass());
 
 		pst.executeUpdate();
 

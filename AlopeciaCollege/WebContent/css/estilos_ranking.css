@@ -16,12 +16,14 @@ header nav { border-bottom: inset grey 2px; }
 
 table, tr, th, td{
 	padding: 8px;
-	border: 1px solid black;
 	width: 900px;
 	margin: auto;
 	margin-bottom: 70px;
 	opacity: 0.9;
 }
+
+th{border: 1px solid white;}
+td{border: 1px solid black;}
 
 footer{ position: relative; width: 100%; bottom: 0; opacity: 0.9; }
 #redes img{ margin-left: 5px; }

@@ -1,26 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="AlopeciaCollege.servicios.Conexion"%>
+<%@ page import="java.sql.*"%>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>The Alopecia College - Usuarios</title> <link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="32x32">
-	<title>Usuarios - The Alopecia College</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/estilos_usuarios.css">
 	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 	<!-- Google Fonts -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
 	<!-- Bootstrap core CSS -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Material Design Bootstrap -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+	<link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
 
 </head>
 <body>
+<%
+	Connection conn = Conexion.getInstance().getConnection();
+	Statement st = conn.createStatement();
+	String query = "SELECT nomUsu, apellidosUsu, DNI, email, FecNac, localidad, telefono, sexUsu, nick, rol, pass FROM alopeciacollege.usuario";
+	ResultSet rs = st.executeQuery(query);
+%>
 <% if (session.getAttribute("rol").equals("Admin")) { %>
 <div id="bg" style="background-image: url('img/College.jpg');">
 	<header>
@@ -64,23 +74,16 @@
 		  </div>
 		</nav>
 	</header>
-	
+
 <form action = "Registro" method = "POST" accept-charset="ISO-8859-1">
-	<div class="wrapper-editor">
-
-
-  <div class="block my-4">
-    <div class="d-flex justify-content-center">
-      <p class="h5 text-primary createShowP">0 filas seleccionadas</p>
-    </div>
-
+<div class="wrapper-editor">
   <div class="row d-flex justify-content-center modalWrapper">
     <div class="modal fade addNewInputs" id="modalAdd1" tabindex="-1" role="dialog" aria-labelledby="modalAdd"
       aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header text-center">
-            <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">Añadir un nuevo usuario</h4>
+            <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">Añadir nuevo usuario</h4>
             <button type="button" class="close text-primary" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -90,27 +93,22 @@
               <input type="text" id="inputName1" class="form-control validate">
               <label data-error="wrong" data-success="right" for="inputName1">Nombre</label>
             </div>
-
             <div class="md-form mb-5">
               <input type="text" id="inputSurname1" class="form-control validate">
               <label data-error="wrong" data-success="right" for="inputPosition1">Apellidos</label>
             </div>
-
             <div class="md-form mb-5">
               <input type="text" id="inputEmail" class="form-control validate">
               <label data-error="wrong" data-success="right" for="inputOfficeInput1">Correo electrónico</label>
             </div>
-
             <div class="md-form mb-5">
               <input type="text" id="inputAge1" class="form-control validate">
               <label data-error="wrong" data-success="right" for="inputAge1">DNI</label>
             </div>
-
             <div class="md-form mb-5">
               <input type="date" id="inputDate1" class="form-control" placeholder="Select Date">
               <label data-error="wrong" data-success="right" for="inputDate1">Fecha de nacimiento</label>
             </div>
-
             <div class="md-form mb-5">
               <input type="text" id="inputSalary1" class="form-control validate">
               <label data-error="wrong" data-success="right" for="inputSalary1">Localidad</label>
@@ -142,9 +140,8 @@
     </div>
 
     <div class="text-center">
-    	
-      <a href="" class="text-succes" data-toggle="modal" data-target="#modalAdd1" ><img
-            id="color" src="img/plus.png" aria-hidden="true" style="width: 30px;"></a>
+      <a href="" class="text-succes" data-toggle="modal" data-target="#modalAdd1" >
+      <img class="hoverable" id="color" src="img/plus.png" aria-hidden="true" style="width: 30px; border-radius: 100%; margin-top: 40px; position: relative;"></a> 
     </div>
 
     <div class="modal fade modalEditClass" id="modalEdit1" tabindex="-1" role="dialog" aria-hidden="true">
@@ -197,9 +194,6 @@
               <input type="text" id="inputSalary1example" class="form-control validate">
               <label data-error="wrong" data-success="right" for="inputSalary1example">Nickname</label>
             </div>
-
-
-
           </div>
           <div class="modal-footer d-flex justify-content-center editInsideWrapper">
             <button class="btn btn-outline-secondary btn-block editInside" data-dismiss="modal">Editar Usuario
@@ -208,10 +202,6 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="text-center buttonEditWrapper">
-    	<a href="#!" class="text-success"><img id="editar" style ="margin-left: 15px; width: 30px;" src="img/edit.png"></a></span>
     </div>
 
     <div class="modal fade" id="modalDelete1" tabindex="-1" role="dialog" aria-labelledby="modalDelete1"
@@ -226,7 +216,6 @@
           </div>
           <div class="modal-body mx-3">
             <p class="text-center h4">¿Estás seguro que quieres borrar al usuario?</p>
-
           </div>
           <div class="modal-footer d-flex justify-content-center deleteButtonsWrapper">
             <button type="button" class="btn btn-danger btnYesClass" id="btnYes1" data-dismiss="modal">Si</button>
@@ -235,67 +224,59 @@
         </div>
       </div>
     </div>
-
-    <div class="text-center">
-    	<a href="#!" class="text-success"><img id="borrar" src="img/delete.png" style ="margin-left: 15px; width: 30px;"></a></span>
-    </div>
   </div>
 
-  <table id="dt-more-columns" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <table id="dtBasicExample" cellspacing="0" style="width: 90%; margin: auto; margin-top: 10px; margin-bottom: 100px;">
     <thead>
-      <tr>
-        <th class="th-sm">Nombre
-
-        </th>
-        <th class="th-sm">Apellidos
-
-        </th>
-        <th class="th-sm">DNI
-
-        </th>
-        <th class="th-sm">Correo Electrónico
-
-        </th>
-        <th class="th-sm">Fecha de nacimiento
-
-        </th>
-        <th class="th-sm">Localidad
-
-        </th>
-        <th class="th-sm">Teléfono
-
-        </th>
-        <th class="th-sm">Sexo
-
-        </th>
-        <th class="th-sm">Nickname
-
-        </th>
-        <th class="th-sm">Contraseña
-
-        </th>
+      <tr style="background: black; opacity: 0.9; text-align: center;">
+        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Nombre</h6></th>
+        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Apellidos</h6></th>
+        <th class="th-sm"><h6 style="font-weight: bold; color: white;">DNI</h6></th>
+        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Correo Electrónico</h6></th>
+        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Fecha de nacimiento</h6></th>
+        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Localidad</h6></th>
+        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Teléfono</h6></th>
+        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Sexo</h6></th>
+        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Nickname</h6></th>
+        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Rol</h6></th>
+        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Contraseña</h6></th>
+        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Acciones</h6></th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><%=request.getAttribute("name_control") %></td>
-        <td><%=request.getAttribute("surname_control") %></</td>
-        <td><%=request.getAttribute("dni_control") %></</td>
-        <td><%=request.getAttribute("email_control") %></</td>
-        <td><%=request.getParameter("birthdate_control") %></</td>
-        <td><%=request.getParameter("localidad_control") %></</td>
-        <td><%=request.getParameter("tel_control") %></</td>
-        <td><%=request.getParameter("sexo_control") %></</td>
-        <td><%=request.getParameter("nick_control") %></</td>
-        <td><%=request.getParameter("pass_control") %></</td>
+    <%
+		while (rs.next()) {
+	%>
+       <tr style="background: lightgrey; opacity: 0.9;">
+        <td><%= rs.getString("nomUsu") %></td>
+        <td><%= rs.getString("apellidosUsu") %></td>
+        <td><%= rs.getString("DNI") %></td>
+        <td><%= rs.getString("email") %></td>
+        <td><%= rs.getString("FecNac") %></td>
+        <td><%= rs.getString("localidad") %></td>
+        <td><%= rs.getString("telefono") %></td>
+        <td><%= rs.getString("sexUsu") %></td>
+        <td><%= rs.getString("nick") %></td>
+        <td><%= rs.getString("rol") %></td>
+        <td><%= rs.getString("pass") %></td>
+        <td>
+	    	<center><a href="Controlador?opcion=e&dni=<%=rs.getString("dni") %>"><img class="hoverable" id="editar" style ="width: 25px; border-radius: 100%;" src="img/edit.png"></a>
+			<!-- ¡Botón borrar listo aquí! - Deshabilitado porque funciona y no avisa: <a href="Controlador?opcion=b&dni=<%=rs.getString("dni") %>"><img class="hoverable" id="borrar" src="img/delete.png" style ="margin-left: 15px; width: 25px; border-radius: 100%;"></a></center> -->
+		</td>
       </tr>
-    </tfoot>
+    <%
+		}
+	%>
+    </tbody>
   </table>
 </div>
-</div>
-</form>	
+</form>
 
-
+<%
+	rs.close();
+	st.close();
+	conn.close();
+%>
 
 	<!-- Whatsapp -->
 	<a class="appWhatsapp" title="WhatsApp" target="blanck" href="https://chat.whatsapp.com/J9FrHHS0MYq5M0xwYEJUfD">
@@ -365,11 +346,11 @@
     </div>
     <!-- Copyright -->
   </footer>
-
-</div>
+</div> <!-- <- No BORRAR, es el div del wallpaper. -->
 
 	<!-- Scripts -->
-  	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="js/js_usuarios.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <!-- Footer --><script src="https://kit.fontawesome.com/2ab430d3ec.js" crossorigin="anonymous"></script>
     <!-- JQuery -->
@@ -379,113 +360,13 @@
 	<!-- Bootstrap core JavaScript -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	<!-- MDB core JavaScript -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>	
-	<script> $('#dt-less-columns').mdbEditor({
-	modalEditor: true,
-	headerLength: 5,
-	});
-	$('.dataTables_length').addClass('bs-select');
-	</script>
-
-		<script>
-			window.addEventListener('load', iniciarf, false);
-		
-			function iniciarf() {
-			  
-			  var face = document.getElementById('face');
-			  
-			  face.addEventListener('mouseover', colorf, false);
-			  face.addEventListener('mouseout', restaurarf, false);
-			}
-		
-			function restaurarf(){
-			  var face = document.getElementById('face').src = "img/face.png";
-			}
-		
-			function colorf() {
-			  var face = document.getElementById('face').src = "img/face_color.png";
-			}
-		</script>
-		<script>
-			window.addEventListener('load', iniciart, false);
-		
-			function iniciart() {
-			  
-			  var twit = document.getElementById('twit');
-			  
-			  twit.addEventListener('mouseover', colort, false);
-			  twit.addEventListener('mouseout', restaurart, false);
-			}
-		
-			function restaurart(){
-			  var twit = document.getElementById('twit').src = "img/twit.png";
-			}
-		
-			function colort() {
-			  var twit = document.getElementById('twit').src = "img/twit_color.png";
-			  
-			}
-		</script>
-		<script>
-			window.addEventListener('load', iniciari, false);
-		
-			function iniciari() {
-			  
-			  var insta = document.getElementById('insta');
-			  
-			  insta.addEventListener('mouseover', colori, false);
-			  insta.addEventListener('mouseout', restaurari, false);
-			}
-		
-			function restaurari(){
-			  var insta = document.getElementById('insta').src = "img/insta.png";
-			}
-		
-			function colori() {
-			  var insta = document.getElementById('insta').src = "img/insta_color.png";
-			  
-			}
-		</script>
-		<script>
-			window.addEventListener('load', iniciarw, false);
-		
-			function iniciarw() {
-			  
-			  var whats = document.getElementById('whats');
-			  
-			  whats.addEventListener('mouseover', colorw, false);
-			  whats.addEventListener('mouseout', restaurarw, false);
-			}
-		
-			function restaurarw(){
-			  var whats = document.getElementById('whats').src = "img/whats.png";
-			}
-		
-			function colorw() {
-			  var whats = document.getElementById('whats').src = "img/whats_color.png";
-			}
-		</script>
-		<script>
-			$(document).ready(function () {
-		  $('#dt-all-checkbox').dataTable({
-		
-		    columnDefs: [{
-		      orderable: false,
-		      className: 'select-checkbox select-checkbox-all',
-		      targets: 0
-		    }],
-		    select: {
-		      style: 'multi',
-		      selector: 'td:first-child'
-		    }
-		  });
-			});
-		</script>
-	    <% } else { %>
-	    <div class="alert alert-danger" style="border: 2px solid darkred; margin: auto; width: 800px; margin-top: 20px;">
-	    <center><b style="font-weight: bold;")>Importante:</b><br>
-	    Esta página está reservada a usuarios Administradores.</center>
-	  	</div>
-	    <% } %>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+	
+    <% } else { %>
+    <div class="alert alert-danger" style="border: 2px solid darkred; margin: auto; width: 800px; margin-top: 20px;">
+    <center><b style="font-weight: bold;")>Importante:</b><br>
+    Esta página está reservada a usuarios Administradores.</center>
+  	</div>
+    <% } %>
 </body>
 </html>

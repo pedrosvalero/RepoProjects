@@ -134,7 +134,7 @@
 	        </div>
 	        <div id="boton"class="text-center">
 			  <button class="btn btn-default btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;" type="submit">Entrar</button>
-			  <button class="btn btn-red btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;" type="submit">Entrar</button>
+			  <button class="btn btn-red btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;" type="submit">Eliminar cuenta</button>
 			</div>
 	    </div>
 	 </div>
