@@ -73,11 +73,11 @@
 	</header>
 
 <%
-	Usuario u = (Usuario) request.getAttribute("email");		
+	Usuario u = (Usuario) request.getAttribute("dni");		
 %>
 
 	<div class="containerbody">
-		<form action = "AnyadirUsuAdmin" method = "POST" accept-charset="ISO-8859-1">
+		<form action = "ListaUsuarios" method = "POST" accept-charset="ISO-8859-1">
 			<center><caption><h4 id="registrarse" style="font-weight: bold;">Editar Usuario</h4></caption>
 
 			<div class="row" id="apartados">

@@ -133,8 +133,8 @@
         <td><%= rs.getString("rol") %></td>
         <td><%= rs.getString("pass") %></td>
         <td>
-	    	<center><a href="ListaUsuarios?opcion=e&email=<%= rs.getString("email") %>"><img data-tarjet="#modalEdit1" class="hoverable" id="editar" style ="width: 25px; border-radius: 100%;" src="img/edit.png"></a>
-			<a id="borrusu" href="ListaUsuarios?opcion=b&email=<%= rs.getString("email") %>"><img class="hoverable" data-toggle="modal" data-target="#yModal" id="borrar" src="img/delete.png" style ="margin-left: 15px; width: 25px; border-radius: 100%;"></a></center>
+	    	<center><a href="ListaUsuarios?opcion=e&dni=<%= rs.getString("dni") %>"><img data-tarjet="#modalEdit1" class="hoverable" id="editar" style ="width: 25px; border-radius: 100%;" src="img/edit.png"></a>
+			<a id="borrusu" href="ListaUsuarios?opcion=b&dni=<%= rs.getString("dni") %>"><img class="hoverable" data-toggle="modal" data-target="#yModal" id="borrar" src="img/delete.png" style ="margin-left: 15px; width: 25px; border-radius: 100%;"></a></center>
 		</td>
       </tr>
     <%
