@@ -1,19 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="AlopeciaCollege.servicios.Conexion"%>
-<%@ page import="java.sql.*"%>
-<%@ page import="AlopeciaCollege.modelo.Usuario"%>
 <!DOCTYPE html>
 <html lang = "es">
 <head>
-	<title>The Alopecia College - Editar Usuario</title>
+	<title>The Alopecia College - Añadir Usuario</title>
 	<meta charset="UTF-8">
 	<link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="32x32">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/estilos_editarusuario.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos_añadirusuario.css">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 	<!-- Google Fonts -->
@@ -50,7 +47,7 @@
 		        <a class="nav-link" href="Usuarios.jsp">Usuarios</a>
 		      </li>
 		      <li class="nav-item active">
-		        <a class="nav-link">Editar Usuario
+		        <a class="nav-link">Nuevo Usuario
 		        <span class="sr-only">(current)</span></a>
 		      </li>
 		    </ul>
@@ -72,56 +69,59 @@
 		</nav>
 	</header>
 
-<%
-	Usuario u = (Usuario) request.getAttribute("email");		
-%>
-
 	<div class="containerbody">
-		<form action = "AnyadirUsuAdmin" method = "POST" accept-charset="ISO-8859-1">
-			<center><caption><h4 id="registrarse" style="font-weight: bold;">Editar Usuario</h4></caption>
+		<form action = "ListaUsuario" method = "POST" accept-charset="ISO-8859-1">
+			<center><caption><h4 id="registrarse" style="font-weight: bold;">Añadir Usuario</h4></caption>
 
 			<div class="row" id="apartados">
 	          	<div class="form-group col-md-6">
-	          		<i class="fas fa-signature"></i><input class="input" type="text" name="name_control" title="Nombre" required autofocus placeholder ="Nombre *" value="<%= u.getNomUsu() %>">
+	          		<i class="fas fa-signature"></i><input class="input" type="text" name="name_control" title="Nombre" required autofocus placeholder ="Nombre *">
 	          	</div>
 	        	<div class="form-group col-md-6">
-	          		<i class="fas fa-signature"></i><input class="input" type="text" name="surname_control" title="Apellidos" required placeholder ="Apellidos *" value="<%= u.getApellidosUsu() %>">
+	          		<i class="fas fa-signature"></i><input class="input" type="text" name="surname_control" title="Apellidos" required placeholder ="Apellidos *">
 	          	</div>
 	      	</div>
 
 	        <div class="row" id="apartados">
 	            <div class="form-group col-md-6">
-	             	<i class="fas fa-id-card"></i><input class="input" type="text" name="dni_control" maxlength="9" title="Número de Documento Identidad" required placeholder ="DNI *" value="<%= u.getDNI() %>">
+	             	<i class="fas fa-id-card"></i><input class="input" type="text" name="dni_control" maxlength="9" title="Número de Documento Identidad" required placeholder ="DNI *">
 	            </div>
 	            <div class="form-group col-md-6">
-	            	<i class="fas fa-birthday-cake"></i><input class="input" type="date" name="birthdate_control" title="Fecha de nacimiento *" required value="<%= u.getFecNac() %>">
+	            	<i class="fas fa-birthday-cake"></i><input class="input" type="date" name="birthdate_control" title="Fecha de nacimiento *" required>
 	            </div>
 	        </div>
 
 			<div class="form-group col-md-12">
 	            <i class="fas fa-envelope" aria-hidden="true"></i><input class="input" id="idMail" type="email" name="email_control" 
-				required placeholder="Email *" title="Dirección de correo electrónico" value="<%= u.getEmail() %>">
+				required placeholder="Email *" title="Dirección de correo electrónico">
 			</div>
 
 			<div class="row" id="apartados">
 				<div class="form-group col-md-6">
-					<i class="fas fa-user"></i><input class="input" type="text" name="nick_control" title="Nombre de usuario" required placeholder ="Nickname *" value="<%= u.getNick() %>">
+					<i class="fas fa-user"></i><input class="input" type="text" name="nick_control" title="Nombre de usuario" required placeholder ="Nickname *">
 	            </div>
 	            <div class="form-group col-md-6">
-	            	<i class="fas fa-key"></i><input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña *" value="<%= u.getPass() %>">
+	            	<i class="fas fa-key"></i><input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña *">
 	            </div>
 	            <div class="form-group col-md-4">
-	           		<i class="fas fa-city"></i><input type="text" title="Localidad" name="localidad_control" value="<%= u.getLocalidad() %>">
+	           		<i class="fas fa-city"></i><select id="idLocalidad" title="Localidad" name="localidad_control">
+						<option hidden>Localidad...</option>
+						<option>Álava</option><option>Albacete</option><option>Alicante</option><option>Almería</option><option>Asturias</option><option>Ávila</option><option>Badajoz</option><option>Barcelona</option><option>Burgos</option><option>Cáceres</option>
+						<option>Cádiz</option><option>Cantabria</option><option>Castellón</option><option>Ciudad Real</option><option>Córdoba</option><option>La Coruña</option><option>Cuenca</option><option>Gerona</option><option>Granada</option><option>Guadalajara</option><option>Guipúzcoa</option><option>Huelva</option><option>Huesca</option><option>Islas Baleares</option><option>Jaén</option><option>León</option><option>Lérida</option><option>Lugo</option><option>Madrid</option><option>Málaga</option><option>Murcia</option><option>Navarra</option><option>Ourense</option><option>Palencia</option><option>Las Palmas</option><option>Pontevedra</option><option>La Rioja</option><option>Salamanca</option><option>Segovia</option><option>Sevilla</option><option>Soria</option><option>Tarragona</option><option>Santa Cruz de Tenerife</option><option>Teruel</option><option>Toledo</option><option>Valencia</option><option>Valladolid</option><option>Vizcaya</option><option>Zamora</option><option>Zaragoza</option>
+					</select>
 	            </div>
 	            <div class="form-group col-md-4">
-	            	<i class="fas fa-mobile-alt" aria-hidden="true"></i><input class="input" type="tel" name="tlf_control" maxlength="9"  placeholder ="Teléfono" title="Número de contacto"  value="<%= u.getTelefono() %>">
+	            	<i class="fas fa-mobile-alt" aria-hidden="true"></i><input class="input" type="tel" name="tlf_control" maxlength="9"  placeholder ="Teléfono" title="Número de contacto">
 	            </div>
 	            <div class="form-group col-md-4">
-	            <i class="fas fa-neuter"></i><input type="text" id="idSex" name="sexo_control" title="Tipo de humano"  value="<%= u.getSexUsu() %>">
-		  		</div>
+	            <i class="fas fa-neuter"></i><select id="idSex" name="sexo_control" title="Tipo de humano">
+		  			<option value="0" hidden>Sexo ...</option>
+		  			<option  value="O">Otro</option><option  value="F">Mujer</option><option  value="M">Hombre</option>
+				</select><br>
+				</div>
 	        </div>
         	<div class="row" id="apartados" style="justify-content: center;">
-        		<button class="btn btn-blue btn-rounded mb-3" style="border-radius: 20px;" type="submit" title="Crear cuenta en la página">Modificar</button>
+        		<button class="btn btn-blue btn-rounded mb-3" style="border-radius: 20px;" type="submit" title="Crear cuenta en la página">Añadir</button>
         		<button class="btn btn-red btn-rounded mb-3" style="border-radius: 20px; margin-left: 45px;" type="reset" title="Empezar de cero">Borrar todo</button>
         	</div>
 		</center></form>
