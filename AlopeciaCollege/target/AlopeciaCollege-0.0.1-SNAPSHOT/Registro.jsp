@@ -5,11 +5,12 @@
 <head>
 	<title>The Alopecia College - Registrarse</title>
 	<meta charset="UTF-8">
+	<link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="32x32">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/estilos_register.css">
-	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 	<!-- Google Fonts -->
@@ -21,10 +22,11 @@
 	</head>
 </head>
 <body>
+<div id="bg" style="background-image: url('img/Lwp2.jpg');">
 	<header>
 		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark default-color bg-dark" style="height: 56px;">
-		  <img src ="img/pepe1.jpg" width="30px">
-		  <a class="navbar-brand" href="#">The Alopecia College</a>
+		  <img src ="img/TheAlopeciaCollegeBLANCO3.png" width="45px">
+		  <a class="navbar-brand"><font id="navfont">The Alopecia College</font></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 		    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
@@ -46,33 +48,33 @@
 
 			<div class="row" id="apartados">
 	          	<div class="form-group col-md-6">
-	          		<i class="fas fa-signature"></i><input class="input" type="text" name="name_control" title="Nombre" required autofocus placeholder ="Nombre">
+	          		<i class="fas fa-signature"></i><input class="input" type="text" name="name_control" title="Nombre" required autofocus placeholder ="Nombre *">
 	          	</div>
 	        	<div class="form-group col-md-6">
-	          		<i class="fas fa-signature"></i><input class="input" type="text" name="surname_control" title="Apellidos" required placeholder ="Apellidos">
+	          		<i class="fas fa-signature"></i><input class="input" type="text" name="surname_control" title="Apellidos" required placeholder ="Apellidos *">
 	          	</div>
 	      	</div>
 
 	        <div class="row" id="apartados">
 	            <div class="form-group col-md-6">
-	             	<i class="fas fa-id-card"></i><input class="input" type="text" name="dni_control" maxlength="9" title="Número de Documento Identidad" required placeholder ="DNI">
+	             	<i class="fas fa-id-card"></i><input class="input" type="text" name="dni_control" maxlength="9" title="Número de Documento Identidad" required placeholder ="DNI *">
 	            </div>
 	            <div class="form-group col-md-6">
-	            	<i class="fas fa-birthday-cake"></i><input class="input" type="date" name="birthdate_control" title="Fecha de nacimiento" required placeholder ="Fecha Nacimiento">
+	            	<i class="fas fa-birthday-cake"></i><input class="input" type="date" name="birthdate_control" title="Fecha de nacimiento *" required>
 	            </div>
 	        </div>
 
 			<div class="form-group col-md-12">
 	            <i class="fas fa-envelope" aria-hidden="true"></i><input class="input" id="idMail" type="email" name="email_control" 
-				required placeholder="Email" title="Dirección de correo electrónico">
+				required placeholder="Email *" title="Dirección de correo electrónico">
 			</div>
 
 			<div class="row" id="apartados">
 				<div class="form-group col-md-6">
-	        	    <i class="fas fa-user"></i><input class="input" type="text" name="nick_control" title="Nombre de usuario" required placeholder ="Nickname">
+					<i class="fas fa-user"></i><input class="input" type="text" name="nick_control" title="Nombre de usuario" required placeholder ="Nickname *">
 	            </div>
 	            <div class="form-group col-md-6">
-	            	<i class="fas fa-key"></i><input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña">
+	            	<i class="fas fa-key"></i><input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña *">
 	            </div>
 	            <div class="form-group col-md-4">
 	           		<i class="fas fa-city"></i><select id="idLocalidad" title="Localidad" name="localidad_control">
@@ -91,19 +93,16 @@
 				</select><br>
 				</div>
 	        </div>
-        	<div class="row" id="apartados">
-        		<div class="form-group col-md-6">
-        			<input id="Registrarse" type ="submit" value="Registrarse" title="Registrarse en la página">
-        		</div>
-        		<div class="form-group col-md-6">
-        			<input id="Registrarse" type ="reset" value="Borrar Todo" title="Empezar de cero">
-        		</div>
+        	<div class="row" id="apartados" style="justify-content: center;">
+        		<button class="btn btn-blue btn-rounded mb-3" style="border-radius: 20px;" type="submit" title="Crear cuenta en la página">Registrarse</button>
+        		<button class="btn btn-red btn-rounded mb-3" style="border-radius: 20px; margin-left: 45px;" type="reset" title="Empezar de cero">Borrar todo</button>
         	</div>
 		</center></form>
 	</div>
 
-	<a class="appWhatsapp" target="blanck" href="https://api.whatsapp.com/send?phone=34601032880&text=Buenas!&nbsp;Entra&nbsp;en&nbsp;nuestro&nbsp;grupo&nbsp;de&nbsp;calvos">
-    <img src = "img/whats.png" alt= "Whatsapp">
+	<!-- Whatsapp -->
+	<a class="appWhatsapp" target="blanck" href="https://api.whatsapp.com/send?phone=34601032880&text=Buenas!&nbsp;Entra&nbsp;en&nbsp;nuestro&nbsp;grupo&nbsp;de&nbsp;calvos" title="WhatsApp">
+    <img src="img/whats.png" id="whats" alt= "Whatsapp">
   	</a>
 
   <!-- Footer -->
@@ -137,11 +136,11 @@
           <!-- Social buttons -->
           <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
           <!-- Facebook -->
-          <a href="#"><img src ="img/face.png" width="45"></a>
+          <a href="#" title="Facebook"><img src ="img/face.png" id = "face" width="45"></a>
           <!-- Twitter -->
-          <a href="#"><img src ="img/twit.png" width="45"></a>          
+          <a href="#" title="Twitter"><img src ="img/twit.png" id = "twit" width="45"></a>          
           <!-- Intagram +-->         
-          <a href="#"><img src ="img/insta.png" width="45"></a>
+          <a href="#" title="Instagram"><img src ="img/insta.png" id = "insta" width="45"></a>
         </div>
         <hr class="clearfix w-100 d-md-none">
         <!-- Grid column -->
@@ -166,11 +165,13 @@
     </div>
     <!-- Footer Links -->
     <!-- Copyright -->
-    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:<a href="#"> paginaweb.com</a>
+    <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:<a href="#"> alopeciacollege.herokuapp.com</a>
     </div>
     <!-- Copyright -->
   </footer>
+</div> <!-- <- NO BORRAR, /div PARA WALLPAPER -->
 
+<!-- Scripts -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <!-- Footer --><script src="https://kit.fontawesome.com/2ab430d3ec.js" crossorigin="anonymous"></script>
@@ -182,6 +183,83 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	<!-- MDB core JavaScript -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
-</body>	
+	<script>
+		window.addEventListener('load', iniciarf, false);
+	
+		function iniciarf() {
+		  
+		  var face = document.getElementById('face');
+		  
+		  face.addEventListener('mouseover', colorf, false);
+		  face.addEventListener('mouseout', restaurarf, false);
+		}
+	
+		function restaurarf(){
+		  var face = document.getElementById('face').src = "img/face.png";
+		}
+	
+		function colorf() {
+		  var face = document.getElementById('face').src = "img/face_color.png";
+		}
+	</script>
+	<script>
+		window.addEventListener('load', iniciart, false);
+	
+		function iniciart() {
+		  
+		  var twit = document.getElementById('twit');
+		  
+		  twit.addEventListener('mouseover', colort, false);
+		  twit.addEventListener('mouseout', restaurart, false);
+		}
+	
+		function restaurart(){
+		  var twit = document.getElementById('twit').src = "img/twit.png";
+		}
+	
+		function colort() {
+		  var twit = document.getElementById('twit').src = "img/twit_color.png";
+		  
+		}
+	</script>
+	<script>
+		window.addEventListener('load', iniciari, false);
+	
+		function iniciari() {
+		  
+		  var insta = document.getElementById('insta');
+		  
+		  insta.addEventListener('mouseover', colori, false);
+		  insta.addEventListener('mouseout', restaurari, false);
+		}
+	
+		function restaurari(){
+		  var insta = document.getElementById('insta').src = "img/insta.png";
+		}
+	
+		function colori() {
+		  var insta = document.getElementById('insta').src = "img/insta_color.png";
+		  
+		}
+	</script>
+	<script>
+		window.addEventListener('load', iniciarw, false);
+	
+		function iniciarw() {
+		  
+		  var whats = document.getElementById('whats');
+		  
+		  whats.addEventListener('mouseover', colorw, false);
+		  whats.addEventListener('mouseout', restaurarw, false);
+		}
+	
+		function restaurarw(){
+		  var whats = document.getElementById('whats').src = "img/whats.png";
+		}
+	
+		function colorw() {
+		  var whats = document.getElementById('whats').src = "img/whats_color.png";
+		}
+	</script>
 </body>
 </html>

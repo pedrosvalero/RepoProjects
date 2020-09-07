@@ -2,14 +2,14 @@
 <web-app xmlns:xsi="w3.org/2001/XMLSchema-instance" xmlns="xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="xmlns.jcp.org/xml/ns/javaee xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>AlopeciaCollege</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>Login.jsp</welcome-file>
     <welcome-file>Registro.jsp</welcome-file>
     <welcome-file>Home.jsp</welcome-file>
     <welcome-file>Ranking.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>Examen.jsp</welcome-file>
+    <welcome-file>Perfil.jsp</welcome-file>
+    <welcome-file>Usuarios.jsp</welcome-file>
+    <welcome-file>AñadirUsuario.jsp</welcome-file>
+    <welcome-file>EditarUsuario.jsp</welcome-file>
   </welcome-file-list>
 </web-app>
