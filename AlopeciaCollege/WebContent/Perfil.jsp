@@ -108,17 +108,17 @@
 	    <div class="modal-body mx-5">
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-envelope prefix"></i>
-	          <label id="text" data-error="wrong" data-success="right" for="form29">Correo Electrónico</label>
-	          <input type="email" id="form29" class="form-control validate" value="<%= u.getEmail() %>">
+	          <label id="text" data-error="wrong" data-success="right" for="form29">Correo Electronico</label>
+	          <input type="email" id="form29" class="form-control validate" >
 	        </div>
 		    <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-user prefix"></i>
 	          <label id="text" data-error="wrong" data-success="right" for="form29">Nickame</label>
-	          <input  type="text" id="form29" class="form-control validate" value="<%= u.getNick() %>">
+	          <input  type="text" id="form29" class="form-control validate" >
 	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-city prefix" style="margin-right: 5px;"></i>
-	          <select id ="localidad" class="custom-select browser-default" value="<%= u.getLocalidad() %>">
+	          <select id ="localidad" class="custom-select browser-default" >
 				<option>Álava</option><option>Albacete</option><option>Alicante</option><option>Almería</option><option>Asturias</option><option>Ávila</option><option>Badajoz</option><option>Barcelona</option><option>Burgos</option><option>Cáceres</option>
 				<option>Cádiz</option><option>Cantabria</option><option>Castellón</option><option>Ciudad Real</option><option>Córdoba</option><option>La Coruña</option><option>Cuenca</option><option>Gerona</option><option>Granada</option><option>Guadalajara</option><option>Guipúzcoa</option><option>Huelva</option><option>Huesca</option><option>Islas Baleares</option><option>Jaén</option><option>León</option><option>Lérida</option><option>Lugo</option><option>Madrid</option><option>Málaga</option><option>Murcia</option><option>Navarra</option><option>Ourense</option><option>Palencia</option><option>Las Palmas</option><option>Pontevedra</option><option>La Rioja</option><option>Salamanca</option><option>Segovia</option><option>Sevilla</option><option>Soria</option><option>Tarragona</option><option>Santa Cruz de Tenerife</option><option>Teruel</option><option>Toledo</option><option>Valencia</option><option>Valladolid</option><option>Vizcaya</option><option>Zamora</option><option>Zaragoza</option>
             </select>
@@ -126,12 +126,12 @@
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-mobile-alt prefix" aria-hidden="true"></i>
 	          <label id="text" data-error="wrong" data-success="right" for="form29">Teléfono</label>
-	          <input  type="tel" id="form29" class="form-control validate" value="<%= u.getTelefono() %>">
+	          <input  type="tel" id="form29" class="form-control validate" >
 	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-key prefix"></i>
 	          <label id="text" data-error="wrong" data-success="right" for="form29">Contraseña</label>
-	          <input  type="password" id="form29" class="form-control validate" value="<%= u.getPass() %>">
+	          <input  type="password" id="form29" class="form-control validate" >
 	        </div>
 	        <div id="boton"class="text-center">
 			  <button class="btn btn-default btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;" type="submit">Entrar</button>
