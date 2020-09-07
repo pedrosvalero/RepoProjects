@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import AlopeciaCollege.modelo.Usuario;
 import AlopeciaCollege.modelo.UsuarioDAO;
+import AlopeciaCollege.controlador.ListaUsuarios;
 
 /**
  * Servlet implementation class AnyadirUsuAdmin
@@ -75,7 +76,9 @@ public class AnyadirUsuAdmin extends HttpServlet {
 		try {
 			usao.altaUsuario(u);
 			pagDest = "Usuarios.jsp";
-			HttpSession session = request.getSession();
+			RequestDispatcher dispatcher = request.getRequestDispatcher(pagDest);
+			dispatcher.forward(request, response);
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

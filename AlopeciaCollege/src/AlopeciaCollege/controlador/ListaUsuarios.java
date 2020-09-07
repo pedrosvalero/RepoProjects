@@ -71,17 +71,30 @@ public class ListaUsuarios extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String email = request.getParameter("email");
-		String nick = request.getParameter("nick");
-		String localidad = request.getParameter("localidad");
-		String telefono = request.getParameter("telefono");
-		String pass = request.getParameter("pass");
+		String nombre = request.getParameter("name_control");
+		String apellidos = request.getParameter("surname_control");
+		String DNI = request.getParameter("dni_control");
+		String fecNac = request.getParameter("birthdate_control");
+		String email = request.getParameter("email_control");
+		String nick = request.getParameter("nick_control");
+		String pass = request.getParameter("pass_control");
+		String localidad = request.getParameter("localidad_control");
+		String sexo = request.getParameter("sexo_control");
+		String rol = request.getParameter("rol_control");
+		String telefono = request.getParameter("tlf_control");		
 		
 		Usuario u = new Usuario();
-		u.setEmail(email);
-		u.setNick(nick);
+		u.setDNI(DNI);
+		u.setNomUsu(nombre);
+		u.setApellidosUsu(apellidos);
+		u.setSexUsu(sexo);
+		u.setFecNac(fecNac);
 		u.setLocalidad(localidad);
+		u.setTelefono(telefono);
+		u.setRol(rol);
+		u.setEmail(email);
 		u.setPass(pass);
+		u.setNick(nick);
 		
 		UsuarioDAO usuDAO = new UsuarioDAO();
 		String pagDest = "Usuarios.jsp";
@@ -91,6 +104,8 @@ public class ListaUsuarios extends HttpServlet {
 			pagDest = "Usuarios.jsp";
 			RequestDispatcher dispatcher = request.getRequestDispatcher(pagDest);
 			dispatcher.forward(request, response);
+			String msg= "Parámetros de usuario modificados!";
+			request.setAttribute("msgerr", msg);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

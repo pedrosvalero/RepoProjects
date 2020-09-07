@@ -152,12 +152,20 @@ public class UsuarioDAO {
 	//QUERY ACTUALIZACION NICK Y ROL A PARTIR DE EMAIL - ESTO SERÁ DESDE MODO ADMIN
 	public void modificarUsuario(Usuario u) throws SQLException {
 
-		String sql = "UPDATE alopeciacollege.usuario SET nick = ?, rol = ? WHERE email = ?";
+		String sql = "UPDATE alopeciacollege.usuario SET dni = ?, nomUsu = ?, apellidosUsu = ?, sexUsu = ?, FecNac = ?, localidad = ?, telefono = ?, email = ?, rol = ?, pass = ?, nick = ? WHERE email = ?";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(sql);
-		pst.setString(1, u.getNick());
-		pst.setString(2, u.getRol());
-		pst.setString(3, u.getEmail());
+		pst.setString(1, u.getDNI());
+		pst.setString(2, u.getNomUsu());
+		pst.setString(3, u.getApellidosUsu());
+		pst.setString(4, u.getSexUsu());
+		pst.setString(5, u.getFecNac());
+		pst.setString(6, u.getLocalidad());
+		pst.setString(7, u.getTelefono());
+		pst.setString(8, u.getEmail());
+		pst.setString(9, u.getRol());
+		pst.setString(10, u.getPass());
+		pst.setString(11, u.getNick());
 
 		pst.executeUpdate();
 
