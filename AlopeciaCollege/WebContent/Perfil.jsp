@@ -102,7 +102,7 @@
 		Usuario u = (Usuario) request.getAttribute("dni");		
 	%>
 <!-- Apartados -->
-<form action="Controlador"  method="POST">
+<form action="ActualizaPerfil"  method="POST">
 	<div class="col active-with-click"id="block">
 		<div class="transbox" >
 	    <div class="modal-body mx-5">
