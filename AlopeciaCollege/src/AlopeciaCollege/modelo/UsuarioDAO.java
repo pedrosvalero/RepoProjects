@@ -85,22 +85,6 @@ public class UsuarioDAO {
 		return u;
 	}
 	
-	//QUERY SELECT PARA UPDATE USUARIO - EDIT PERFIL
-	public void selectUsuario(Usuario u) throws SQLException {
-
-		String sql = "SELECT localidad, telefono, email, pass, nick FROM alopeciacollege.usuario WHERE dni = ?";
-		con = Conexion.getInstance().getConnection();
-		pst = con.prepareStatement(sql);
-		pst.setString(1, u.getEmail());
-		pst.setString(2, u.getNick());
-		pst.setString(3, u.getLocalidad());
-		pst.setString(4, u.getTelefono());
-		pst.setString(5, u.getPass());
-
-		pst.executeUpdate();
-
-	}
-	
 	//QUERY UPDATE USUARIO - EDIT PERFIL
 	public void updateUsuario(Usuario u) throws SQLException {
 

@@ -15,16 +15,16 @@ import AlopeciaCollege.modelo.Usuario;
 import AlopeciaCollege.modelo.UsuarioDAO;
 
 /**
- * Servlet implementation class Registro
+ * Servlet implementation class AnyadirUsuAdmin
  */
-@WebServlet("/AñadirUsuario")
-public class AñadirUsuario extends HttpServlet {
+@WebServlet("/AnyadirUsuAdmin")
+public class AnyadirUsuAdmin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AñadirUsuario() {
+    public AnyadirUsuAdmin() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -83,5 +83,4 @@ public class AñadirUsuario extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher(pagDest);
 		dispatcher.forward(request, response);
 	}
-
 }

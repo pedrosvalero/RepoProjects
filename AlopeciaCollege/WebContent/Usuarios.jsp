@@ -78,7 +78,7 @@
 <!------------------------------------ TABLA DE USUARIOS ----------------------------------------->	
 	<!-- Botón Añadir Usuario -->
 <div class="text-left" style="justify-content: left;">
-	<img src="img/plus.png" style="width: 34px; border-radius: 100%; margin-top: 30px; left: 0px; margin-left: 85px;"> <a href="AñadirUsuario.jsp"><button class="btn btn-blue btn-rounded mb-3" style="border-radius: 20px; left: 0px; margin-top: 40px;" title="Crear cuenta en la página"> Añadir usuario</button></a>
+	<img src="img/plus.png" style="width: 34px; border-radius: 100%; margin-top: 30px; left: 0px; margin-left: 85px;"> <a href="AnyadirUsuAdmin.jsp"><button class="btn btn-blue btn-rounded mb-3" style="border-radius: 20px; left: 0px; margin-top: 40px;" title="Crear cuenta en la página"> Añadir usuario</button></a>
 </div>
 
 			<!-- Modal borrar: -->

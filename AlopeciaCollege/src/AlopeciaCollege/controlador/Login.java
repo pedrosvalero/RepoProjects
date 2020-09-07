@@ -57,7 +57,7 @@ public class Login extends HttpServlet {
 			session.setAttribute("nickUsu", usu.getNick());
 			session.setAttribute("rol", usu.getRol());
 		} else {
-			String msgerr = "Parámetros de login incorrectos!";
+			String msgerr = "Parametros de login incorrectos!";
 			request.setAttribute("msgerr", msgerr);
 			pagDest  = "Login.jsp";
 		}

@@ -3,6 +3,7 @@
 <%@ page import="AlopeciaCollege.servicios.Conexion"%>
 <%@ page import="java.sql.*"%>
 <%@ page import="AlopeciaCollege.modelo.Usuario"%>
+<%@ page import="AlopeciaCollege.controlador.ActualizaPerfil"%>
 <!DOCTYPE html>
 <html>
 <head>
