@@ -21,6 +21,9 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 </head>
 <body>
+
+<div class="wrapper hoverable" style="margin-bottom: 200px;">
+
 <div id="bg" style="background-image: url('img/College.jpg');">
 	<header>
 		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
@@ -166,6 +169,8 @@
 	    <% } %>
 		<!-- Card -->
 	</center>
+	
+</div>
 
 	<!-- Whatsapp -->
 	<a class="appWhatsapp" target="blanck" href="https://api.whatsapp.com/send?phone=34601032880&text=Buenas!&nbsp;Entra&nbsp;en&nbsp;nuestro&nbsp;grupo&nbsp;de&nbsp;calvos" title="WhatsApp">
@@ -173,7 +178,7 @@
   	</a>
 
   <!-- Footer -->
-  <footer class="page-footer font-small mdb-color lighten-3 pt-4">
+  <footer class="page-footer font-small mdb-color lighten-3 pt-4" style="z-index: -1; position: fixed; bottom: 0px; width: 100%;">
     <!-- Footer Links -->
     <div class="container text-center text-md-left">
       <!-- Grid row -->
@@ -234,7 +239,6 @@
     <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:<a href="#"> paginaweb.com</a></div>
     <!-- Copyright -->
   </footer>
-
 </div>
 
   <!-- Scripts -->

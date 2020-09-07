@@ -6,8 +6,10 @@
     <welcome-file>Registro.jsp</welcome-file>
     <welcome-file>Home.jsp</welcome-file>
     <welcome-file>Ranking.jsp</welcome-file>
-    <welcome-file>Usuarios.jsp</welcome-file>
+    <welcome-file>Examen.jsp</welcome-file>
     <welcome-file>Perfil.jsp</welcome-file>
-	<welcome-file>Examen.jsp</welcome-file>
+    <welcome-file>Usuarios.jsp</welcome-file>
+    <welcome-file>AñadirUsuario.jsp</welcome-file>
+    <welcome-file>EditarUsuario.jsp</welcome-file>
   </welcome-file-list>
 </web-app>

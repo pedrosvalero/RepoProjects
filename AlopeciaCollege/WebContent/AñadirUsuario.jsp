@@ -3,14 +3,14 @@
 <!DOCTYPE html>
 <html lang = "es">
 <head>
-	<title>The Alopecia College - Registrarse</title>
+	<title>The Alopecia College - Añadir Usuario</title>
 	<meta charset="UTF-8">
 	<link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="32x32">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/estilos_register.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos_añadirusuario.css">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 	<!-- Google Fonts -->
@@ -22,20 +22,47 @@
 	</head>
 </head>
 <body>
-<div id="bg" style="background-image: url('img/Lwp2.jpg');">
+<% if (session.getAttribute("rol").equals("Admin")) { %>
+<div id="bg" style="background-image: url('img/College.jpg');">
 	<header>
-		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark default-color bg-dark" style="height: 56px;">
+		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
 		  <img src ="img/TheAlopeciaCollegeBLANCO3.png" width="45px">
-		  <a class="navbar-brand"><font id="navfont">The Alopecia College</font></a>
+		  <a class="navbar-brand" href="Home.jsp"><font id="navfont">The Alopecia College</font></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 		    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
-		    <ul class="navbar-nav mr-auto"></ul>
-		    <ul class="navbar-nav ml-auto nav-flex-icons">
+		    <ul class="navbar-nav mr-auto">
 		      <li class="nav-item">
-		        <a class="nav-link" href="Login.jsp"><i class="fas fa-user"></i> Iniciar Sesión</a>
+		        <a class="nav-link" href="Home.jsp">Home</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="Ranking.jsp">Ranking</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="Examen.jsp">Examenes</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="Usuarios.jsp">Usuarios</a>
+		      </li>
+		      <li class="nav-item active">
+		        <a class="nav-link">Nuevo Usuario
+		        <span class="sr-only">(current)</span></a>
+		      </li>
+		    </ul>
+		    <ul class="navbar-nav ml-auto nav-flex-icons">
+		      <li class="nav-item dropdown">
+		        <a class="nav-link" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+		          aria-haspopup="true" aria-expanded="false">
+		          <img src="img/usuario.png" class="rounded-circle z-depth-0" alt="avatar image" height="33" style="margin-right: 5px">
+		          	<% out.print(session.getAttribute("nickUsu")); %>
+		        </a>
+		        <div class="dropdown-menu dropdown-menu-right dropdown-default"
+		          aria-labelledby="navbarDropdownMenuLink-333">
+		          <a class="dropdown-item" href="Perfil.jsp"><i class="fas fa-user cyan-text" style="margin-right: 9px"></i>Perfil</a>
+				  <a class="dropdown-item" href="Logout"><i class="fas fa-sign-out-alt red-text" style="margin-right: 9px"></i>Cerrar Sesión</a>
+		        </div>
 		      </li>
 		    </ul>
 		  </div>
@@ -43,8 +70,8 @@
 	</header>
 
 	<div class="containerbody">
-		<form action = "Registro" method = "POST" accept-charset="ISO-8859-1">
-			<center><caption><h4 id="registrarse" style="font-weight: bold;">Registrarse</h4></caption>
+		<form action = "AñadirUsuario" method = "POST" accept-charset="ISO-8859-1">
+			<center><caption><h4 id="registrarse" style="font-weight: bold;">Añadir Usuario</h4></caption>
 
 			<div class="row" id="apartados">
 	          	<div class="form-group col-md-6">
@@ -94,7 +121,7 @@
 				</div>
 	        </div>
         	<div class="row" id="apartados" style="justify-content: center;">
-        		<button class="btn btn-blue btn-rounded mb-3" style="border-radius: 20px;" type="submit" title="Crear cuenta en la página">Registrarse</button>
+        		<button class="btn btn-blue btn-rounded mb-3" style="border-radius: 20px;" type="submit" title="Crear cuenta en la página">Añadir</button>
         		<button class="btn btn-red btn-rounded mb-3" style="border-radius: 20px; margin-left: 45px;" type="reset" title="Empezar de cero">Borrar todo</button>
         	</div>
 		</center></form>
@@ -261,5 +288,12 @@
 		  var whats = document.getElementById('whats').src = "img/whats_color.png";
 		}
 	</script>
+	
+	<% } else { %>
+    <div class="alert alert-danger" style="border: 2px solid darkred; margin: auto; width: 800px; margin-top: 20px;">
+    <center><b style="font-weight: bold;")>Importante:</b><br>
+    Esta página está reservada a usuarios Administradores.</center>
+  	</div>
+    <% } %>
 </body>
 </html>

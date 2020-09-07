@@ -4,7 +4,6 @@
 	//headerLength: 5,
 	});
 	$('.dataTables_length').addClass('bs-select');
-	
 
 	// Función Editor.
 	$('#dtBasicExample').mdbEditor({

@@ -1,10 +1,6 @@
 package AlopeciaCollege.controlador;
 
 import java.io.IOException;
-
-import java.sql.SQLException;
-
-import java.io.IOException;
 import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
@@ -17,17 +13,18 @@ import javax.servlet.http.HttpSession;
 
 import AlopeciaCollege.modelo.Usuario;
 import AlopeciaCollege.modelo.UsuarioDAO;
+
 /**
- * Servlet implementation class Controlador
+ * Servlet implementation class ListaUsuarios
  */
-@WebServlet("/Controlador")
-public class Controlador extends HttpServlet {
+@WebServlet("/ListaUsuarios")
+public class ListaUsuarios extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Controlador() {
+    public ListaUsuarios() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,23 +32,22 @@ public class Controlador extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-    //Perfil
-	//Usuario
+	// Lista de Usuarios
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String opcion = request.getParameter("opcion");
-		String dni = request.getParameter("dni");
+		String email = request.getParameter("email");
 		UsuarioDAO udao = new UsuarioDAO();
 		Usuario u = null;
 		
-		String destPage = "Perfil.jsp";
+		String destPage = "Usuarios.jsp";
 		
 		switch (opcion) {
 		case "e":
 			try {
-				u = udao.getPerfil(dni);
-				request.setAttribute("dni", u);
-				destPage = "Perfil.jsp";
+				u = udao.getUsuario(email);
+				request.setAttribute("email", u);
+				destPage = "EditarUsuario.jsp";
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -59,8 +55,8 @@ public class Controlador extends HttpServlet {
 			break;
 		case "b":
 			try {
-				udao.borrarUsuario(dni);
-				destPage = "Login.jsp";
+				udao.borrarUsuario(email);
+				destPage = "Usuarios.jsp";
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -89,14 +85,13 @@ public class Controlador extends HttpServlet {
 		u.setPass(pass);
 		
 		UsuarioDAO usuDAO = new UsuarioDAO();
-		String pagDest = "Perfil.jsp";
+		String pagDest = "Usuarios.jsp";
 		
 		try {
 			usuDAO.modificarUsuario(u);
-			pagDest = "Perfil.jsp";
+			pagDest = "Usuarios.jsp";
 			RequestDispatcher dispatcher = request.getRequestDispatcher(pagDest);
 			dispatcher.forward(request, response);
-			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

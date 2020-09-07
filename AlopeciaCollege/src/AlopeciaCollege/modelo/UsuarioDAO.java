@@ -66,7 +66,7 @@ public class UsuarioDAO {
 	public Usuario getPerfil(String dni) throws SQLException {
 
 		Usuario u = null;
-		String sql = "SELECT email, nick, localidad, telefono, pass FROM alopeciacollege.usuario WHERE nick = ?";
+		String sql = "SELECT email, nick, localidad, telefono, pass FROM alopeciacollege.usuario WHERE dni = ?";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(sql);
 		pst.setString(1, dni);
@@ -88,7 +88,7 @@ public class UsuarioDAO {
 	//QUERY SELECT PARA UPDATE USUARIO - EDIT PERFIL
 	public void selectUsuario(Usuario u) throws SQLException {
 
-		String sql = "SELECT localidad, telefono, email, pass, nick FROM alopeciacollege.usuario WHERE nick = ?";
+		String sql = "SELECT localidad, telefono, email, pass, nick FROM alopeciacollege.usuario WHERE dni = ?";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(sql);
 		pst.setString(1, u.getEmail());
@@ -118,6 +118,37 @@ public class UsuarioDAO {
 
 	}
 
+	//RECOGER INFO DEL USUARIO
+		public Usuario getUsuario(String email) throws SQLException {
+
+			Usuario u = null;
+			String sql = "SELECT email, nick, localidad, telefono, pass FROM alopeciacollege.usuario WHERE email = ?";
+			con = Conexion.getInstance().getConnection();
+			pst = con.prepareStatement(sql);
+			pst.setString(1, email);
+
+			rs = pst.executeQuery();
+
+			if (rs.next()) {
+				u = new Usuario();
+				u.setEmail(rs.getString("email"));
+				u.setNomUsu(rs.getString("nomUsu"));
+				u.setApellidosUsu(rs.getString("apellidos"));
+				u.setDNI(rs.getString("dni"));
+				u.setNick(rs.getString("nick"));
+				u.setLocalidad(rs.getNString("localidad"));
+				u.setTelefono(rs.getString("telefono"));
+				u.setPass(rs.getNString("pass"));
+				u.setSexUsu(rs.getString("sexo"));
+				u.setFecNac(rs.getNString("fecnac"));
+				u.setRol(rs.getNString("rol"));
+				u.setPuntuacion(rs.getInt("puntuacion"));
+				
+			}
+
+			return u;
+		}
+
 	//QUERY ACTUALIZACION NICK Y ROL A PARTIR DE EMAIL - ESTO SERÁ DESDE MODO ADMIN
 	public void modificarUsuario(Usuario u) throws SQLException {
 
@@ -131,29 +162,7 @@ public class UsuarioDAO {
 		pst.executeUpdate();
 
 	}
-	
-	//RECOGER INFO DEL USUARIO
-	public Usuario getUsuario(String email) throws SQLException {
 
-		Usuario u = null;
-		String sql = "SELECT * FROM alopeciacollege.usuario WHERE email = ?";
-		con = Conexion.getInstance().getConnection();
-		pst = con.prepareStatement(sql);
-		pst.setString(1, email);
-
-		rs = pst.executeQuery();
-
-		if (rs.next()) {
-			u = new Usuario();
-			u.setEmail(rs.getString("email"));
-			u.setNick(rs.getString("nick"));
-			u.setRol(rs.getString("rol"));
-			u.setLocalidad(rs.getNString("localidad"));
-		}
-
-		return u;
-	}
-	
 	//RECOGER RANKING USUARIOS
 	public Usuario getRanking(Usuario u) throws SQLException {
 
@@ -175,7 +184,7 @@ public class UsuarioDAO {
 
 		return u;
 	}
-	
+
 	//BORRAR USUARIO
 	public void borrarUsuario(String dni) throws SQLException {
 

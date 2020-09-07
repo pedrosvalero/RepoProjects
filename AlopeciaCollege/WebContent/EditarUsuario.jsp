@@ -2,34 +2,29 @@
     pageEncoding="ISO-8859-1"%>
 <%@ page import="AlopeciaCollege.servicios.Conexion"%>
 <%@ page import="java.sql.*"%>
+<%@ page import="AlopeciaCollege.modelo.Usuario"%>
 <!DOCTYPE html>
-<html>
+<html lang = "es">
 <head>
+	<title>The Alopecia College - Editar Usuario</title>
 	<meta charset="UTF-8">
-	<title>The Alopecia College - Usuarios</title> <link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="32x32">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="icon" type="img/TheAlopeciaCollegeBLANCO3.png" href="img/TheAlopeciaCollegeBLANCO3.png" sizes="32x32">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/estilos_usuarios.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/estilos_editarusuario.css">
 	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 	<!-- Google Fonts -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
 	<!-- Bootstrap core CSS -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Material Design Bootstrap -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
-	<link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
+	</head>
 </head>
 <body>
-<%
-	Connection conn = Conexion.getInstance().getConnection();
-	Statement st = conn.createStatement();
-	String query = "SELECT nomUsu, apellidosUsu, DNI, email, FecNac, localidad, telefono, sexUsu, nick, rol, pass FROM alopeciacollege.usuario";
-	ResultSet rs = st.executeQuery(query);
-%>
 <% if (session.getAttribute("rol").equals("Admin")) { %>
 <div id="bg" style="background-image: url('img/College.jpg');">
 	<header>
@@ -51,8 +46,11 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="Examen.jsp">Examenes</a>
 		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="Usuarios.jsp">Usuarios</a>
+		      </li>
 		      <li class="nav-item active">
-		        <a class="nav-link">Usuarios
+		        <a class="nav-link">Editar Usuario
 		        <span class="sr-only">(current)</span></a>
 		      </li>
 		    </ul>
@@ -74,84 +72,66 @@
 		</nav>
 	</header>
 
-
-<!------------------------------------ TABLA DE USUARIOS ----------------------------------------->	
-	<!-- Botón Añadir Usuario -->
-<div class="text-left" style="justify-content: left;">
-	<img src="img/plus.png" style="width: 34px; border-radius: 100%; margin-top: 30px; left: 0px; margin-left: 85px;"> <a href="AñadirUsuario.jsp"><button class="btn btn-blue btn-rounded mb-3" style="border-radius: 20px; left: 0px; margin-top: 40px;" title="Crear cuenta en la página"> Añadir usuario</button></a>
-</div>
-
-			<!-- Modal borrar: -->
-			<div class="container">
-				<div class="modal fade" id="myModal" role="dialog">
-					<div class="modal-dialog">
-					    <div class="modal-content" style="opacity: 0.85; border-radius: 10px; padding: 5px;">
-					        <div class="modal-header">
-					          <h4 class="modal-title"><b>Eliminar</b></h4>
-					          <img class="close" data-dismiss="modal" src="img/close.png" width="40">
-					        </div>
-					        <div class="modal-body">
-					          <h5 style="text-align: center;">¿Estás seguro de eliminar este usuario?</h5>
-					        </div>
-					        <div class="modal-footer"">
-					          <button type="button" class="btn btn-red" data-tarjet="#borrusu" data-dismiss="modal" style="border-radius: 20px; margin: auto;">Sí</button>
-					          <button type="button" class="btn btn-default" data-dismiss="modal" style="border-radius: 20px; margin: auto;">No</button>
-					        </div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-  <table id="dtBasicExample" cellspacing="0" style="width: 90%; margin: auto; margin-top: 10px; margin-bottom: 100px;">
-      <tr style="background: black; opacity: 0.9; text-align: center;">
-        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Nombre</h6></th>
-        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Apellidos</h6></th>
-        <th class="th-sm"><h6 style="font-weight: bold; color: white;">DNI</h6></th>
-        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Correo Electrónico</h6></th>
-        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Fecha de nacimiento</h6></th>
-        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Localidad</h6></th>
-        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Teléfono</h6></th>
-        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Sexo</h6></th>
-        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Nickname</h6></th>
-        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Rol</h6></th>
-        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Contraseña</h6></th>
-        <th class="th-sm"><h6 style="font-weight: bold; color: white;">Acciones</h6></th>
-      </tr>
-    <%
-		while (rs.next()) {
-	%>
-       <tr style="background: lightgrey; opacity: 0.9;">
-        <td><%= rs.getString("nomUsu") %></td>
-        <td><%= rs.getString("apellidosUsu") %></td>
-        <td><%= rs.getString("DNI") %></td>
-        <td><%= rs.getString("email") %></td>
-        <td><%= rs.getString("FecNac") %></td>
-        <td><%= rs.getString("localidad") %></td>
-        <td><%= rs.getString("telefono") %></td>
-        <td><%= rs.getString("sexUsu") %></td>
-        <td><%= rs.getString("nick") %></td>
-        <td><%= rs.getString("rol") %></td>
-        <td><%= rs.getString("pass") %></td>
-        <td>
-	    	<center><a href="ListaUsuarios?opcion=e&email=<%= rs.getString("email") %>"><img data-tarjet="#modalEdit1" class="hoverable" id="editar" style ="width: 25px; border-radius: 100%;" src="img/edit.png"></a>
-			<a id="borrusu" href="ListaUsuarios?opcion=b&email=<%= rs.getString("email") %>"><img class="hoverable" data-toggle="modal" data-target="#yModal" id="borrar" src="img/delete.png" style ="margin-left: 15px; width: 25px; border-radius: 100%;"></a></center>
-		</td>
-      </tr>
-    <%
-		}
-	%>
-  </table>
-
 <%
-	rs.close();
-	st.close();
-	conn.close();
+	Usuario u = (Usuario) request.getAttribute("email");		
 %>
 
+	<div class="containerbody">
+		<form action = "AñadirUsuario" method = "POST" accept-charset="ISO-8859-1">
+			<center><caption><h4 id="registrarse" style="font-weight: bold;">Editar Usuario</h4></caption>
+
+			<div class="row" id="apartados">
+	          	<div class="form-group col-md-6">
+	          		<i class="fas fa-signature"></i><input class="input" type="text" name="name_control" title="Nombre" required autofocus placeholder ="Nombre *" value="<%= u.getNomUsu() %>">
+	          	</div>
+	        	<div class="form-group col-md-6">
+	          		<i class="fas fa-signature"></i><input class="input" type="text" name="surname_control" title="Apellidos" required placeholder ="Apellidos *" value="<%= u.getApellidosUsu() %>">
+	          	</div>
+	      	</div>
+
+	        <div class="row" id="apartados">
+	            <div class="form-group col-md-6">
+	             	<i class="fas fa-id-card"></i><input class="input" type="text" name="dni_control" maxlength="9" title="Número de Documento Identidad" required placeholder ="DNI *" value="<%= u.getDNI() %>">
+	            </div>
+	            <div class="form-group col-md-6">
+	            	<i class="fas fa-birthday-cake"></i><input class="input" type="date" name="birthdate_control" title="Fecha de nacimiento *" required value="<%= u.getFecNac() %>">
+	            </div>
+	        </div>
+
+			<div class="form-group col-md-12">
+	            <i class="fas fa-envelope" aria-hidden="true"></i><input class="input" id="idMail" type="email" name="email_control" 
+				required placeholder="Email *" title="Dirección de correo electrónico" value="<%= u.getEmail() %>">
+			</div>
+
+			<div class="row" id="apartados">
+				<div class="form-group col-md-6">
+					<i class="fas fa-user"></i><input class="input" type="text" name="nick_control" title="Nombre de usuario" required placeholder ="Nickname *" value="<%= u.getNick() %>">
+	            </div>
+	            <div class="form-group col-md-6">
+	            	<i class="fas fa-key"></i><input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña *" value="<%= u.getPass() %>">
+	            </div>
+	            <div class="form-group col-md-4">
+	           		<i class="fas fa-city"></i><input type="text" title="Localidad" name="localidad_control" value="<%= u.getLocalidad() %>">
+	            </div>
+	            <div class="form-group col-md-4">
+	            	<i class="fas fa-mobile-alt" aria-hidden="true"></i><input class="input" type="tel" name="tlf_control" maxlength="9"  placeholder ="Teléfono" title="Número de contacto"  value="<%= u.getTelefono() %>">
+	            </div>
+	            <div class="form-group col-md-4">
+	            <i class="fas fa-neuter"></i><input type="text" id="idSex" name="sexo_control" title="Tipo de humano"  value="<%= u.getSexUsu() %>">
+		  		</div>
+	        </div>
+        	<div class="row" id="apartados" style="justify-content: center;">
+        		<button class="btn btn-blue btn-rounded mb-3" style="border-radius: 20px;" type="submit" title="Crear cuenta en la página">Añadir</button>
+        		<button class="btn btn-red btn-rounded mb-3" style="border-radius: 20px; margin-left: 45px;" type="reset" title="Empezar de cero">Borrar todo</button>
+        	</div>
+		</center></form>
+	</div>
+
 	<!-- Whatsapp -->
-	<a class="appWhatsapp" title="WhatsApp" target="blanck" href="https://chat.whatsapp.com/J9FrHHS0MYq5M0xwYEJUfD">
-    <img src = "img/whats.png" id ="whats" alt= "Whatsapp">
+	<a class="appWhatsapp" target="blanck" href="https://api.whatsapp.com/send?phone=34601032880&text=Buenas!&nbsp;Entra&nbsp;en&nbsp;nuestro&nbsp;grupo&nbsp;de&nbsp;calvos" title="WhatsApp">
+    <img src="img/whats.png" id="whats" alt= "Whatsapp">
   	</a>
+
   <!-- Footer -->
   <footer class="page-footer font-small mdb-color lighten-3 pt-4">
     <!-- Footer Links -->
@@ -183,11 +163,11 @@
           <!-- Social buttons -->
           <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
           <!-- Facebook -->
-          <a href="#" title="Facebook"><img src ="img/face.png" id="face" width="45"></a>
+          <a href="#" title="Facebook"><img src ="img/face.png" id = "face" width="45"></a>
           <!-- Twitter -->
-          <a href="#" title="Twitter"><img src ="img/twit.png" id="twit" width="45"></a>          
+          <a href="#" title="Twitter"><img src ="img/twit.png" id = "twit" width="45"></a>          
           <!-- Intagram +-->         
-          <a href="#" title="Instagram"><img src ="img/insta.png" id= "insta" width="45"></a>
+          <a href="#" title="Instagram"><img src ="img/insta.png" id = "insta" width="45"></a>
         </div>
         <hr class="clearfix w-100 d-md-none">
         <!-- Grid column -->
@@ -216,10 +196,9 @@
     </div>
     <!-- Copyright -->
   </footer>
-</div> <!-- <- No BORRAR, es el div del wallpaper. -->
+</div> <!-- <- NO BORRAR, /div PARA WALLPAPER -->
 
-	<!-- Scripts -->
-	<script src="js/js_usuarios.js"></script>
+<!-- Scripts -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <!-- Footer --><script src="https://kit.fontawesome.com/2ab430d3ec.js" crossorigin="anonymous"></script>
@@ -231,8 +210,86 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	<!-- MDB core JavaScript -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
-
-    <% } else { %>
+	<script>
+		window.addEventListener('load', iniciarf, false);
+	
+		function iniciarf() {
+		  
+		  var face = document.getElementById('face');
+		  
+		  face.addEventListener('mouseover', colorf, false);
+		  face.addEventListener('mouseout', restaurarf, false);
+		}
+	
+		function restaurarf(){
+		  var face = document.getElementById('face').src = "img/face.png";
+		}
+	
+		function colorf() {
+		  var face = document.getElementById('face').src = "img/face_color.png";
+		}
+	</script>
+	<script>
+		window.addEventListener('load', iniciart, false);
+	
+		function iniciart() {
+		  
+		  var twit = document.getElementById('twit');
+		  
+		  twit.addEventListener('mouseover', colort, false);
+		  twit.addEventListener('mouseout', restaurart, false);
+		}
+	
+		function restaurart(){
+		  var twit = document.getElementById('twit').src = "img/twit.png";
+		}
+	
+		function colort() {
+		  var twit = document.getElementById('twit').src = "img/twit_color.png";
+		  
+		}
+	</script>
+	<script>
+		window.addEventListener('load', iniciari, false);
+	
+		function iniciari() {
+		  
+		  var insta = document.getElementById('insta');
+		  
+		  insta.addEventListener('mouseover', colori, false);
+		  insta.addEventListener('mouseout', restaurari, false);
+		}
+	
+		function restaurari(){
+		  var insta = document.getElementById('insta').src = "img/insta.png";
+		}
+	
+		function colori() {
+		  var insta = document.getElementById('insta').src = "img/insta_color.png";
+		  
+		}
+	</script>
+	<script>
+		window.addEventListener('load', iniciarw, false);
+	
+		function iniciarw() {
+		  
+		  var whats = document.getElementById('whats');
+		  
+		  whats.addEventListener('mouseover', colorw, false);
+		  whats.addEventListener('mouseout', restaurarw, false);
+		}
+	
+		function restaurarw(){
+		  var whats = document.getElementById('whats').src = "img/whats.png";
+		}
+	
+		function colorw() {
+		  var whats = document.getElementById('whats').src = "img/whats_color.png";
+		}
+	</script>
+	
+	<% } else { %>
     <div class="alert alert-danger" style="border: 2px solid darkred; margin: auto; width: 800px; margin-top: 20px;">
     <center><b style="font-weight: bold;")>Importante:</b><br>
     Esta página está reservada a usuarios Administradores.</center>
