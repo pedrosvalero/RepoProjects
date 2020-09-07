@@ -9,7 +9,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import AlopeciaCollege.modelo.Usuario;
 import AlopeciaCollege.modelo.UsuarioDAO;
@@ -32,7 +31,6 @@ public class ListaUsuarios extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	// Lista de Usuarios
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String opcion = request.getParameter("opcion");
@@ -40,7 +38,7 @@ public class ListaUsuarios extends HttpServlet {
 		UsuarioDAO udao = new UsuarioDAO();
 		Usuario u = null;
 		
-		String destPage = "Usuarios.jsp";
+		String destPage = "EditarUsuario.jsp";
 		
 		switch (opcion) {
 		case "e":
@@ -72,6 +70,7 @@ public class ListaUsuarios extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		String email = request.getParameter("email");
 		String nick = request.getParameter("nick");
 		String localidad = request.getParameter("localidad");
