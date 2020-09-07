@@ -42,12 +42,12 @@ public class ActualizaPerfil extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String dni = request.getParameter("dni");
-		String email = request.getParameter("email");
-		String nick = request.getParameter("nick");
-		String ciudad = request.getParameter("localidad");
-		String telefono = request.getParameter("tlf");
-		String pass = request.getParameter("pass");
+		String dni = request.getParameter("dni_control");
+		String email = request.getParameter("email_control");
+		String nick = request.getParameter("nick_control");
+		String ciudad = request.getParameter("localidad_control");
+		String telefono = request.getParameter("tlf_control");
+		String pass = request.getParameter("pass_control");
 		
 		Usuario u = new Usuario();
 		u.setDNI(dni);
@@ -63,13 +63,12 @@ public class ActualizaPerfil extends HttpServlet {
 	
 
 	try {
-		
 		usao.updateUsuario(u);		
 		pagDest = "Perfil.jsp";
-		HttpSession session = request.getSession();
+		RequestDispatcher dispatcher = request.getRequestDispatcher(pagDest);
+		dispatcher.forward(request, response);
 		String msg= "Parámetros de usuario modificados!";
 		request.setAttribute("msgerr", msg);
-		
 	} catch (SQLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();

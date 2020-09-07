@@ -34,7 +34,7 @@ public class ListaUsuarios extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String opcion = request.getParameter("opcion");
-		String email = request.getParameter("email");
+		String dni = request.getParameter("dni");
 		UsuarioDAO udao = new UsuarioDAO();
 		Usuario u = null;
 		
@@ -43,8 +43,8 @@ public class ListaUsuarios extends HttpServlet {
 		switch (opcion) {
 		case "e":
 			try {
-				u = udao.getUsuario(email);
-				request.setAttribute("email", u);
+				u = udao.getUsuario(dni);
+				request.setAttribute("dni", u);
 				destPage = "EditarUsuario.jsp";
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
@@ -53,7 +53,7 @@ public class ListaUsuarios extends HttpServlet {
 			break;
 		case "b":
 			try {
-				udao.borrarUsuario(email);
+				udao.borrarUsuario(dni);
 				destPage = "Usuarios.jsp";
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
@@ -80,7 +80,6 @@ public class ListaUsuarios extends HttpServlet {
 		String pass = request.getParameter("pass_control");
 		String localidad = request.getParameter("localidad_control");
 		String sexo = request.getParameter("sexo_control");
-		String rol = request.getParameter("rol_control");
 		String telefono = request.getParameter("tlf_control");		
 		
 		Usuario u = new Usuario();
@@ -91,7 +90,6 @@ public class ListaUsuarios extends HttpServlet {
 		u.setFecNac(fecNac);
 		u.setLocalidad(localidad);
 		u.setTelefono(telefono);
-		u.setRol(rol);
 		u.setEmail(email);
 		u.setPass(pass);
 		u.setNick(nick);
