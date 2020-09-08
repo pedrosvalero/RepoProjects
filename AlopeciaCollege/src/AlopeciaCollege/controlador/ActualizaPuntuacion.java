@@ -34,26 +34,6 @@ public class ActualizaPuntuacion extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		//String dni = request.getParameter("dni");
-		//String rol = request.getParameter("rol");
-		//int puntuacion = Integer. parseInt(request.getParameter("puntuacion"));
-		UsuarioDAO udao = new UsuarioDAO();
-		Usuario u = null;
-		
-		String destPage = "Examen.jsp";
-		
-		try {
-			udao.getPuntos(u);
-			request.setAttribute("dni", u);
-			request.setAttribute("rol", u);
-			request.setAttribute("puntuacion", u);
-			destPage = "Examen.jsp";
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
-		dispatcher.forward(request, response);
 	}
 
 	/**
@@ -63,7 +43,7 @@ public class ActualizaPuntuacion extends HttpServlet {
 		// TODO Auto-generated method stub
 		String dni = request.getParameter("dni");
 		String rol = request.getParameter("rol");
-		int puntuacion = Integer. parseInt(request.getParameter("puntuacion"));
+		int puntuacion = Integer.parseInt(request.getParameter("puntuacion"));
 		
 		Usuario u = new Usuario();
 		u.setDNI(dni);

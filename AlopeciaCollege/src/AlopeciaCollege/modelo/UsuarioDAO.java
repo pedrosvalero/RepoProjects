@@ -20,7 +20,7 @@ public class UsuarioDAO {
 	public Usuario login(String email, String pass) throws SQLException {
 		
 		Usuario u = null;
-		String query = "Select DNI, nomUsu, nick, email, pass, rol, localidad, telefono FROM alopeciacollege.usuario WHERE email = ? AND pass = ?";
+		String query = "Select DNI, nomUsu, nick, email, pass, rol, localidad, telefono, puntuacion FROM alopeciacollege.usuario WHERE email = ? AND pass = ?";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(query);
 		pst.setString(1, email);
@@ -37,6 +37,7 @@ public class UsuarioDAO {
 			u.setRol(rs.getString("rol"));
 			u.setLocalidad(rs.getNString("localidad"));
 			u.setTelefono(rs.getString("telefono"));
+			u.setPuntuacion(rs.getInt("puntuacion"));
 			
 		}
 		return u;
@@ -169,29 +170,6 @@ public class UsuarioDAO {
 
 		pst.executeQuery();
 
-	}
-	
-	//SELECT PUNTUACION 	
-	public Usuario getPuntos(Usuario u) throws SQLException {
-
-		String sql = "SELECT DNI, rol, puntuacion from alopeciacollege.usuario";
-		con = Conexion.getInstance().getConnection();
-		pst = con.prepareStatement(sql);
-		pst.setString(1, u.getDNI());
-		pst.setString(2, u.getRol());
-		pst.setInt(3, u.getPuntuacion());
-		
-
-		pst.executeQuery();
-		
-		if (rs.next()) {
-			u = new Usuario();
-			u.setDNI(rs.getString("dni"));
-			u.setRol(rs.getString("rol"));	
-			u.setPuntuacion(rs.getInt("puntuacion"));			
-		}
-
-		return u;
 	}
 	
 	//BORRAR USUARIO
