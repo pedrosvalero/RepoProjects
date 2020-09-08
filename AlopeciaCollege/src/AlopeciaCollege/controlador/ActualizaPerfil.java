@@ -88,14 +88,12 @@ public class ActualizaPerfil extends HttpServlet {
 	
 		
 		UsuarioDAO usao = new UsuarioDAO();
-		String pagDest = "Perfil.jsp";
+		String pagDest = "Login.jsp";
 	
 
 	try {
 		usao.updateUsuario(u);		
 		pagDest = "Login.jsp";
-		RequestDispatcher dispatcher = request.getRequestDispatcher(pagDest);
-		dispatcher.forward(request, response);
 		String msg= "Parámetros de usuario modificados!";
 		request.setAttribute("msgerr", msg);
 	} catch (SQLException e) {
