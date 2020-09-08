@@ -142,7 +142,7 @@
 		    <!-- Title -->
 		    <h4 class="card-title">Hacer examen</h4>
 		    <!-- Text -->
-		    <p class="card-text">Realiza un examen con preguntas aleatorias y sube en el Ranking. ¡Qué calvario!</p>
+		    <p class="card-text">Realiza un examen y obtén la mejor puntuación. ¡Qué calvario!</p>
 		    <!-- Button -->
 		    <a href="Examen.jsp" class="btn btn-primary">Entrar</a>
 		  </div>
