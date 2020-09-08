@@ -43,7 +43,7 @@ public class ActualizaPerfil extends HttpServlet {
 		switch (opcion) {
 		case "e":
 			try {
-				u = udao.getPerfil(dni);
+				u = udao.getUsuario(dni);
 				request.setAttribute("dni", u);
 				destPage = "EditarPerfil.jsp";
 			} catch (SQLException e) {

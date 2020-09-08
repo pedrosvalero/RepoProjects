@@ -65,37 +65,6 @@ public class UsuarioDAO {
 
 	}
 	
-	//RECOGER INFO DEL PERFIL
-	public Usuario getPerfil(String dni) throws SQLException {
-
-		Usuario u = null;
-		String sql = "SELECT * FROM usuario WHERE DNI = ?";
-		con = Conexion.getInstance().getConnection();
-		pst = con.prepareStatement(sql);
-		pst.setString(1, dni);
-
-		rs = pst.executeQuery();
-
-		if (rs.next()) {
-			u = new Usuario();
-			u.setEmail(rs.getString("email"));
-			u.setNomUsu(rs.getString("nomUsu"));
-			u.setApellidosUsu(rs.getString("apellidosUsu"));
-			u.setDNI(rs.getString("dni"));
-			u.setNick(rs.getString("nick"));
-			u.setLocalidad(rs.getNString("localidad"));
-			u.setTelefono(rs.getString("telefono"));
-			u.setPass(rs.getNString("pass"));
-			u.setSexUsu(rs.getString("sexUsu"));
-			u.setFecNac(rs.getNString("FecNac"));
-			u.setRol(rs.getNString("rol"));
-			u.setPuntuacion(rs.getInt("puntuacion"));
-			
-		}
-
-		return u;
-	}
-	
 	//QUERY UPDATE USUARIO - EDIT PERFIL
 	public void updateUsuario(Usuario u) throws SQLException {
 
@@ -187,7 +156,21 @@ public class UsuarioDAO {
 
 		return u;
 	}
+	
+	//ACTUALIZAR PUNTUACION 	
+	public void actualizaPuntos(Usuario u) throws SQLException {
 
+		String sql = "UPDATE alopeciacollege.usuario SET puntuacion = ?, rol = ? WHERE DNI = ?";
+		con = Conexion.getInstance().getConnection();
+		pst = con.prepareStatement(sql);
+		pst.setString(1, u.getRol());
+		pst.setInt(2, u.getPuntuacion());
+		pst.setString(3, u.getDNI());
+
+		pst.executeUpdate();
+
+	}
+	
 	//BORRAR USUARIO
 	public void borrarUsuario(String dni) throws SQLException {
 
