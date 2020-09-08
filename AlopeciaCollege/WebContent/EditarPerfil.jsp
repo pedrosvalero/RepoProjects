@@ -107,12 +107,12 @@
 	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-mobile-alt prefix" aria-hidden="true"></i>
-	          <label id="text" data-error="wrong" data-success="right" for="form29">Teléfono</label>
+	          <label id="text" data-error="wrong" data-success="right" for="form29" maxlength="9" >Teléfono</label>
 	          <input  type="tel" name="tlf_control" maxlength="9" id="form29" class="form-control validate" value="<%= u.getTelefono() %>">
 	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-key prefix"></i>
-	          <label id="text" data-error="wrong" data-success="right" for="form29">Contraseña</label>
+	          <label id="text" data-error="wrong" data-success="right" for="form29" minlength="6" >Contraseña</label>
 	          <input  type="password" name="pass_control" id="form29" class="form-control validate" value="<%= u.getPass() %>">
 	        </div>
 	        <div id="boton"class="text-center">
