@@ -80,7 +80,8 @@ public class ListaUsuarios extends HttpServlet {
 		String pass = request.getParameter("pass_control");
 		String localidad = request.getParameter("localidad_control");
 		String sexo = request.getParameter("sexo_control");
-		String telefono = request.getParameter("tlf_control");		
+		String telefono = request.getParameter("tlf_control");
+		int puntuacion = Integer.parseInt(request.getParameter("puntuacion_control"));
 		
 		Usuario u = new Usuario();
 		u.setDNI(DNI);
@@ -93,6 +94,7 @@ public class ListaUsuarios extends HttpServlet {
 		u.setEmail(email);
 		u.setPass(pass);
 		u.setNick(nick);
+		u.setPuntuacion(puntuacion);
 		
 		UsuarioDAO usuDAO = new UsuarioDAO();
 		String pagDest = "Usuarios.jsp";

@@ -44,9 +44,11 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="Examen.jsp">Examenes</a>
 		      </li>
+		      <% if (session.getAttribute("rol").equals("Admin")) { %>
 		      <li class="nav-item">
 		        <a class="nav-link" href="Usuarios.jsp">Usuarios</a>
 		      </li>
+		      <% } %>
 		      <li class="nav-item active">
 		        <a class="nav-link">Perfil
 		        <span class="sr-only">(current)</span></a>
@@ -80,15 +82,15 @@
                     <span><% out.print(session.getAttribute("nickUsu")); %></span>
                     <strong>
                         <i class="fa fa-fw fa-star"></i>
-                        Jason Statham
+                        <%= session.getAttribute("rol") %>
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="img/jason.png" width="320">
+                        <img class="img-responsive" src="img/jason.png" width="320" style="border-radius: 100%;">
                     </div>
                     <div class="mc-description">
-                        Eres un apredíz de calvos, aún puedes mejorar más, sigue haciendo exámanes. Demomento tienes el rol Jason Statham
+                        Eres un apredíz de calvos, aún puedes mejorar más, sigue haciendo exámanes. De momento tienes el rol: <%= session.getAttribute("rol") %>.
                     </div>
                 </div>
                 <a class="mc-btn-action">

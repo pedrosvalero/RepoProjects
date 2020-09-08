@@ -25,7 +25,7 @@
 <%
 	Connection conn = Conexion.getInstance().getConnection();
 	Statement st = conn.createStatement();
-	String query = "SELECT nick, puntuacion, rol FROM alopeciacollege.usuario WHERE rol <> 'Admin' order by puntuacion";
+	String query = "SELECT nick, rol, puntuacion FROM alopeciacollege.usuario WHERE rol <> 'Admin' order by puntuacion";
 	ResultSet rs = st.executeQuery(query);
 %>
 <div id="bg" style="background-image: url('img/College.jpg');">

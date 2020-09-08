@@ -91,7 +91,7 @@
 
 	        <div class="row" id="apartados">
 	            <div class="form-group col-md-6">
-	             	<i class="fas fa-id-card"></i><input class="input" type="text" name="dni_control" maxlength="9" title="Número de Documento Identidad" required placeholder ="DNI *" value="<%= u.getDNI() %>">
+	             	<i class="fas fa-award prefix"></i><input class="input" type="text" name="puntuacion_control" maxlength="9" title="Puntos del usuario" placeholder ="Puntuación" value="<%= u.getPuntuacion() %>">
 	            </div>
 	            <div class="form-group col-md-6">
 	            	<i class="fas fa-birthday-cake"></i><input class="input" type="date" name="birthdate_control" title="Fecha de nacimiento *" required value="<%= u.getFecNac() %>">
@@ -102,6 +102,11 @@
 	            <i class="fas fa-envelope" aria-hidden="true"></i><input class="input" id="idMail" type="email" name="email_control" 
 				required placeholder="Email *" title="Dirección de correo electrónico" value="<%= u.getEmail() %>">
 			</div>
+			
+			<div class="form-group col-md-12" hidden>
+	            <i class="fas fa-envelope" aria-hidden="true"></i><input class="input" id="idMail" type="text" maxlength="9" name="dni_control" 
+				required placeholder="DNI (No tocar)" title="DNI" value="<%= u.getDNI() %>">
+			</div>
 
 			<div class="row" id="apartados">
 				<div class="form-group col-md-6">
@@ -110,17 +115,20 @@
 	            <div class="form-group col-md-6">
 	            	<i class="fas fa-key"></i><input class="input" type="password" name="pass_control" minlength="6" title="Contraseña de la cuenta" required placeholder ="Contraseña *" value="<%= u.getPass() %>">
 	            </div>
+	        </div>
+	        <div class="row" id="apartados">
 	            <div class="form-group col-md-4">
-	           		<i class="fas fa-city"></i><input type="text" title="Localidad" name="localidad_control" value="<%= u.getLocalidad() %>">
+	           		<i class="fas fa-city"></i><input id="idLocalidad" type="text" title="Localidad" name="localidad_control" value="<%= u.getLocalidad() %>">
 	            </div>
 	            <div class="form-group col-md-4">
 	            	<i class="fas fa-mobile-alt" aria-hidden="true"></i><input class="input" type="tel" name="tlf_control" maxlength="9"  placeholder ="Teléfono" title="Número de contacto"  value="<%= u.getTelefono() %>">
 	            </div>
 	            <div class="form-group col-md-4">
-	            <i class="fas fa-neuter"></i><input type="text" id="idSex" name="sexo_control" title="Tipo de humano"  value="<%= u.getSexUsu() %>">
+	            <i class="fas fa-neuter"></i><input type="text" id="idSex" name="sexo_control" title="Tipo de humano" placeholder="Hombre (M) / Mujer (F) / Otro (O)" value="<%= u.getSexUsu() %>">
 		  		</div>
 	        </div>
         	<div class="row" id="apartados" style="justify-content: center;">
+        		<input type="hidden" name="opcion" value="e">
         		<button class="btn btn-blue btn-rounded mb-3" style="border-radius: 20px;" type="submit" title="Crear cuenta en la página">Modificar</button>
         		<button class="btn btn-red btn-rounded mb-3" style="border-radius: 20px; margin-left: 45px;" type="reset" title="Empezar de cero">Borrar todo</button>
         	</div>

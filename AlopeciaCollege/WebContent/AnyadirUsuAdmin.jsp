@@ -70,7 +70,7 @@
 	</header>
 
 	<div class="containerbody">
-		<form action = "ListaUsuario" method = "POST" accept-charset="ISO-8859-1">
+		<form action = "AnyadirUsuAdmin" method = "POST" accept-charset="ISO-8859-1">
 			<center><caption><h4 id="registrarse" style="font-weight: bold;">Añadir Usuario</h4></caption>
 
 			<div class="row" id="apartados">

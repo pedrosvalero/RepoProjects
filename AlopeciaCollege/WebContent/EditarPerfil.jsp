@@ -44,9 +44,11 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="Examen.jsp">Examenes</a>
 		      </li>
+		      <% if (session.getAttribute("rol").equals("Admin")) { %>
 		      <li class="nav-item">
 		        <a class="nav-link" href="Usuarios.jsp">Usuarios</a>
 		      </li>
+		      <% } %>
 		      <li class="nav-item active">
 		        <a class="nav-link">Editar Perfil
 		        <span class="sr-only">(current)</span></a>
@@ -82,33 +84,39 @@
 	<div class="col active-with-click"id="block">
 		<div class="transbox" >
 	    <div class="modal-body mx-5">
+	    	<h4>Editar Perfil</h4><br>
+	    	 <div class="md-form mb-5" hidden>
+	          <i id="simbolos" class="fas fa-envelope prefix"></i>
+	          <label id="text" data-error="wrong" data-success="right" for="form29">DNI</label>
+	          <input type="text" name="dni_control" id="form29" class="form-control validate" value="<%= u.getDNI() %>">
+	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-envelope prefix"></i>
-	          <label id="text" data-error="wrong" data-success="right" for="form29"><%= u.getEmail() %></label>
-	          <input type="email" name="email_control" id="form29" class="form-control validate">
+	          <label id="text" data-error="wrong" data-success="right" for="form29">Correo Electrónico</label>
+	          <input type="email" name="email_control" id="form29" class="form-control validate" value="<%= u.getEmail() %>">
 	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-key prefix"></i>
-	          <label id="text" data-error="wrong" data-success="right" for="form29"><%= u.getPass() %></label>
-	          <input  type="password" name="pass_control" id="form29" class="form-control validate" >
+	          <label id="text" data-error="wrong" data-success="right" for="form29">Contraseña</label>
+	          <input  type="password" name="pass_control" id="form29" class="form-control validate" value="<%= u.getPass() %>">
 	        </div>
 		    <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-user prefix"></i>
-	          <label id="text" data-error="wrong" data-success="right" for="form29"><%= u.getNick() %></label>
-	          <input  type="text" name="nick_control" id="form29" class="form-control validate">
+	          <label id="text" data-error="wrong" data-success="right" for="form29">Nickname</label>
+	          <input  type="text" name="nick_control" id="form29" class="form-control validate" value="<%= u.getNick() %>">
 	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-city prefix" style="margin-right: 5px;"></i>
-	          <label id="Localidad" data-error="wrong" data-success="right" for="form29"><%= u.getLocalidad() %></label>
-	          <input type="tel" name="localidad_control" id="form29" class="form-control validate">
+	          <label id="Localidad" data-error="wrong" data-success="right" for="form29">Localidad</label>
+	          <input type="tel" name="localidad_control" id="form29" class="form-control validate" value="<%= u.getLocalidad() %>">
 	        </div>
 	        <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-mobile-alt prefix" aria-hidden="true"></i>
-	          <label id="text" data-error="wrong" data-success="right" for="form29"><%= u.getTelefono() %></label>
-	          <input  type="tel" name="tlf_control" id="form29" class="form-control validate" >
+	          <label id="text" data-error="wrong" data-success="right" for="form29">Teléfono</label>
+	          <input  type="tel" name="tlf_control" maxlength="9" id="form29" class="form-control validate" value="<%= u.getTelefono() %>">
 	        </div>
 	        <div id="boton"class="text-center">
-				<button class="btn btn-blue btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;" type="submit">Aplicar</button>
+				<button type="submit" class="btn btn-blue btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Aplicar</button>
 				<button class="btn btn-red btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;" type="reset">Borrar datos</button>
 			</div>
 	    </div>

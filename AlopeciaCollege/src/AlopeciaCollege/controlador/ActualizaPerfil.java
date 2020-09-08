@@ -9,8 +9,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
 import AlopeciaCollege.modelo.Usuario;
 import AlopeciaCollege.modelo.UsuarioDAO;
 
@@ -40,7 +38,7 @@ public class ActualizaPerfil extends HttpServlet {
 		UsuarioDAO udao = new UsuarioDAO();
 		Usuario u = null;
 		
-		String destPage = "Perfil.jsp";
+		String destPage = "EditarPerfil.jsp";
 		
 		switch (opcion) {
 		case "e":
@@ -95,7 +93,7 @@ public class ActualizaPerfil extends HttpServlet {
 
 	try {
 		usao.updateUsuario(u);		
-		pagDest = "Perfil.jsp";
+		pagDest = "Login.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(pagDest);
 		dispatcher.forward(request, response);
 		String msg= "Parámetros de usuario modificados!";

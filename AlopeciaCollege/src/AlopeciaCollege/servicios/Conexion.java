@@ -12,7 +12,7 @@ public class Conexion {
 	private static Conexion instancia;
     private Connection connection;
     private String url = "jdbc:mysql://db4free.net:3306/alopeciacollege?serverTimezone=UTC";
-    //private String url = "jdbc:mysql://localhost:3306/college?serverTimezone=UTC";
+    //private String url = "jdbc:mysql://localhost:3306/alopeciacollege?serverTimezone=UTC";
     //private String username = "root";
     //private String password = "123";
     private String username = "teamindecisos";
