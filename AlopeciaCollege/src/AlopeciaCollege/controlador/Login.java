@@ -56,6 +56,10 @@ public class Login extends HttpServlet {
 			session.setAttribute("nomUsuario", usu.getNomUsu());
 			session.setAttribute("nickUsu", usu.getNick());
 			session.setAttribute("rol", usu.getRol());
+			session.setAttribute("email", usu.getEmail());
+			session.setAttribute("localidad", usu.getLocalidad());
+			session.setAttribute("telefono", usu.getTelefono());
+			session.setAttribute("pass", usu.getPass());
 		} else {
 			String msgerr = "Parámetros de login incorrectos!";
 			request.setAttribute("msgerr", msgerr);

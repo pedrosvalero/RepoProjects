@@ -35,6 +35,37 @@ public class ActualizaPerfil extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String opcion = request.getParameter("opcion");
+		String dni = request.getParameter("dni");
+		UsuarioDAO udao = new UsuarioDAO();
+		Usuario u = null;
+		
+		String destPage = "Perfil.jsp";
+		
+		switch (opcion) {
+		case "e":
+			try {
+				u = udao.getPerfil(dni);
+				request.setAttribute("dni", u);
+				destPage = "EditarPerfil.jsp";
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+		case "b":
+			try {
+				udao.borrarUsuario(dni);
+				destPage = "Login.jsp";
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+		}
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
+		dispatcher.forward(request, response);
 	}
 
 	/**

@@ -20,7 +20,7 @@ public class UsuarioDAO {
 	public Usuario login(String email, String pass) throws SQLException {
 		
 		Usuario u = null;
-		String query = "Select nomUsu, nick, email, pass, rol FROM alopeciacollege.usuario WHERE email = ? AND pass = ?";
+		String query = "Select nomUsu, nick, email, pass, rol, localidad, telefono, DNI FROM alopeciacollege.usuario WHERE email = ? AND pass = ?";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(query);
 		pst.setString(1, email);
@@ -34,6 +34,9 @@ public class UsuarioDAO {
 			u.setEmail(rs.getString("email"));
 			u.setPass(rs.getString("pass"));
 			u.setRol(rs.getString("rol"));
+			u.setLocalidad(rs.getNString("localidad"));
+			u.setTelefono(rs.getString("telefono"));
+			u.setDNI(rs.getString("dni"));
 			
 		}
 		return u;
@@ -83,22 +86,6 @@ public class UsuarioDAO {
 		}
 
 		return u;
-	}
-	
-	//QUERY SELECT PARA UPDATE USUARIO - EDIT PERFIL
-	public void selectUsuario(Usuario u) throws SQLException {
-
-		String sql = "SELECT localidad, telefono, email, pass, nick FROM alopeciacollege.usuario WHERE DNI = ?";
-		con = Conexion.getInstance().getConnection();
-		pst = con.prepareStatement(sql);
-		pst.setString(1, u.getEmail());
-		pst.setString(2, u.getNick());
-		pst.setString(3, u.getLocalidad());
-		pst.setString(4, u.getTelefono());
-		pst.setString(5, u.getPass());
-
-		pst.executeUpdate();
-
 	}
 	
 	//QUERY UPDATE USUARIO - EDIT PERFIL

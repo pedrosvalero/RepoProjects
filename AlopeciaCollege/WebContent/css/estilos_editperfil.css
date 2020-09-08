@@ -14,6 +14,7 @@
 #navfont{margin-left: 10px; font-family: 'Pacifico', sans-serif; color: #eaeaec; font-size: 5;}
 header nav {border-bottom: inset grey 2px;}
 
+
 footer{position: relative; width: 100%; bottom: 0; opacity: 0.9;}
 #redes img{margin-left: 5px;}
 
@@ -25,20 +26,13 @@ footer{position: relative; width: 100%; bottom: 0; opacity: 0.9;}
 	z-index: 1000;
 }
 
-.flex-1 {
-	flex: 1;
-}
-
 .appWhatsapp img{
 	width: 100%;
 	height: auto;
 }
 
-#block{
-    justify-content: center;
-    margin: auto;
-    margin-top: 15vh;
-    margin-bottom: 15vh;
+#block{	
+    text-align: justify;
 }
 
 #rol{
@@ -55,7 +49,11 @@ div.transbox {
   margin: 11px;
   background-color: #ffffff;
   opacity: 0.7;
+  border-radius: 10px;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
 }
+
 
 #simbolos{
 	
@@ -306,6 +304,7 @@ div.transbox {
 .material-card.Red.mc-active .mc-btn-action {
   border-color: #FFEBEE;
 }
+
 
 h2{
   font-weight: 200;
