@@ -163,12 +163,35 @@ public class UsuarioDAO {
 		String sql = "UPDATE alopeciacollege.usuario SET puntuacion = ?, rol = ? WHERE DNI = ?";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(sql);
-		pst.setString(1, u.getRol());
-		pst.setInt(2, u.getPuntuacion());
-		pst.setString(3, u.getDNI());
+		pst.setString(1, u.getDNI());
+		pst.setString(2, u.getRol());
+		pst.setInt(3, u.getPuntuacion());	
 
-		pst.executeUpdate();
+		pst.executeQuery();
 
+	}
+	
+	//SELECT PUNTUACION 	
+	public Usuario getPuntos(Usuario u) throws SQLException {
+
+		String sql = "SELECT DNI, rol, puntuacion from alopeciacollege.usuario";
+		con = Conexion.getInstance().getConnection();
+		pst = con.prepareStatement(sql);
+		pst.setString(1, u.getDNI());
+		pst.setString(2, u.getRol());
+		pst.setInt(3, u.getPuntuacion());
+		
+
+		pst.executeQuery();
+		
+		if (rs.next()) {
+			u = new Usuario();
+			u.setDNI(rs.getString("dni"));
+			u.setRol(rs.getString("rol"));	
+			u.setPuntuacion(rs.getInt("puntuacion"));			
+		}
+
+		return u;
 	}
 	
 	//BORRAR USUARIO

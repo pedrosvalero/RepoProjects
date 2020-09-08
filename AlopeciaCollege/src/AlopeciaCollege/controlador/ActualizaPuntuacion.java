@@ -34,20 +34,20 @@ public class ActualizaPuntuacion extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		String dni = request.getParameter("dni");
-		String rol = request.getParameter("rol");
-		int puntuacion = Integer. parseInt(request.getParameter("puntuacion"));
+		//String dni = request.getParameter("dni");
+		//String rol = request.getParameter("rol");
+		//int puntuacion = Integer. parseInt(request.getParameter("puntuacion"));
 		UsuarioDAO udao = new UsuarioDAO();
 		Usuario u = null;
 		
-		String destPage = "Home.jsp";
+		String destPage = "Examen.jsp";
 		
 		try {
-			udao.actualizaPuntos(u);
+			udao.getPuntos(u);
 			request.setAttribute("dni", u);
 			request.setAttribute("rol", u);
 			request.setAttribute("puntuacion", u);
-			destPage = "Home.jsp";
+			destPage = "Examen.jsp";
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
