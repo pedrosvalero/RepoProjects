@@ -169,7 +169,7 @@ public class UsuarioDAO {
 	//RECOGER RANKING USUARIOS
 	public Usuario getRanking(Usuario u) throws SQLException {
 
-		String sql = "SELECT nick, puntuacion, rol FROM alopeciacollege.usuario order by puntuacion";
+		String sql = "SELECT nick, puntuacion, rol FROM alopeciacollege.usuario ORDER BY puntuacion ASC";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(sql);
 		pst.setString(1, u.getNick());

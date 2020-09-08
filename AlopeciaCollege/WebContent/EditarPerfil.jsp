@@ -95,11 +95,6 @@
 	          <label id="text" data-error="wrong" data-success="right" for="form29">Correo Electrónico</label>
 	          <input type="email" name="email_control" id="form29" class="form-control validate" value="<%= u.getEmail() %>">
 	        </div>
-	        <div class="md-form mb-5">
-	          <i id="simbolos" class="fas fa-key prefix"></i>
-	          <label id="text" data-error="wrong" data-success="right" for="form29">Contraseña</label>
-	          <input  type="password" name="pass_control" id="form29" class="form-control validate" value="<%= u.getPass() %>">
-	        </div>
 		    <div class="md-form mb-5">
 	          <i id="simbolos" class="fas fa-user prefix"></i>
 	          <label id="text" data-error="wrong" data-success="right" for="form29">Nickname</label>
@@ -114,6 +109,11 @@
 	          <i id="simbolos" class="fas fa-mobile-alt prefix" aria-hidden="true"></i>
 	          <label id="text" data-error="wrong" data-success="right" for="form29">Teléfono</label>
 	          <input  type="tel" name="tlf_control" maxlength="9" id="form29" class="form-control validate" value="<%= u.getTelefono() %>">
+	        </div>
+	        <div class="md-form mb-5">
+	          <i id="simbolos" class="fas fa-key prefix"></i>
+	          <label id="text" data-error="wrong" data-success="right" for="form29">Contraseña</label>
+	          <input  type="password" name="pass_control" id="form29" class="form-control validate" value="<%= u.getPass() %>">
 	        </div>
 	        <div id="boton"class="text-center">
 				<button type="submit" class="btn btn-blue btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Aplicar</button>

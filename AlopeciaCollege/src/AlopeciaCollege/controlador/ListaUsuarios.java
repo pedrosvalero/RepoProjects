@@ -102,8 +102,6 @@ public class ListaUsuarios extends HttpServlet {
 		try {
 			usuDAO.modificarUsuario(u);
 			pagDest = "Usuarios.jsp";
-			RequestDispatcher dispatcher = request.getRequestDispatcher(pagDest);
-			dispatcher.forward(request, response);
 			String msg= "Parámetros de usuario modificados!";
 			request.setAttribute("msgerr", msg);
 		} catch (SQLException e) {
