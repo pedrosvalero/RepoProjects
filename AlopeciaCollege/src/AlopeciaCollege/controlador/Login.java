@@ -62,7 +62,6 @@ public class Login extends HttpServlet {
 			session.setAttribute("telefono", usu.getTelefono());
 			session.setAttribute("pass", usu.getPass());
 			session.setAttribute("puntuacion", usu.getPuntuacion());
-			session.setAttribute("foto", usu.getFoto());
 			
 		} else {
 			String msgerr = "Parámetros de login incorrectos!";

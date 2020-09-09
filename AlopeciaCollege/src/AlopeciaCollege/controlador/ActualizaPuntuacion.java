@@ -44,13 +44,11 @@ public class ActualizaPuntuacion extends HttpServlet {
 		String dni = request.getParameter("dni");
 		String rol = request.getParameter("rol");
 		int puntuacion = Integer.parseInt(request.getParameter("puntuacion"));
-		String foto = request.getParameter("foto");
 		
 		Usuario u = new Usuario();
 		u.setDNI(dni);
 		u.setRol(rol);
 		u.setPuntuacion(puntuacion);
-		u.setFoto(foto);
 
 		UsuarioDAO usao = new UsuarioDAO();
 		String pagDest = "Home.jsp";

@@ -100,7 +100,6 @@
 	                	<input type="text" title="DNI" value="<%= session.getAttribute("dni") %>" hidden>
 				    	<input id="puntuacion" type="text" value="<%= session.getAttribute("puntuacion") %>" hidden>
 				    	<input id="rol" type="text" title="rol" value="<%= session.getAttribute("rol") %>" hidden>
-				    	<input id="foto" type="text" title="foto" value="<%= session.getAttribute("foto") %>" hidden>
 						
 						<button type="submit" class="btn btn-primary mt-4" style="border-radius: 20px;">Aceptar</button>
 						<p><b style="font-weight: bold;">Aviso:</b> ¡Este botón actualiza tus puntos, pero deberás loguearte de nuevo para actualizar tu rango en perfil!</p>

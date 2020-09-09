@@ -20,7 +20,7 @@ public class UsuarioDAO {
 	public Usuario login(String email, String pass) throws SQLException {
 		
 		Usuario u = null;
-		String query = "Select DNI, nomUsu, nick, email, pass, rol, localidad, telefono, puntuacion, foto FROM alopeciacollege.usuario WHERE email = ? AND pass = ?";
+		String query = "Select DNI, nomUsu, nick, email, pass, rol, localidad, telefono, puntuacion FROM alopeciacollege.usuario WHERE email = ? AND pass = ?";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(query);
 		pst.setString(1, email);
@@ -38,7 +38,6 @@ public class UsuarioDAO {
 			u.setLocalidad(rs.getNString("localidad"));
 			u.setTelefono(rs.getString("telefono"));
 			u.setPuntuacion(rs.getInt("puntuacion"));
-			u.setFoto(rs.getString("foto"));
 			
 		}
 		return u;
@@ -162,13 +161,12 @@ public class UsuarioDAO {
 	//ACTUALIZAR PUNTUACION 	
 	public void actualizaPuntos(Usuario u) throws SQLException {
 
-		String sql = "UPDATE alopeciacollege.usuario SET puntuacion = ?, rol = ?, foto = ? WHERE DNI = ?";
+		String sql = "UPDATE alopeciacollege.usuario SET puntuacion = ?, rol = ? WHERE DNI = ?";
 		con = Conexion.getInstance().getConnection();
 		pst = con.prepareStatement(sql);
 		pst.setString(1, u.getDNI());
 		pst.setString(2, u.getRol());
 		pst.setInt(3, u.getPuntuacion());
-		pst.setString(4, u.getFoto());
 
 		pst.executeQuery();
 

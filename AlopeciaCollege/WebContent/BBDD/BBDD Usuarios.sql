@@ -35,7 +35,6 @@ CREATE TABLE `usuario` (
   `pass` varchar(16) DEFAULT NULL,
   `nick` varchar(12) NOT NULL,
   `puntuacion` smallint DEFAULT NULL,
-  `foto` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`DNI`),
   CONSTRAINT `usuario_chk_1` CHECK ((`sexUsu` in (_utf8mb4'F',_utf8mb4'M',_utf8mb4'O')))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -47,7 +46,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES ('00000000X','CollegeAdmin','Admin','O','2020-08-27','Alicante','099123123','alopecia.college@gmail.com','Admin','pepeviyuela69','CalveAdmin',NULL,NULL),('12345678X','José Carlos','Grau','M','1990-01-01','Alicante','123123123','jcgraucatral@gmail.com','Admin','123456','JCGRAU',0,NULL),('23132123A','prueba2','prueba1','M','2020-02-13','Alicante','146546456','prueba2@gmail.com','level 1','123456','prueba1',0,NULL),('23423523e','prueba5','prueba5','F','2200-06-05','Albacete','654646546','prueba5@gmail.com','level 1','123456','prueba5',0,NULL),('32324532c','prueba4','prueba4','F','2020-06-05','Albacete','565556465','prueba4@gmail.com','level 1','123456','prueba4',0,NULL),('50000000N','Néstor','Martínez','M','1995-02-04','Alicante','610345361','srmonzo@gmail.com','level 1','123456','Nes154',119,NULL),('5487985P','Lara','Bernabeu','F','1990-05-30','Alicante','601032880','lara@gmail.com','level 1','123456','lara07024',0,NULL),('74373440L','Pedro','Sempere','M','1995-07-04','Elche','626469140','pedrosvalero@gmail.com','level 1','123456','Unnameable',100,NULL),('789456123','Prueba','Pedro','F','1995-07-04','Almería','123456789','PruebaPedro@gmail.com','level 1','123456','PruPe',0,NULL);
+INSERT INTO `usuario` VALUES ('00000000X','CollegeAdmin','Admin','O','2020-08-27','Alicante','099123123','alopecia.college@gmail.com','Admin','pepeviyuela69','CalveAdmin',NULL),('12345678X','José Carlos','Grau','M','1990-01-01','Alicante','123123123','jcgraucatral@gmail.com','Admin','123456','JCGRAU',0),('23132123A','prueba2','prueba1','M','2020-02-13','Alicante','146546456','prueba2@gmail.com','level 1','123456','prueba1',0),('23423523e','prueba5','prueba5','F','2200-06-05','Albacete','654646546','prueba5@gmail.com','level 1','123456','prueba5',0),('32324532c','prueba4','prueba4','F','2020-06-05','Albacete','565556465','prueba4@gmail.com','level 1','123456','prueba4',0),('50000000N','Néstor','Martínez','M','1995-02-04','Alicante','610345361','srmonzo@gmail.com','level 1','123456','Nes154',119),('5487985P','Lara','Bernabeu','F','1990-05-30','Alicante','601032880','lara@gmail.com','level 1','123456','lara07024',0),('74373440L','Pedro','Sempere','M','1995-07-04','Elche','626469140','pedrosvalero@gmail.com','level 1','123456','Unnameable',100),('789456123','Prueba','Pedro','F','1995-07-04','Almería','123456789','PruebaPedro@gmail.com','level 1','123456','PruPe',0);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -64,4 +63,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-09-09 14:19:15
+-- Dump completed on 2020-09-09 16:48:17
