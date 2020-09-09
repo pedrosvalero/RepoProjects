@@ -116,7 +116,7 @@
 	          <input  type="password" name="pass_control" id="form29" minlength="6" class="form-control validate" value="<%= u.getPass() %>">
 	        </div>
 	        <div id="boton"class="text-center">
-				<button type="submit" class="btn btn-blue btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Aplicar</button>
+				<button type="submit" onclick="sonido()" class="btn btn-blue btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Aplicar</button>
 				<button class="btn btn-red btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;" type="reset">Borrar datos</button>
 			</div>
 	    </div>
@@ -317,6 +317,20 @@
             }
         });
     });
+		</script>
+		<script>
+			function sonido(){
+				var x = document.createElement("AUDIO");
+					console.log("entras??")
+				  if (x.canPlayType("audio/mpeg")) {
+				    x.setAttribute("src","Desbloqueable/BaseDatosCalvica.mp3");
+				  } else {
+				    x.setAttribute("src","Desbloqueable/BaseDatosCalvica.mp3");
+				  }
+
+				x.setAttribute("autoplay", "autoplay");
+				  document.body.appendChild(x);
+			}
 		</script>
 </body>
 </html>

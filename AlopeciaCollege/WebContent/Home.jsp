@@ -23,7 +23,7 @@
 <body>
 <div class="wrapper hoverable" style="margin-bottom: 200px;">
 <div id="bg" style="background-image: url('img/College.jpg');">
-<canvas onclick="eliminarElemento()" style="height:20%;width:100%;position:absolute;left:0px;top:0px;z-index:99999;" id="confeti" ></canvas>
+<canvas onclick="eliminarElemento()" style="height:100%;width:100%;position:absolute;left:0px;top:0px;z-index:99999;" id="confeti" ></canvas>
 	<header>
 		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
 		  <img src ="img/TheAlopeciaCollegeBLANCO3.png" width="45px">
@@ -55,7 +55,7 @@
 		      <li class="nav-item dropdown">
 		        <a class="nav-link" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
 		          aria-haspopup="true" aria-expanded="false">
-		          <img src="img/<% session.getAttribute("foto"); %>" class="rounded-circle z-depth-0" alt="avatar image" height="33" style="margin-right: 5px">
+		          <img src="img/usuario.png" class="rounded-circle z-depth-0" alt="avatar image" height="33" style="margin-right: 5px">
 		          	<% out.print(session.getAttribute("nickUsu")); %>
 		        </a>
 		        <div class="dropdown-menu dropdown-menu-right dropdown-default"

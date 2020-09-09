@@ -18,7 +18,7 @@ header nav{ border-bottom: inset grey 2px; }
 	margin-top: 5%;
 	margin-bottom: 10%;
 	width: 600px;
-	height: 450px;
+	height: relative;
 	padding: 35px;
 	background-color: lightgrey;
 	border-radius: 20px; 
