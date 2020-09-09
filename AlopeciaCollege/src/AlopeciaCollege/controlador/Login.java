@@ -53,6 +53,7 @@ public class Login extends HttpServlet {
 		if (usu != null) {
 			pagDest = "Home.jsp";
 			HttpSession session = request.getSession();
+			session.setAttribute("dni", usu.getDNI());
 			session.setAttribute("nomUsuario", usu.getNomUsu());
 			session.setAttribute("nickUsu", usu.getNick());
 			session.setAttribute("rol", usu.getRol());
@@ -60,7 +61,9 @@ public class Login extends HttpServlet {
 			session.setAttribute("localidad", usu.getLocalidad());
 			session.setAttribute("telefono", usu.getTelefono());
 			session.setAttribute("pass", usu.getPass());
-			session.setAttribute("dni", usu.getDNI());
+			session.setAttribute("puntuacion", usu.getPuntuacion());
+			session.setAttribute("foto", usu.getFoto());
+			
 		} else {
 			String msgerr = "Parámetros de login incorrectos!";
 			request.setAttribute("msgerr", msgerr);

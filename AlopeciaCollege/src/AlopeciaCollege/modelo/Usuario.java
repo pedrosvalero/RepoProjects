@@ -13,14 +13,14 @@ public class Usuario {
 	private String telefono;
 	private String localidad;
 	private int puntuacion;
+	private String foto;
 
 	public Usuario() {
 		super();
 	}
-	
-	
+
 	public Usuario(String nomUsu, String apellidosUsu, String email, String pass, String rol, String DNI,
-				   String nick, String sexUsu, String fecNac, String telefono, String localidad, int puntuacion) {
+				   String nick, String sexUsu, String fecNac, String telefono, String localidad, int puntuacion, String foto) {
 		super();
 		this.nomUsu = nomUsu;
 		this.apellidosUsu = apellidosUsu;
@@ -34,8 +34,8 @@ public class Usuario {
 		this.telefono = telefono;
 		this.localidad = localidad;
 		this.puntuacion = puntuacion;
+		this.foto = foto;
 	}
-	
 
 	public String getNomUsu() {
 		return nomUsu;
@@ -133,14 +133,18 @@ public class Usuario {
 		this.puntuacion = puntuacion;
 	}
 
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
 	@Override
 	public String toString() {
 		return "Usuario [nomUsu=" + nomUsu + ", apellidosUsu=" + apellidosUsu + ", email=" + email + ", pass=" + pass
 				+ ", rol=" + rol + ", DNI=" + DNI + ", nick=" + nick + ", sexUsu=" + sexUsu + ", fecNac=" + fecNac
-				+ ", telefono=" + telefono + ", localidad=" + localidad + ", puntuacion=" + puntuacion + "]";
+				+ ", telefono=" + telefono + ", localidad=" + localidad + ", puntuacion=" + puntuacion + ", foto=" + foto + "]";
 	}
-	
-	
-
-
 }

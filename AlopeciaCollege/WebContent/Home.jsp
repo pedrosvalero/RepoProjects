@@ -21,10 +21,9 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 </head>
 <body>
-
 <div class="wrapper hoverable" style="margin-bottom: 200px;">
-
 <div id="bg" style="background-image: url('img/College.jpg');">
+<canvas onclick="eliminarElemento()" style="height:20%;width:100%;position:absolute;left:0px;top:0px;z-index:99999;" id="confeti" ></canvas>
 	<header>
 		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
 		  <img src ="img/TheAlopeciaCollegeBLANCO3.png" width="45px">
@@ -56,7 +55,7 @@
 		      <li class="nav-item dropdown">
 		        <a class="nav-link" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
 		          aria-haspopup="true" aria-expanded="false">
-		          <img src="img/usuario.png" class="rounded-circle z-depth-0" alt="avatar image" height="33" style="margin-right: 5px">
+		          <img src="img/<% session.getAttribute("foto"); %>" class="rounded-circle z-depth-0" alt="avatar image" height="33" style="margin-right: 5px">
 		          	<% out.print(session.getAttribute("nickUsu")); %>
 		        </a>
 		        <div class="dropdown-menu dropdown-menu-right dropdown-default"
@@ -82,8 +81,8 @@
 		        <center><img src="img/Banner1logo.png" alt="Bienvenido" style="width:100%; height:100%; border-radius: 10px;"></center>
 		        <div class="container">
 		          <div class="carousel-caption">
-		            <h1 style="font-size: 8mm; -webkit-text-stroke: 1px white; color: black;">BIENVENIDO</h1>
-		            <p style="font-size: 5mm; -webkit-text-stroke: 1px black; color: white;">¡Te damos la bienvenida a la mejor Universidad de alopecia del mundo!</p>
+		            <h1 style="font-size: 8mm; -webkit-text-stroke: 1px yellow; color: black; text-transform: uppercase;">Bienvenido <% out.print(session.getAttribute("nomUsuario")); %></h1>
+		            <p style="font-size: 5mm; -webkit-text-stroke: 1px black; color: yellow;">¡Te damos la bienvenida a la mejor Universidad de alopecia del mundo!</p>
 		          </div>
 		        </div>
 		      </div>
@@ -93,7 +92,6 @@
 		          <div class="carousel-caption">
 		            <h1 style="font-size: 8mm; color: white;">LAS MEJORES BECAS</h1>
 		            <p style="font-size: 5mm; color: white;">¡Tenemos las mejores becas que te pueden ofrecer!</p>
-		            <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver</a></p>
 		          </div>
 		        </div>
 		      </div>
@@ -331,5 +329,132 @@
 		  var whats = document.getElementById('whats').src = "img/whats_color.png";
 		}
 	</script>
+	<script type="text/javascript">
+  //<![CDATA[
+(function() {
+
+(function() {
+  var Confetti, PI_2, canvas, colors, confetti, context, drawCircle, i, range, resizeWindow, xpos;
+
+  canvas = document.getElementById("confeti");
+
+  context = canvas.getContext("2d");
+
+  window.w = window.innerWidth;
+
+  window.h = window.innerHeight;
+
+  resizeWindow = function() {
+    window.w = canvas.width = window.innerWidth;
+    return window.h = canvas.height = window.innerHeight;
+  };
+
+  window.addEventListener('resize', resizeWindow, false);
+
+  window.onload = function() {
+    return setTimeout(resizeWindow, 0);
+  };
+
+  range = function(a, b) {
+    return (b - a) * Math.random() + a;
+  };
+
+  colors = [[85, 71, 106], [174, 61, 99], [219, 56, 83], [244, 92, 68], [248, 182, 70]];
+
+  PI_2 = 2 * Math.PI;
+
+  drawCircle = function(x, y, r, style) {
+    context.beginPath();
+    context.arc(x, y, r, 0, PI_2, false);
+    context.fillStyle = style;
+    return context.fill();
+  };
+
+  xpos = 0.5;
+
+  document.onmousemove = function(e) {
+    return xpos = e.pageX / w;
+  };
+
+  window.requestAnimationFrame = (function() {
+    return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
+      return window.setTimeout(callback, 1000 / 60);
+    };
+  })();
+
+  Confetti = (function() {
+
+    function Confetti() {
+      this.style = colors[~~range(0, 5)];
+      this.rgb = "rgba(" + this.style[0] + "," + this.style[1] + "," + this.style[2];
+      this.r = ~~range(2, 6);
+      this.replace();
+    }
+
+    Confetti.prototype.replace = function() {
+      this.opacity = 0;
+      this.dop = 0.03 * range(1, 5);
+      this.x = range(-2 * this.r, w - 2 * this.r);
+      this.y = range(-2 * this.r, h - 2 * this.r);
+      this.xmax = w - this.r;
+      this.ymax = h - this.r;
+      this.vx = 2 * Math.random() + 10 * xpos - 6;
+      return this.vy = this.r + range(-1, 1);
+    };
+
+    Confetti.prototype.draw = function() {
+      var _ref;
+      this.x += this.vx;
+      this.y += this.vy;
+      this.opacity += this.dop;
+      if (this.opacity > 1) {
+        this.opacity = 1;
+        this.dop *= -1;
+      }
+      if (this.opacity < 0 || this.y > this.ymax || !((0 < (_ref = this.x) && _ref < this.xmax))) {
+        this.replace();
+      }
+      return drawCircle(~~this.x, ~~this.y, this.r, "" + this.rgb + "," + this.opacity + ")");
+    };
+
+    return Confetti;
+
+  })();
+
+  confetti = (function() {
+    var _results;
+    _results = [];
+    for (i = 1; i <= 300; i++) {
+      _results.push(new Confetti);
+    }
+    return _results;
+  })();
+
+  window.step = function() {
+    var c, _i, _len, _results;
+    requestAnimationFrame(step);
+    context.clearRect(0, 0, w, h);
+    _results = [];
+    for (_i = 0, _len = confetti.length; _i < _len; _i++) {
+      c = confetti[_i];
+      _results.push(c.draw());
+    }
+    return _results;
+  };
+
+  step();
+
+}).call(this);
+
+})();
+//]]>
+</script>
+<script>
+function eliminarElemento(){
+	imagen = document.getElementById(confeti);
+		padre = confeti.parentNode;
+		padre.removeChild(confeti);
+}
+</script>
 </body>	
 </html>	

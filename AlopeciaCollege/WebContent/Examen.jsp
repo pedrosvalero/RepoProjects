@@ -22,7 +22,6 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Material Design Bootstrap -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -72,13 +71,48 @@
 		</nav>
 	</header>
 
-
-<div id="general">
-  <div id="test"></div>
-  <button id="boton">Mostrar resultados cálvicos</button>
-  <div id="resultado"></div>
-  <script src="ExamenScripts.js"></script>
+<div class="containerexamen">
+<h1 style="font-weight: bold; text-align: center; -webkit-text-stroke: 0.1mm grey; color: black;">Examen</h1>
+    <div class="transbox" >
+        <div class="row mt-4">
+            <div class="col" style="font-size: 120%;">
+                <div id="pregunta" class="form-group font-weight-bold"></div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" onClick = "checkOn()" name="alternativas" value="1" ><span
+                        id="opcion1"></span>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" onClick = "checkOn()" name="alternativas" value="2"><span
+                        id="opcion2"></span>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" onClick = "checkOn()" name="alternativas" value="3"><span
+                        id="opcion3"></span>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" onClick = "checkOn()" name="alternativas" value="4"><span
+                        id="opcion4"></span>
+                </div>
+                <div id ="resultado" class="form-check" style="text-align: justify;"></div>
+                	<center><button id="btnAvanzar" onClick = "siguiente()" class="btn btn-primary mt-4" style="border-radius: 20px;">Siguiente pregunta</button></center>
+                	<input type="text" onchange="sumar(<%= session.getAttribute("puntuacion") %>);">
+           		</div>
+        </div>
+    </div>
 </div>
+
+<!-- HACER AQUÍ EL FORMULARIO DEL .XML DE GITHUB EN HIDDEN, PARA QUE NO SE DESMADRE EL EXAMEN!!! -->
+
+<input id="puntuaj" type="text" title="puntuaj"> <!-- este muestra lel mismo valor que el botón avanzar, para tener al menos un input que pueda subir los puntos a bbdd -->
+
+<input id="puntua" type="text" title="puntua"> <!-- se supone que este muestra la suma de puntosTotal y puntuacion usuario -->
+
+<!-- PONER EL INPUT FINAL QUE TENGA LA PUNTUACIÓN CORRECTA EN HIDDEN y hacer el formulario del .xml que he dejado en github -->
+
+
+
+
+
 
 	<!-- Whatsapp -->
 	<a class="appWhatsapp" target="blanck" href="https://api.whatsapp.com/send?phone=34601032880&text=Buenas!&nbsp;Entra&nbsp;en&nbsp;nuestro&nbsp;grupo&nbsp;de&nbsp;calvos" title="WhatsApp">
@@ -147,8 +181,7 @@
     <div  class="footer-copyright mdb-color black text-center py-2">© 2020 Copyright:<a href="#"> alopeciacollege.herokuapp.com</a></div>
     <!-- Copyright -->
   </footer>
-
-</div>
+</div><!-- <- NO BORRAR, /div DEL WALLPAPER -->
 
   <!-- Scripts -->
   	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

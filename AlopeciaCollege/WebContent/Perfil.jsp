@@ -89,8 +89,12 @@
                     <div class="img-container">
                         <img class="img-responsive" src="img/jason.png" width="320" style="border-radius: 100%;">
                     </div>
-                    <div class="mc-description">
-                        Eres un apredíz de calvos, aún puedes mejorar más, sigue haciendo exámanes. De momento tienes el rol: <%= session.getAttribute("rol") %>.
+                    <div class="mc-description" style="height: 270px;">
+                        Eres un apredíz de calvos, aún puedes mejorar más, sigue haciendo exámanes. De momento tienes el rol: <%= session.getAttribute("rol") %>.<br>
+                        
+                         <% if ((session.getAttribute("rol").equals("Admin")) || (session.getAttribute("rol").equals("Bruce_Willis")) || (session.getAttribute("rol").equals("Demi_Moore"))) { %>
+                        <img src="Desbloqueable/LogroBruceWillis.png" style="width: 70%; height: 70%; margin: auto; margin-left: 40px;">
+                        <% } %>
                     </div>
                 </div>
                 <a class="mc-btn-action">
