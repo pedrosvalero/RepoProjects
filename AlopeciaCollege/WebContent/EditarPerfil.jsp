@@ -24,6 +24,11 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 </head>
 <body>
+
+<audio id="myAudio">
+  <source src="Desbloqueable/BaseDatosCalvica.ogg" type="audio/ogg">
+  <source src="Desbloqueable/BaseDatosCalvica.mp3" type="audio/mpeg">
+</audio>
 <div id="bg" style="background-image: url('img/College.jpg');">
 	<header>
 		<nav id= "nose" class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
@@ -116,7 +121,8 @@
 	          <input  type="password" name="pass_control" id="form29" minlength="6" class="form-control validate" value="<%= u.getPass() %>">
 	        </div>
 	        <div id="boton"class="text-center">
-				<button type="submit" onclick="sonido()" class="btn btn-blue btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Aplicar</button>
+	        	<button onclick="playAudio()" class="btn btn-default btn-rounded mb-3" type="button" style="border-radius: 20px;">Pínchame</button>
+				<button type="submit" class="btn btn-blue btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;">Aplicar</button>
 				<button class="btn btn-red btn-rounded mb-3" data-toggle="modal" data-target="#modalContactForm" style="border-radius: 20px;" type="reset">Borrar datos</button>
 			</div>
 	    </div>
@@ -319,18 +325,12 @@
     });
 		</script>
 		<script>
-			function sonido(){
-				var x = document.createElement("AUDIO");
-					console.log("entras??")
-				  if (x.canPlayType("audio/mpeg")) {
-				    x.setAttribute("src","Desbloqueable/BaseDatosCalvica.mp3");
-				  } else {
-				    x.setAttribute("src","Desbloqueable/BaseDatosCalvica.mp3");
-				  }
-
-				x.setAttribute("autoplay", "autoplay");
-				  document.body.appendChild(x);
-			}
+		var x = document.getElementById("myAudio"); 
+		
+		function playAudio() { 
+		  x.play(); 
+		} 
+		
 		</script>
 </body>
 </html>
