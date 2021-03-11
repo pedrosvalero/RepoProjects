@@ -102,31 +102,34 @@ public class CadenasPedro {
 		menu();
 		opcion = entrada.nextInt();
 		
-		switch(opcion){
-		case 1:
-			mayus(cadena);
-			break;
-			
-		case 2:
-			cuentaVocales(cadena);
-			break;
-			
-		case 3:
-			subcadena(cadena);
-			break;
-			
-		case 4:
-			reemplazo(cadena);
-			break;
-			
-		case 5:
-			System.out.println(cadena);
-			break;
-			
-		default:
-			System.out.println("Finaliza Programa");
-			break;
+		while(opcion != 6) {
+			switch(opcion){
+			case 1:
+				mayus(cadena);
+				break;
+				
+			case 2:
+				cuentaVocales(cadena);
+				break;
+				
+			case 3:
+				subcadena(cadena);
+				break;
+				
+			case 4:
+				reemplazo(cadena);
+				break;
+				
+			case 5:
+				System.out.println(cadena);
+				break;
+				
+			default:
+				System.out.println("Finaliza Programa");
+				break;
+			}
 		}
+		
 
 	}
 
