@@ -15,8 +15,9 @@ public class CalculadoraMetodosPedro {
 	
 	}
 	
-	public static void pedirNum() {
+	public static int pedirNum(Scanner sc) {
 		System.out.println("Dime un número");
+		return sc.nextInt();
 	}
 
 	public static void main(String[] args) {
@@ -25,65 +26,59 @@ public class CalculadoraMetodosPedro {
 		int opcion;
 		int n1, n2;
 		// TODO Auto-generated method stub
-		menu();
-		opcion = entrada.nextInt();
-		
-		while (opcion < 1 || opcion > 6) {
-			System.out.println("Valor no válido, introduce número del 1 al 6");
+		do {
+			menu();
 			opcion = entrada.nextInt();
-		}
+		
+			while (opcion < 0 || opcion > 6) {
+				System.out.println("Valor no válido, introduce número del 1 al 6");
+				opcion = entrada.nextInt();
+			}
 		 
 		
 		
-		switch(opcion) {
+			switch(opcion) {
+			
+			case 1:			
+				n1 = pedirNum(entrada);
+				n2 = pedirNum(entrada);
+				System.out.println("El resultado de sumar " + n1 + "+" + n2 + " es " + (n1+n2));
+				break;
+				
+			case 2:
+				n1 = pedirNum(entrada);
+				n2 = pedirNum(entrada);
+				System.out.println("El resultado de restar " + n1 + "-" + n2 + " es " + (n1-n2));
+				break;
+				
+			case 3:
+				n1 = pedirNum(entrada);
+				n2 = pedirNum(entrada);
+				System.out.println("El resultado de multiplicar " + n1 + "*" + n2 + " es " + (n1*n2));
+				break;
+				
+			case 4:
+				n1 = pedirNum(entrada);
+				n2 = pedirNum(entrada);
+				System.out.println("El resultado de dividir " + n1 + "/" + n2 + " es " + (n1/n2));
+				break;
+				
+			case 5:
+				n1 = pedirNum(entrada);
+				System.out.println("El resultado del valor absoluto es " + Math.abs(n1));
+				break;
+				
+			case 6:
+				System.out.println("El resultado del numero PI es " + Math.PI);
+				break;
+				
+			case 0:
+				System.out.println("Salimos");
+				break;
+			
+			}
+		}while(opcion != 0);
 		
-		case 1:
-			pedirNum();
-			n1 = entrada.nextInt();
-			pedirNum();
-			n2 = entrada.nextInt();
-			System.out.println("El resultado de sumar " + n1 + "+" + n2 + " es " + (n1+n2));
-			break;
-			
-		case 2:
-			pedirNum();
-			n1 = entrada.nextInt();
-			pedirNum();
-			n2 = entrada.nextInt();
-			System.out.println("El resultado de restar " + n1 + "-" + n2 + " es " + (n1-n2));
-			break;
-			
-		case 3:
-			pedirNum();
-			n1 = entrada.nextInt();
-			pedirNum();
-			n2 = entrada.nextInt();
-			System.out.println("El resultado de multiplicar " + n1 + "*" + n2 + " es " + (n1*n2));
-			break;
-			
-		case 4:
-			pedirNum();
-			n1 = entrada.nextInt();
-			pedirNum();
-			n2 = entrada.nextInt();
-			System.out.println("El resultado de dividir " + n1 + "/" + n2 + " es " + (n1/n2));
-			break;
-			
-		case 5:
-			pedirNum();
-			n1 = entrada.nextInt();
-			System.out.println("El resultado del valor absoluto es " + Math.abs(n1));
-			break;
-			
-		case 6:
-			System.out.println("El resultado del numero PI es " + Math.PI);
-			break;
-			
-		default:
-			System.out.println("Valor no válido, introduce número del 1 al 6");
-			opcion = entrada.nextInt();
-		
-		}
 	
 	}
 
