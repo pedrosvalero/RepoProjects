@@ -1,0 +1,47 @@
+*{
+	margin:0px;
+	padding: 0px;
+	font-family: 'Alata', sans-serif;
+	box-sizing: border-box;
+}
+
+#bg {
+  background-position: center;
+  background-size: cover;
+}
+
+#navstyle{margin-left: 10px; font-family: 'Pacifico', sans-serif; color: #eaeaec; font-size: 5;}
+header nav { border-bottom: inset grey 2px; }
+#rankingcalvitium{ margin-top: 35px; margin-bottom: 35px; }
+
+table, tr, th, td{
+	padding: 8px;
+	width: 900px;
+	margin: auto;
+	margin-bottom: 70px;
+	opacity: 0.9;
+}
+
+th{border: 1px solid white;}
+td{border: 1px solid black;}
+
+footer{ position: relative; width: 100%; bottom: 0; opacity: 0.9; }
+#redes img{ margin-left: 5px; }
+
+.appWhatsapp{
+	position:fixed;
+	right: 26px;
+	bottom: 100px;
+	width: 60px;
+	z-index: 1000;
+}
+
+.appWhatsapp img{
+	width: 100%;
+	height: auto;
+}
+
+
+#cabezera{
+	margin: 100px;
+}

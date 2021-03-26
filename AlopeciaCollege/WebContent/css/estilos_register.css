@@ -1,0 +1,89 @@
+*{	
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Alata', sans-serif;
+	box-sizing: border-box;
+}
+
+#bg {
+	background-position: center;
+	background-size: cover;
+}
+
+#navfont{margin-left: 10px; font-family: 'Pacifico', sans-serif; color: #eaeaec; font-size: 5;}
+header nav { border-bottom: inset grey 2px; }
+.containerbody{min-height: calc(100vh - 100px - 300px);}
+
+form{
+	margin: auto;
+	margin-top: 6vh;
+	margin-bottom: 6vh;
+	min-width: 200px;
+	width: 500px;
+	justify-content: center;
+	padding: 30px;
+	background-color: lightgrey;
+	border-radius: 20px;
+	border: 1px solid black;
+	-webkit-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+	opacity: 0.8;
+}
+
+#registrarse{ margin-bottom: 15px; }
+
+#apartados .input{
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 85%;
+	padding: 10px 8px;
+	margin: 5px;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+#idSex { 
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 85%;
+	padding: 10px 8px;
+	margin: 5px;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+#idMail {
+	margn-right: 5%;
+	width: 94%;
+	padding: 10px 8px;
+	margin: 5px;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+#idLocalidad {	
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 80%;
+	padding: 10px 8px;
+	margin: 5px;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+footer{ margin-top: 20px; bottom: 0; opacity: 0.95; }
+#redes img{ margin-left: 5px; }
+
+.appWhatsapp{
+	position:fixed;
+	right: 26px;
+	bottom: 100px;
+	width: 60px;
+	z-index: 1000;
+}
+
+.appWhatsapp img{
+	width: 100%;
+	height: auto;
+}
