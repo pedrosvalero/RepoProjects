@@ -1,0 +1,44 @@
+*{	
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Alata', sans-serif;
+	box-sizing: border-box;
+}
+
+#bg {
+  background-position: center;
+  background-size: cover;
+}
+
+#navfont{margin-left: 10px; font-family: 'Pacifico', sans-serif; color: #eaeaec; font-size: 5;}
+header nav { border-bottom: inset grey 2px; }
+.carousel { margin-top: 30px; margin-bottom: 20px; }
+#myCarousel{width: 70%; border-radius: 11px; border: 1px solid black;}
+.carousel, .slide,
+.carousel .carousel-inner,
+.carousel .carousel-item,
+.carousel .carousel-item img,
+.carousel .carousel-control {
+  border-radius: $11;
+  overflow: hidden;
+}
+
+#cards{ width: 300px; display: inline-block; margin: 25px; border-radius: 10px; jusfity-content: center; }
+#cards img{ border-radius: 10px; padding: 1%; }
+#cards a{ border-radius: 20px; }
+
+footer{ position: relative; width: 100%; bottom: 0; opacity: 0.9; }
+#redes img{ margin-left: 5px; }
+
+.appWhatsapp{
+	position:fixed;
+	right: 26px;
+	bottom: 100px;
+	width: 60px;
+	z-index: 1000;
+}
+
+.appWhatsapp img{
+	width: 100%;
+	height: auto;
+}
